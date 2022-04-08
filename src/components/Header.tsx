@@ -1,11 +1,29 @@
-/* eslint-disable import/extensions */
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header: React.FC = ({ children }) => (
-  <header className={styles.header}>
-    <div className={styles.logoAndNav}>
+    <header className={styles.header}>
+        <div className="container-fluid align-items-center">
+            <div className="row">
+                <div className="col-3">
+                    <button type="button" className="btn btn-outline-light">Каталог</button>
+
+                </div>
+                <div className="col-7">
+                    <input type="input" className="form-control" id="exampleFormControlInput1" placeholder="Поиск по товарам" />
+
+                </div>
+                <div className="col-2">
+                    <button className="btn btn-sm btn-outline-light">
+                        <p>Cart</p>
+                    </button>
+                </div>
+            </div>
+            {/* <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label> */}
+
+        </div>
+
+        {/* <div className={styles.logoAndNav}>
       <NavLink className={styles.logo} to="/tasks">ToDo List</NavLink>
       <NavLink
         style={({ isActive }) => ({
@@ -26,9 +44,9 @@ const Header: React.FC = ({ children }) => (
       >
         Категории
       </NavLink>
-    </div>
-    {children}
-  </header>
+    </div> */}
+        {children}
+    </header>
 );
 
 export default Header;

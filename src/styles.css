@@ -29,25 +29,3 @@ body {
     height: 100vh;
     overflow: hidden;
 }
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.nonSupportedScreen {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    color: var(--backgroundDark);
-    background-color: var(--background);
-
-}
-
-.row {
-    display: flex;
-    column-gap: 24px;
-    margin-bottom: 24px;
-}
