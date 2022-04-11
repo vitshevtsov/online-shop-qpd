@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from './Header';
+import Header from './Header/Header';
 import '../styles.css';
 import Main from '../routes/Main';
+import SideMenu from './SideMenu/SideMenu';
 
 const App: React.FC = () => {
     // const { openedItemId } = useContext(DataContext);
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <div className={appClassNames}>
             <Header>
             </Header>
+            <SideMenu></SideMenu>
             <Main />
         
         </div>

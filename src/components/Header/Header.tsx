@@ -1,4 +1,5 @@
 import React from 'react';
+import SideMenuToggler from '../SideMenu/SideMenuToggler';
 import styles from './Header.module.css';
 
 const Header: React.FC = ({ children }) => (
@@ -6,7 +7,7 @@ const Header: React.FC = ({ children }) => (
         <div className="container-fluid align-items-center">
             <div className="row">
                 <div className="col-3">
-                    <button type="button" className="btn btn-outline-light">Каталог</button>
+                    <SideMenuToggler />
 
                 </div>
                 <div className="col-7">
