@@ -8,7 +8,6 @@ const Header: React.FC = ({ children }) => (
             <div className="row">
                 <div className="col-3">
                     <SideMenuToggler />
-
                 </div>
                 <div className="col-7">
                     <input type="input" className="form-control" id="exampleFormControlInput1" placeholder="Поиск по товарам" />
