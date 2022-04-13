@@ -8,6 +8,8 @@
 
 * {
     box-sizing: border-box;
+    /* text-decoration: none; */
+    list-style: none;
 }
 
 body {
@@ -28,4 +30,8 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+.offcanvas-start {
+    width: 850px;
 }

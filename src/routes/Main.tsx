@@ -1,91 +1,11 @@
 import React from 'react';
+import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
+import * as categoriesData from '../data/categories.json';
 
 const Main = () => {
+    const categoriesArr = Array.from(categoriesData); // todo логика популярных категорий
     return (
-        <div className="container-md">
-            <div className="row row-cols-5">
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <CategoryGroupsPanel categories={categoriesArr} />
     );
 };
 
