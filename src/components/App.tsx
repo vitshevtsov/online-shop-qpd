@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './Header/Header';
 import '../styles.css';
-import Main from '../routes/Main';
+// import Main from '../routes/Main';
 import SideMenu from './SideMenu/SideMenu';
+import RoutesComponent from '../routes/Routes';
 
 const App: React.FC = () => {
     // const { openedItemId } = useContext(DataContext);
@@ -15,9 +16,8 @@ const App: React.FC = () => {
         <div className={appClassNames}>
             <Header>
             </Header>
-            <SideMenu></SideMenu>
-            <Main />
-        
+            <SideMenu />
+            <RoutesComponent />
         </div>
     );
 };

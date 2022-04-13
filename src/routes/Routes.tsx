@@ -15,6 +15,9 @@ const RoutesComponent = () => {
             <Route path="category" element={<Category />} />
             <Route path="searchresult" element={<SearchResult />} />
             <Route path="*" element={<NoMatchRoute />} />
+            
+
+            <Route path="/category:id" element={<Category />} />
         </Routes>
     );
 };
