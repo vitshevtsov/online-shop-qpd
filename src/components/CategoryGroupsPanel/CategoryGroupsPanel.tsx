@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import List from '../List/List';
 
 const CategoryGroupsPanel = (props: any) => {
     const renderPanelCategory =(category: any) => {
         return (
             <div key={category.id} className="col">
-                <div className="card h-100">
+                <Link to={`/category${category.id}`} className="card h-100 list-group-item list-group-item-action">
                     <img src="..." className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{category.name}</h5>
                     </div>
-                </div>
+                </Link>
             </div>
         );
     };

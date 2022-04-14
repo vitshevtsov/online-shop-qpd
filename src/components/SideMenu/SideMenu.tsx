@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as categoriesData from '../../data/categories.json';
 import CategoryGroup from '../CategoryGroup/CategoryGroup';
 import List from '../List/List';
-import {Offcanvas} from 'bootstrap'; 
+// import {Offcanvas} from 'bootstrap'; 
 
 const SideMenu = () => {
     const categoriesArr = Array.from(categoriesData);
@@ -14,23 +14,13 @@ const SideMenu = () => {
         setOpenedCategory(selectedCategory(+e.currentTarget.id));
     };
 
-    const handleOnClickCategory = () => {
-        console.log('click');
-        const offcanvas: string | Element | null = document.querySelector('#offcanvasExample'); //todo
-        console.log(offcanvas);
-        if (offcanvas) {
-            const bsOffcanvas = new Offcanvas(offcanvas);
-            bsOffcanvas.hide();
-        }
-    };
-
     const renderCategory = (category: any) => {
         return (
             <li 
                 key={category.id} 
                 id={category.id} 
                 onMouseOver={handleOnMouseOverCategory}
-                onClick={handleOnClickCategory}
+                data-bs-dismiss="offcanvas"
             >
                 <Link to={`/category${category.id}`} className="list-group-item list-group-item-action">{category.name}</Link>
             </li>
