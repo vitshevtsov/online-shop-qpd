@@ -49,11 +49,8 @@ const SideMenu = () => {
                     <div className="row row-cols-2">
                         <List items={openedCategory.children} renderItem={renderCategoryGroups} />
                     </div>
-                    
                 </div>
-                
-            </div>
-                
+            </div>  
         </div>
     );
 };
