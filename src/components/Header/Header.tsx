@@ -1,22 +1,24 @@
 import React from 'react';
-import SideMenuToggler from '../SideMenu/SideMenuToggler';
+import { Link } from 'react-router-dom';
+import CartToggler from '../CartToggler/CartToggler';
+import SideMenuToggler from '../modal/Cart/SideMenuToggler/SideMenuToggler';
 import styles from './Header.module.css';
 
 const Header: React.FC = ({ children }) => (
     <header className={styles.header}>
         <div className="container-fluid align-items-center">
             <div className="row">
-                <div className="col-3">
+                <div className="col-4">
+                    <Link to="main" className="btn btn-sm btn-outline-light">Главная</Link>
                     <SideMenuToggler />
                 </div>
-                <div className="col-7">
+                <div className="col-6">
                     <input type="input" className="form-control" id="exampleFormControlInput1" placeholder="Поиск по товарам" />
 
                 </div>
                 <div className="col-2">
-                    <button className="btn btn-sm btn-outline-light">
-                        <p>Cart</p>
-                    </button>
+                    <Link to="orders" className="btn btn-sm btn-outline-light">Заказы</Link>
+                    <CartToggler/>
                 </div>
             </div>
             {/* <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label> */}

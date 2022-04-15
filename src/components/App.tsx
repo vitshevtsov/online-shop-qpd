@@ -1,9 +1,11 @@
 import React from 'react';
 import Header from './Header/Header';
 import '../styles.css';
-// import Main from '../routes/Main';
 import SideMenu from './SideMenu/SideMenu';
 import RoutesComponent from '../routes/Routes';
+import {store} from '../store/store';
+import { Provider } from 'react-redux';
+import Cart from './modal/Cart/Cart';
 
 const App: React.FC = () => {
     // const { openedItemId } = useContext(DataContext);
@@ -13,12 +15,16 @@ const App: React.FC = () => {
     const appClassNames = 'needToReplace';
 
     return (
-        <div className={appClassNames}>
-            <Header>
-            </Header>
-            <SideMenu />
-            <RoutesComponent />
-        </div>
+        <Provider store={store}>
+            <div className={appClassNames}>
+                <Header>
+                </Header>
+                <SideMenu />
+                <Cart />
+                <RoutesComponent />
+            </div>
+        </Provider>
+        
     );
 };
 

@@ -12,11 +12,8 @@ const RoutesComponent = () => {
             <Route path="/" element={<Navigate to="main" replace />} />
             <Route path="main" element={<Main />} />
             <Route path="orders" element={<Orders />} />
-            <Route path="category" element={<Category />} />
             <Route path="searchresult" element={<SearchResult />} />
             <Route path="*" element={<NoMatchRoute />} />
-            
-
             <Route path="/category:id" element={<Category />} />
         </Routes>
     );
