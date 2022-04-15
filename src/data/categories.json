@@ -9,11 +9,13 @@
 					"children": [
 						{
 							"id": 6916904882880694,
-							"name": "Смартфоны"
+							"name": "Смартфоны",
+							"properties": ["price", "brand", "color"]
 						},
 						{
 							"id": 4050952776871174,
-							"name": "Кнопочные телефоны"
+							"name": "Кнопочные телефоны",
+							"properties": ["price", "brand", "color"]
 						}
 					]
 				},
@@ -23,12 +25,14 @@
 					"children": [
 						{
 							"id": 4542478618009742,
-							"name": "Смарт-часы"
+							"name": "Смарт-часы",
+							"properties": ["price", "brand", "color"]
 							
 						},
 						{
 							"id": 523746442731178,
-							"name": "Квадрокоптеры"
+							"name": "Квадрокоптеры",
+							"properties": ["price", "brand", "color"]
 							
 						}
 					]
@@ -45,11 +49,13 @@
 					"children": [
 						{
 							"id": 572877343295800,
-							"name": "Компьютеры"
+							"name": "Компьютеры",
+							"properties": ["price", "brand", "RAM"]
 						},
 						{
 							"id": 4044155329474938,
-							"name": "Ноутбуки"
+							"name": "Ноутбуки",
+							"properties": ["price", "brand", "RAM"]
 						}
 					]
 				},
@@ -59,11 +65,13 @@
 					"children": [
 						{
 							"id": 488663833006086,
-							"name": "Процессоры"
+							"name": "Процессоры",
+							"properties": ["price", "brand", "series"]
 						},
 						{
 							"id": 5679189180610592,
-							"name": "Материнские платы"
+							"name": "Материнские платы",
+							"properties": ["price", "brand", "chipset"]
 						}
 					]
 				}
@@ -79,12 +87,14 @@
 					"children": [
 						{
 							"id": 1115084996950174,
-							"name": "Телевизоры"
+							"name": "Телевизоры",
+							"properties": ["price", "brand", "diagonal"]
 							
 						},
 						{
 							"id": 867762482351120,
-							"name": "Медиаплееры (Смарт ТВ приставки)" 
+							"name": "Медиаплееры (Смарт ТВ приставки)",
+							"properties": ["price", "brand", "RAM"]
 						}
 					]
 				},
@@ -94,11 +104,13 @@
 					"children": [
 						{
 							"id": 3999786304527930,
-							"name": "Саундбары"
+							"name": "Саундбары",
+							"properties": ["price", "brand", "power"]
 						},
 						{
 							"id": 7592219361933140,
-							"name": "Магнитолы"
+							"name": "Магнитолы",
+							"properties": ["price", "brand", "power"]
 						}
 					]
 				}
@@ -114,11 +126,13 @@
 					"children": [
 						{
 							"id": 6344086368913802,
-							"name": "Холодильники"
+							"name": "Холодильники",
+							"properties": ["price", "brand", "height"]
 						},
 						{
 							"id": 5493326664410312,
-							"name": "Стиральные машины"
+							"name": "Стиральные машины",
+							"properties": ["price", "brand", "volume"]
 						}
 					]
 				},
@@ -128,11 +142,13 @@
 					"children": [
 						{
 							"id": 3311772441592944,
-							"name": "Духовые шкафы"
+							"name": "Духовые шкафы",
+							"properties": ["price", "brand", "height"]
 						},
 						{
 							"id": 148119500659280,
-							"name": "Встраиваемые микроволновые печи"
+							"name": "Встраиваемые микроволновые печи",
+							"properties": ["price", "brand", "height"]
 						}
 					]
 				}
@@ -148,11 +164,13 @@
 					"children": [
 						{
 							"id": 1030817562911076,
-							"name": "Шуруповерты"
+							"name": "Шуруповерты",
+							"properties": ["price", "brand", "power"]
 						},
 						{
 							"id": 4679511730634562,
-							"name": "Дрели"
+							"name": "Дрели",
+							"properties": ["price", "brand", "power"]
 						}
 					]
 				},
@@ -162,11 +180,13 @@
 					"children": [
 						{
 							"id": 943498683944736,
-							"name": "Розетки"
+							"name": "Розетки",
+							"properties": ["price", "brand", "color"]
 						},
 						{
 							"id": 4179831730223438,
-							"name": "Выключатели"
+							"name": "Выключатели",
+							"properties": ["price", "brand", "color"]
 						}
 					]
 				}

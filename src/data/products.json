@@ -5,7 +5,8 @@
 		"name": "Смартфон Xiaomi Redmi 9A 32Gb",
 		"properties": {
 			"price": 221444,
-			"color": "cyan"
+			"brand": "Xiaomi Redmi",
+			"color": "Черный"
 		}
 	},
 	{
@@ -14,7 +15,8 @@
 		"name": "Смартфон Xiaomi Redmi Note 10S 6/128Gb",
 		"properties": {
 			"price": 241369,
-			"color": "chartreuse green"
+			"brand": "Xiaomi Redmi",
+			"color": "Серый"
 		}
 	},
 	{
@@ -23,7 +25,8 @@
 		"name": "Смартфон REALME 8 6/128Gb",
 		"properties": {
 			"price": 182258,
-			"color": "brown"
+			"brand": "REALME",
+			"color": "Белый"
 		}
 	},
 	{
@@ -32,7 +35,8 @@
 		"name": "Смартфон Motorola Moto G20 64Gb",
 		"properties": {
 			"price": 297856,
-			"color": "azure"
+			"brand": "Motorola",
+			"color": "Синий"
 		}
 	},
 	{
@@ -41,7 +45,8 @@
 		"name": "Смартфон Xiaomi Poco M3 Pro 6/128Gb",
 		"properties": {
 			"price": 214926,
-			"color": "brown"
+			"brand": "Xiaomi Poco",
+			"color": "Серый"
 		}
 	},
 	{
@@ -50,7 +55,8 @@
 		"name": "Сотовый телефон Nokia 105 SS TA-1203",
 		"properties": {
 			"price": 68501,
-			"color": "chartreuse green"
+			"brand": "Nokia",
+			"color": "Серый"
 		}
 	},
 	{
@@ -59,7 +65,8 @@
 		"name": "Сотовый телефон SUNWIND CITI A1701",
 		"properties": {
 			"price": 68827,
-			"color": "spring green"
+			"brand": "SUNWIND",
+			"color": "Черный"
 		}
 	},
 	{
@@ -68,7 +75,8 @@
 		"name": "Сотовый телефон Nokia 106",
 		"properties": {
 			"price": 194452,
-			"color": "white"
+			"brand": "Nokia",
+			"color": "Белый"
 		}
 	},
 	{
@@ -77,7 +85,8 @@
 		"name": "Сотовый телефон Philips Xenium E185",
 		"properties": {
 			"price": 353356,
-			"color": "azure"
+			"brand": "Philips",
+			"color": "Серый"
 		}
 	},
 	{
@@ -86,7 +95,8 @@
 		"name": "Сотовый телефон Digma Linx S240",
 		"properties": {
 			"price": 183041,
-			"color": "cyan"
+			"brand": "Digma",
+			"color": "Черный"
 		}
 	},
 	{
@@ -95,7 +105,8 @@
 		"name": "Смарт-часы AMAZFIT Bip U Pro A2008",
 		"properties": {
 			"price": 296096,
-			"color": "grey"
+			"brand": "AMAZFIT",
+			"color": "Серый"
 		}
 	},
 	{
@@ -104,7 +115,8 @@
 		"name": "Смарт-часы Xiaomi Haylou LS02",
 		"properties": {
 			"price": 73086,
-			"color": "spring green"
+			"brand": "Xiaomi",
+			"color": "Красный"
 		}
 	},
 	{
@@ -113,7 +125,8 @@
 		"name": "Смарт-часы JET Kid Connect",
 		"properties": {
 			"price": 43955,
-			"color": "blue"
+			"brand": "JET",
+			"color": "Синий"
 		}
 	},
 	{
@@ -122,7 +135,8 @@
 		"name": "Смарт-часы SUNWIND SW20",
 		"properties": {
 			"price": 64402,
-			"color": "brown"
+			"brand": "SUNWIND",
+			"color": "Черный"
 		}
 	},
 	{
@@ -131,7 +145,8 @@
 		"name": "Смарт-часы Canyon Wildberry",
 		"properties": {
 			"price": 195430,
-			"color": "chartreuse green"
+			"brand": "Canyon",
+			"color": "Белый"
 		}
 	},
 	{
@@ -140,7 +155,8 @@
 		"name": "Квадрокоптер DJI Mini 2 MT2PD Fly More Combo с камерой,",
 		"properties": {
 			"price": 257374,
-			"color": "spring green"
+			"brand": "DJI",
+			"color": "Белый"
 		}
 	},
 	{
@@ -149,7 +165,8 @@
 		"name": "Квадрокоптер HIPER HQC-0003 Falcon X FPV с камерой",
 		"properties": {
 			"price": 156926,
-			"color": "white"
+			"brand": "HIPER",
+			"color": "Белый"
 		}
 	},
 	{
@@ -158,7 +175,8 @@
 		"name": "Квадрокоптер HIPER HQC-0030 Sky Patrol FPV с камерой",
 		"properties": {
 			"price": 288003,
-			"color": "grey"
+			"brand": "HIPER",
+			"color": "Черный"
 		}
 	},
 	{
@@ -167,7 +185,8 @@
 		"name": "Квадрокоптер JXD 515W Space Ship с камерой",
 		"properties": {
 			"price": 78876,
-			"color": "brown"
+			"brand": "JXD",
+			"color": "Синий"
 		}
 	},
 	{
@@ -176,7 +195,8 @@
 		"name": "Квадрокоптер Syma X5UW с камерой",
 		"properties": {
 			"price": 323697,
-			"color": "red"
+			"brand": "Syma",
+			"color": "Красный"
 		}
 	},
 	{
@@ -185,7 +205,8 @@
 		"name": "Компьютер iRU Home 310H5SE",
 		"properties": {
 			"price": 113292,
-			"color": "cyan"
+			"brand": "iRU",
+			"RAM": 16
 		}
 	},
 	{
@@ -194,7 +215,8 @@
 		"name": "Компьютер iRU Home 310H5",
 		"properties": {
 			"price": 7277,
-			"color": "black"
+			"brand": "iRU",
+			"RAM": 16
 		}
 	},
 	{
@@ -203,7 +225,8 @@
 		"name": "Компьютер Acer Nitro N50-620",
 		"properties": {
 			"price": 90837,
-			"color": "red"
+			"brand": "Acer",
+			"RAM": 8
 		}
 	},
 	{
@@ -212,7 +235,8 @@
 		"name": "Компьютер Acer Aspire XC-1660",
 		"properties": {
 			"price": 136217,
-			"color": "rose"
+			"brand": "Acer",
+			"RAM": 8
 		}
 	},
 	{
@@ -221,7 +245,8 @@
 		"name": "Компьютер iRU Game 510B5GE",
 		"properties": {
 			"price": 302387,
-			"color": "green"
+			"brand": "iRU",
+			"RAM": 32
 		}
 	},
 	{
@@ -230,7 +255,8 @@
 		"name": "Ноутбук Huawei MateBook D 15, 53012KQY",
 		"properties": {
 			"price": 116458,
-			"color": "red"
+			"brand": "Huawei",
+			"RAM": 16
 		}
 	},
 	{
@@ -239,7 +265,8 @@
 		"name": "Ноутбук Lenovo IP Gaming 3 15ACH6, 82K201D1RK",
 		"properties": {
 			"price": 213212,
-			"color": "magenta"
+			"brand": "Lenovo",
+			"RAM": 16
 		}
 	},
 	{
@@ -248,7 +275,8 @@
 		"name": "Ноутбук Acer Aspire 3 A315-56-38MN, NX.HS5ER.00B",
 		"properties": {
 			"price": 72253,
-			"color": "orange"
+			"brand": "Acer",
+			"RAM": 16
 		}
 	},
 	{
@@ -257,7 +285,8 @@
 		"name": "Ноутбук Digma EVE 11 C409, ES2056EW",
 		"properties": {
 			"price": 42508,
-			"color": "rose"
+			"brand": "Digma",
+			"RAM": 8
 		}
 	},
 	{
@@ -266,7 +295,8 @@
 		"name": "Ноутбук ASUS TUF Gaming F15 FX506HCB-HN1138",
 		"properties": {
 			"price": 390849,
-			"color": "violet"
+			"brand": "ASUS",
+			"RAM": 32
 		}
 	},
 	{
@@ -275,7 +305,8 @@
 		"name": "Процессор AMD A6 9500E, OEM",
 		"properties": {
 			"price": 56156,
-			"color": "red"
+			"brand": "AMD",
+			"series": "A6"
 		}
 	},
 	{
@@ -284,7 +315,8 @@
 		"name": "Процессор AMD A8 9600, OEM",
 		"properties": {
 			"price": 10848,
-			"color": "rose"
+			"brand": "AMD",
+			"series": "A8"
 		}
 	},
 	{
@@ -293,7 +325,8 @@
 		"name": "Процессор AMD Athlon 3000G, OEM",
 		"properties": {
 			"price": 299369,
-			"color": "spring green"
+			"brand": "AMD",
+			"series": "Athlon"
 		}
 	},
 	{
@@ -302,7 +335,8 @@
 		"name": "Процессор Intel Celeron G5905, OEM",
 		"properties": {
 			"price": 76048,
-			"color": "yellow"
+			"brand": "Intel",
+			"series": "Celeron"
 		}
 	},
 	{
@@ -311,7 +345,8 @@
 		"name": "Процессор AMD A10 9700, OEM",
 		"properties": {
 			"price": 264875,
-			"color": "azure"
+			"brand": "AMD",
+			"series": "A10"
 		}
 	},
 	{
@@ -320,7 +355,8 @@
 		"name": "Материнская плата ASUS PRIME H510M-K",
 		"properties": {
 			"price": 221139,
-			"color": "orange"
+			"brand": "ASUS",
+			"chipset": "AMD B450"
 		}
 	},
 	{
@@ -329,7 +365,8 @@
 		"name": "Материнская плата ASROCK B560M PRO4",
 		"properties": {
 			"price": 86719,
-			"color": "violet"
+			"brand": "ASROCK",
+			"chipset": "AMD B550"
 		}
 	},
 	{
@@ -338,7 +375,8 @@
 		"name": "Материнская плата GIGABYTE B450M S2H",
 		"properties": {
 			"price": 160572,
-			"color": "yellow"
+			"brand": "GIGABYTE",
+			"chipset": "Intel B560"
 		}
 	},
 	{
@@ -347,7 +385,8 @@
 		"name": "Материнская плата ASROCK H510M-HVS R2.0",
 		"properties": {
 			"price": 150914,
-			"color": "grey"
+			"brand": "ASROCK",
+			"chipset": "Intel H510"
 		}
 	},
 	{
@@ -356,7 +395,8 @@
 		"name": "Материнская плата ASROCK B450 PRO4 R2.0",
 		"properties": {
 			"price": 366548,
-			"color": "spring green"
+			"brand": "ASROCK",
+			"chipset": "Intel H510"
 		}
 	},
 	{
@@ -365,7 +405,8 @@
 		"name": "Телевизор Xiaomi MI TV 32 P1, HD READY",
 		"properties": {
 			"price": 85000,
-			"color": "green"
+			"brand": "Xiaomi",
+			"diagonal": 32
 		}
 	},
 	{
@@ -374,7 +415,8 @@
 		"name": "Телевизор LG 32LM6350PLA, 32",
 		"properties": {
 			"price": 194375,
-			"color": "rose"
+			"brand": "LG",
+			"diagonal": 32
 		}
 	},
 	{
@@ -383,7 +425,8 @@
 		"name": "Телевизор LG 43UP75006LF, 43",
 		"properties": {
 			"price": 294276,
-			"color": "cyan"
+			"brand": "LG",
+			"diagonal": 43
 		}
 	},
 	{
@@ -392,7 +435,8 @@
 		"name": "Телевизор Digma DM-LED32MQ10, 32",
 		"properties": {
 			"price": 381782,
-			"color": "brown"
+			"brand": "Digma",
+			"diagonal": 32
 		}
 	},
 	{
@@ -401,7 +445,8 @@
 		"name": "Телевизор BBK 32LEM-1089/T2C, 32",
 		"properties": {
 			"price": 177210,
-			"color": "yellow"
+			"brand": "BBK",
+			"diagonal": 32
 		}
 	},
 	{
@@ -410,7 +455,8 @@
 		"name": "Медиаплеер Xiaomi Mi Box S, 8ГБ",
 		"properties": {
 			"price": 46051,
-			"color": "cyan"
+			"brand": "Xiaomi",
+			"RAM": 2
 		}
 	},
 	{
@@ -419,7 +465,8 @@
 		"name": "Медиаплеер ЯНДЕКС Модуль - Смарт.ТВ с Алисой",
 		"properties": {
 			"price": 24016,
-			"color": "spring green"
+			"brand": "ЯНДЕКС",
+			"RAM": 2
 		}
 	},
 	{
@@ -428,7 +475,8 @@
 		"name": "Медиаплеер Xiaomi MDZ-24-AA, 8ГБ",
 		"properties": {
 			"price": 206770,
-			"color": "black"
+			"brand": "Xiaomi",
+			"RAM": 4
 		}
 	},
 	{
@@ -437,7 +485,8 @@
 		"name": "Медиаплеер SBER SberBox SBDV-00002, 16ГБ",
 		"properties": {
 			"price": 364108,
-			"color": "white"
+			"brand": "SBER",
+			"RAM": 1
 		}
 	},
 	{
@@ -446,7 +495,8 @@
 		"name": "Медиаплеер ROMBICA TV Fly, 16ГБ",
 		"properties": {
 			"price": 126611,
-			"color": "blue"
+			"brand": "ROMBICA",
+			"RAM": 2
 		}
 	},
 	{
@@ -455,7 +505,8 @@
 		"name": "Саундбар Xiaomi Redmi TV Soundbar 2.0 30Вт",
 		"properties": {
 			"price": 389661,
-			"color": "azure"
+			"brand": "Xiaomi",
+			"power": 150
 		}
 	},
 	{
@@ -464,7 +515,8 @@
 		"name": "Саундбар JBL Cinema SB120 2.0 110Вт",
 		"properties": {
 			"price": 119713,
-			"color": "red"
+			"brand": "JBL",
+			"power": 200
 		}
 	},
 	{
@@ -473,7 +525,8 @@
 		"name": "Саундбар LG SJ3 300Вт",
 		"properties": {
 			"price": 26258,
-			"color": "red"
+			"brand": "LG",
+			"power": 200
 		}
 	},
 	{
@@ -482,7 +535,8 @@
 		"name": "Саундбар Ginzzu GM-501 2.0 20Вт",
 		"properties": {
 			"price": 348434,
-			"color": "chartreuse green"
+			"brand": "Ginzzu",
+			"power": 150
 		}
 	},
 	{
@@ -491,7 +545,8 @@
 		"name": "Саундбар Hisense HS214 2.1 54Вт+54Вт",
 		"properties": {
 			"price": 91834,
-			"color": "green"
+			"brand": "Hisense",
+			"power": 180
 		}
 	},
 	{
@@ -500,7 +555,8 @@
 		"name": "Аудиомагнитола Hyundai H-PAS120",
 		"properties": {
 			"price": 325099,
-			"color": "magenta"
+			"brand": "Hyundai",
+			"power": 100
 		}
 	},
 	{
@@ -509,7 +565,8 @@
 		"name": "Аудиомагнитола Hyundai H-PAS180",
 		"properties": {
 			"price": 355637,
-			"color": "brown"
+			"brand": "Hyundai",
+			"power": 90
 		}
 	},
 	{
@@ -518,7 +575,8 @@
 		"name": "Аудиомагнитола Hyundai H-PCD400",
 		"properties": {
 			"price": 70266,
-			"color": "spring green"
+			"brand": "Hyundai",
+			"power": 90
 		}
 	},
 	{
@@ -527,7 +585,8 @@
 		"name": "Аудиомагнитола Panasonic RX-D550GS-K",
 		"properties": {
 			"price": 152186,
-			"color": "blue"
+			"brand": "Panasonic",
+			"power": 110
 		}
 	},
 	{
@@ -536,7 +595,8 @@
 		"name": "Аудиомагнитола Supra BTS-580",
 		"properties": {
 			"price": 123488,
-			"color": "spring green"
+			"brand": "Supra",
+			"power": 130
 		}
 	},
 	{
@@ -545,7 +605,8 @@
 		"name": "Холодильник STINOL STS 185 S двухкамерный",
 		"properties": {
 			"price": 363391,
-			"color": "violet"
+			"brand": "STINOL",
+			"height": 205
 		}
 	},
 	{
@@ -554,7 +615,8 @@
 		"name": "Холодильник Indesit ITR 4180 W двухкамерный",
 		"properties": {
 			"price": 32328,
-			"color": "grey"
+			"brand": "Indesit",
+			"height": 180
 		}
 	},
 	{
@@ -563,7 +625,8 @@
 		"name": "Холодильник NORDFROST ERB 432 032 двухкамерный",
 		"properties": {
 			"price": 262189,
-			"color": "grey"
+			"brand": "NORDFROST",
+			"height": 150
 		}
 	},
 	{
@@ -572,7 +635,8 @@
 		"name": "Холодильник Beko RCNK335K00W двухкамерный",
 		"properties": {
 			"price": 247168,
-			"color": "white"
+			"brand": "Beko",
+			"height": "190"
 		}
 	},
 	{
@@ -581,7 +645,8 @@
 		"name": "Холодильник Indesit ITR 5160 W двухкамерный",
 		"properties": {
 			"price": 129549,
-			"color": "grey"
+			"brand": "Indesit",
+			"height": 220
 		}
 	},
 	{
@@ -590,7 +655,8 @@
 		"name": "Стиральная машина Candy CS34 1052DB1/2-07",
 		"properties": {
 			"price": 221680,
-			"color": "white"
+			"brand": "Candy",
+			"volume": 5
 		}
 	},
 	{
@@ -599,7 +665,8 @@
 		"name": "Стиральная машина Indesit EWUC 4105",
 		"properties": {
 			"price": 242602,
-			"color": "blue"
+			"brand": "Indesit",
+			"volume": 4
 		}
 	},
 	{
@@ -608,7 +675,8 @@
 		"name": "Стиральная машина LG F1296NDS0",
 		"properties": {
 			"price": 307257,
-			"color": "violet"
+			"brand": "LG",
+			"volume": 6
 		}
 	},
 	{
@@ -617,7 +685,8 @@
 		"name": "Стиральная машина Indesit IWSB 5105",
 		"properties": {
 			"price": 384644,
-			"color": "cyan"
+			"brand": "Indesit",
+			"volume": 5
 		}
 	},
 	{
@@ -626,7 +695,8 @@
 		"name": "Стиральная машина Hotpoint-Ariston VMSG 601 B",
 		"properties": {
 			"price": 111344,
-			"color": "black"
+			"brand": "Hotpoint-Ariston",
+			"volume": 4
 		}
 	},
 	{
@@ -635,7 +705,8 @@
 		"name": "Духовой шкаф Electrolux EZB52410AK",
 		"properties": {
 			"price": 187732,
-			"color": "orange"
+			"brand": "Electrolux",
+			"height": 100
 		}
 	},
 	{
@@ -644,7 +715,8 @@
 		"name": "Духовой шкаф Electrolux EZB52430AX",
 		"properties": {
 			"price": 145654,
-			"color": "orange"
+			"brand": "Electrolux",
+			"height": 110
 		}
 	},
 	{
@@ -653,7 +725,8 @@
 		"name": "Духовой шкаф Darina 1U BDE 111 707 At",
 		"properties": {
 			"price": 364504,
-			"color": "magenta"
+			"brand": "Darina",
+			"height": 100
 		}
 	},
 	{
@@ -662,7 +735,8 @@
 		"name": "Духовой шкаф Bosch HBF114EB0R",
 		"properties": {
 			"price": 177000,
-			"color": "orange"
+			"brand": "Bosch",
+			"height": 120
 		}
 	},
 	{
@@ -671,7 +745,8 @@
 		"name": "Духовой шкаф Electrolux OEF5C50Z",
 		"properties": {
 			"price": 376519,
-			"color": "orange"
+			"brand": "Electrolux",
+			"height": 105
 		}
 	},
 	{
@@ -680,7 +755,8 @@
 		"name": "Микроволновая печь MAUNFELD MBMO.20.1PGW, встраиваемая, 20л, 800Вт",
 		"properties": {
 			"price": 68409,
-			"color": "grey"
+			"brand": "MAUNFELD",
+			"height": 80
 		}
 	},
     {
@@ -689,7 +765,8 @@
 		"name": "Микроволновая печь Samsung MS20A7013AL/BW, встраиваемая, 20л, 850Вт",
 		"properties": {
 			"price": 368455,
-			"color": "azure"
+			"brand": "Samsung",
+			"height": 90
 		}
 	},
 	{
@@ -698,7 +775,8 @@
 		"name": "Микроволновая печь Candy MIC201EX, встраиваемая, 20л, 800Вт",
 		"properties": {
 			"price": 897,
-			"color": "chartreuse green"
+			"brand": "Candy",
+			"height": 100
 		}
 	},
 	{
@@ -707,7 +785,8 @@
 		"name": "Микроволновая печь MAUNFELD JBMO.20.5S, встраиваемая, 20л, 700Вт",
 		"properties": {
 			"price": 77084,
-			"color": "white"
+			"brand": "MAUNFELD",
+			"height": 90
 		}
 	},
 	{
@@ -716,7 +795,8 @@
 		"name": "Микроволновая печь LEX Bimo 20.01, встраиваемая, 20л, 700Вт",
 		"properties": {
 			"price": 180231,
-			"color": "red"
+			"brand": "LEX",
+			"height": 150
 		}
 	},
 	{
@@ -725,7 +805,8 @@
 		"name": "Дрель-шуруповерт Bosch UniversalDrill 18 1.5Ач",
 		"properties": {
 			"price": 64549,
-			"color": "rose"
+			"brand": "Bosch",
+			"power": 150
 		}
 	},
 	{
@@ -734,7 +815,8 @@
 		"name": "Дрель-шуруповерт Bosch GSR 120-LI 2Ач",
 		"properties": {
 			"price": 315473,
-			"color": "chartreuse green"
+			"brand": "Bosch",
+			"power": 150
 		}
 	},
 	{
@@ -743,7 +825,8 @@
 		"name": "Дрель-шуруповерт DEKO GCD12DU3 SET 3 1.5Ач",
 		"properties": {
 			"price": 379780,
-			"color": "azure"
+			"brand": "DEKO",
+			"power": 140
 		}
 	},
 	{
@@ -752,7 +835,8 @@
 		"name": "Дрель-шуруповерт Вихрь ДА-18Л-2КА 1.5Ач",
 		"properties": {
 			"price": 277305,
-			"color": "blue"
+			"brand": "Вихрь",
+			"power": 100
 		}
 	},
 	{
@@ -761,7 +845,8 @@
 		"name": "Дрель-шуруповерт METABO PowerMaxx BS 2Ач",
 		"properties": {
 			"price": 42215,
-			"color": "azure"
+			"brand": "METABO",
+			"power": 120
 		}
 	},
 	{
@@ -770,7 +855,8 @@
 		"name": "Дрель ударная Интерскол ДУ-13/780ЭР",
 		"properties": {
 			"price": 164506,
-			"color": "chartreuse green"
+			"brand": "Интерскол",
+			"power": 140
 		}
 	},
 	{
@@ -779,7 +865,8 @@
 		"name": "Дрель ударная Makita HP1640",
 		"properties": {
 			"price": 200718,
-			"color": "green"
+			"brand": "Makita",
+			"power": 145
 		}
 	},
 	{
@@ -788,7 +875,8 @@
 		"name": "Дрель ударная DEKO DKID600W",
 		"properties": {
 			"price": 219794,
-			"color": "rose"
+			"brand": "DEKO",
+			"power": 150
 		}
 	},
 	{
@@ -797,7 +885,8 @@
 		"name": "Дрель ударная Вихрь ДУ-500",
 		"properties": {
 			"price": 138861,
-			"color": "brown"
+			"brand": "Вихрь",
+			"power": 120
 		}
 	},
 	{
@@ -806,7 +895,8 @@
 		"name": "Дрель ударная Makita HP1640K",
 		"properties": {
 			"price": 135445,
-			"color": "green"
+			"brand": "Makita",
+			"power": 130
 		}
 	},
 	{
@@ -815,7 +905,8 @@
 		"name": "Розетка Schneider Electric Glossa скрытая, заземление, IP20",
 		"properties": {
 			"price": 97473,
-			"color": "red"
+			"brand": "Schneider",
+			"color": "Серый"
 		}
 	},
 	{
@@ -824,7 +915,8 @@
 		"name": "Розетка силовая Schneider Electric AtlasDesign скрытая, заземление, IP20",
 		"properties": {
 			"price": 43479,
-			"color": "white"
+			"brand": "Schneider",
+			"color": "Синий"
 		}
 	},
 	{
@@ -833,7 +925,8 @@
 		"name": "Розетка Schneider Electric Blanca скрытая, заземление, IP20",
 		"properties": {
 			"price": 263835,
-			"color": "spring green"
+			"brand": "Schneider",
+			"color": "Черный"
 		}
 	},
 	{
@@ -842,7 +935,8 @@
 		"name": "Розетка силовая Panasonic Karre Plus & Arkedia Slim скрытая, заземление, IP20",
 		"properties": {
 			"price": 43524,
-			"color": "black"
+			"brand": "Panasonic",
+			"color": "Серый"
 		}
 	},
 	{
@@ -851,7 +945,8 @@
 		"name": "Розетка Schneider Electric Glossa скрытая, заземление, шторки, IP20",
 		"properties": {
 			"price": 213552,
-			"color": "red"
+			"brand": "Schneider",
+			"color": "Серый"
 		}
 	},
 	{
@@ -860,7 +955,8 @@
 		"name": "Выключатель Schneider Electric Glossa 1-клавишный, установка скрытая, IP20",
 		"properties": {
 			"price": 320116,
-			"color": "white"
+			"brand": "Schneider",
+			"color": "Черный"
 		}
 	},
 	{
@@ -869,7 +965,8 @@
 		"name": "Выключатель Schneider Electric AtlasDesign 2-клавишный, установка скрытая, IP20",
 		"properties": {
 			"price": 363348,
-			"color": "yellow"
+			"brand": "Schneider",
+			"color": "Серый"
 		}
 	},
 	{
@@ -878,7 +975,8 @@
 		"name": "Выключатель Schneider Electric Blanca 1-клавишный, установка скрытая, IP20",
 		"properties": {
 			"price": 31379,
-			"color": "rose"
+			"brand": "Schneider",
+			"color": "Белый"
 		}
 	},
     {
@@ -887,7 +985,8 @@
 		"name": "Выключатель Panasonic Karre Plus 2-клавишный, установка скрытая, IP20",
 		"properties": {
 			"price": 13651,
-			"color": "chartreuse green"
+			"brand": "Panasonic",
+			"color": "Белый"
 		}
 	},
 	{
@@ -896,7 +995,8 @@
 		"name": "Выключатель Panasonic 1-клавишный, установка открытая, IP20",
 		"properties": {
 			"price": 52247,
-			"color": "blue"
+			"brand": "Panasonic",
+			"color": "Белый"
 		}
 	}
 ]

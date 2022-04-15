@@ -9,6 +9,10 @@ const ProductItem = (props: any) => {
             <h6>{props.product.name}</h6>
             <br/>
             <p>Цена: {props.product.properties.price} руб.</p>
+            <p>Бренд: {props.product.properties.brand}</p>
+            <p>{'третье свойство'}</p>
+
+            
 
         </div>
     );
