@@ -7,7 +7,7 @@ import {setupStore} from '../store/store';
 import { Provider } from 'react-redux';
 import Cart from './modal/Cart/Cart';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
-import { categoriesSlice } from '../store/categoriesSlice';
+import { categoriesSlice } from '../store/reducers/categoriesSlice';
 
 const App: React.FC = () => {
     const store = setupStore();

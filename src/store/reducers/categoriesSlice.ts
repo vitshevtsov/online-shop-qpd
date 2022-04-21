@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ICategory } from '../types/models/ICategory';
-import {CategoriesState} from '../types/state/CategoriesState';
-import * as categoriesData from '../data/categories.json';
+import { ICategory } from '../../types/models/ICategory';
+import {ICategoriesState} from '../../types/state/ICategoriesState';
+import * as categoriesData from '../../data/categories.json';
 
-const initialState: CategoriesState = {
+const initialState: ICategoriesState = {
     categories: Array.from(categoriesData),
     isLoading: false,
     error: '',
