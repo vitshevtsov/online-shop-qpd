@@ -3,13 +3,15 @@ import { useParams } from 'react-router-dom';
 import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
 import List from '../components/List/List';
 import ProductItem from '../components/ProductItem/ProductItem';
-import * as categories from '../data/categories.json';
 import * as products from '../data/products.json';
+import { useAppSelector } from '../hooks/redux';
 import searchCategory from '../utils/searchCategory';
 
 const Category = () => {
     const {id} = useParams();
-    const category = searchCategory(Array.from(categories), id);
+    const {categories} = useAppSelector(state => state.categoriesReducer);
+
+    const category = searchCategory(categories, id);
     const currentCategoryproducts = Array.from(products).filter((item: any) => item.categoryId === Number(id));
 
     const renderProducts = (product: any) => {

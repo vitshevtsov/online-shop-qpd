@@ -3,20 +3,24 @@ import Header from './Header/Header';
 import '../styles.css';
 import SideMenu from './SideMenu/SideMenu';
 import RoutesComponent from '../routes/Routes';
-import {store} from '../store/store';
+import {setupStore} from '../store/store';
 import { Provider } from 'react-redux';
 import Cart from './modal/Cart/Cart';
+import { useAppDispatch, useAppSelector } from '../hooks/redux';
+import { categoriesSlice } from '../store/categoriesSlice';
 
 const App: React.FC = () => {
-    // const { openedItemId } = useContext(DataContext);
-    // const appClassNames = (openedItemId !== null) // при открытом модальном окне openedItemId = 0 (для новых задач) или = id (редактирование / удаление)
-    //   ? ['app', 'appWithOpenModal'].join(' ')
-    //   : 'app';
-    const appClassNames = 'needToReplace';
+    const store = setupStore();
+    const {categories} = useAppSelector(state => state.categoriesReducer);
+
+    const {addCategories} = categoriesSlice.actions;
+    const dispatch = useAppDispatch();
 
     return (
         <Provider store={store}>
-            <div className={appClassNames}>
+            <div>{categories ? categories.map((item) => <div key={item.id}>{item.name}</div>) : 'категорий пока нет'}</div>
+            <button onClick={() => dispatch(addCategories([{id: 123, name: 'name',}])) }>add categories</button>
+            <div>
                 <Header>
                 </Header>
                 <SideMenu />
