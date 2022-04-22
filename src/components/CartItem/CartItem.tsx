@@ -1,47 +1,35 @@
 import React from 'react';
+import { useAppDispatch } from '../../hooks/redux';
+import {cartSlice} from '../../store/reducers/cartSlice';
+
 
 const CartItem = (props: any) => {
+    const {removeFromCart} = cartSlice.actions;
+    const dispatch = useAppDispatch();
+    const handleRemoveFromCart = () => {
+        dispatch(removeFromCart(props.product.id));
+    };
+
     return (
         <div 
             id={props.product.id} 
-            className="list-group-item list-group-item-action"
+            className="list-group-item"
         >
-            <h6>{props.product.name}</h6>
-            <br/>
-            <p>Цена: {props.product.properties.price} руб.</p>
-            <p>Бренд: {props.product.properties.brand}</p>
-            <p>{'третье свойство'}</p>
+            <div className="row">
+                <div className="col-8">
+                    <h6>{props.product.name}</h6>
+                    <p>Бренд: {props.product.properties.brand}</p>
+                    <p>{'третье свойство'}</p>
+                </div>
+                <div className="col-4">
+                    <p>Цена: {props.product.properties.price} руб.</p>
+                    <label htmlFor="quantity" className="form-label">Quantity</label>
+                    <input type="number" className="form-control" id="quantity"></input>
+                    <button className="btn-primary" onClick={handleRemoveFromCart}>Удалить из корзины</button>
+                </div>
+            </div>
         </div>
     );
 };
 
 export default CartItem;
-
-// listItem Example from bootstrap
-
-{/* <div className="list-group">
-    <a href="#" className="list-group-item list-group-item-action active" aria-current="true">
-        <div className="d-flex w-100 justify-content-between">
-            <h5 className="mb-1">List group item heading</h5>
-            <small>3 days ago</small>
-        </div>
-        <p className="mb-1">Some placeholder content in a paragraph.</p>
-        <small>And some small print.</small>
-    </a>
-    <a href="#" className="list-group-item list-group-item-action">
-        <div className="d-flex w-100 justify-content-between">
-            <h5 className="mb-1">List group item heading</h5>
-            <small className="text-muted">3 days ago</small>
-        </div>
-        <p className="mb-1">Some placeholder content in a paragraph.</p>
-        <small className="text-muted">And some muted small print.</small>
-    </a>
-    <a href="#" className="list-group-item list-group-item-action">
-        <div className="d-flex w-100 justify-content-between">
-            <h5 className="mb-1">List group item heading</h5>
-            <small className="text-muted">3 days ago</small>
-        </div>
-        <p className="mb-1">Some placeholder content in a paragraph.</p>
-        <small className="text-muted">And some muted small print.</small>
-    </a>
-</div>; */}

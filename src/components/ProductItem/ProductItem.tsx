@@ -1,8 +1,15 @@
 import React from 'react';
-import { useAppDispatch } from '../../hooks/redux';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {cartSlice} from '../../store/reducers/cartSlice';
 
 const ProductItem = (props: any) => {
+
+    const {cart} = useAppSelector(state => state.cartReducer);
+
+    const isInCart: boolean = cart.some(item => item.id === props.product.id);
+    const buttonClassNames = (isInCart)
+        ? 'btn btn-outline-primary'
+        : 'btn btn-primary';
 
     // const {stock} = useAppSelector(state => state.categoriesReducer);
     const {addToCart} = cartSlice.actions;
@@ -27,7 +34,9 @@ const ProductItem = (props: any) => {
                 </div>
                 <div className="col">
                     <p>Цена: {props.product.properties.price} руб.</p>
-                    <button className="btn btn-primary" onClick={handleAddToCart}>Добавить в корзину</button>
+                    <button className={buttonClassNames} onClick={() => !isInCart && handleAddToCart()}>
+                        {isInCart ? 'Товар уже в корзине' : 'Добавить в корзину'}
+                    </button>
                 </div>
             </div>
         </div>

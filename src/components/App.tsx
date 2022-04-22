@@ -12,12 +12,10 @@ const App: React.FC = () => {
 
     return (
         <Provider store={store}>
-            <div>
-                <Header />
-                <SideMenu />
-                <Cart />
-                <RoutesComponent />
-            </div>
+            <Header />
+            <SideMenu />
+            <Cart />
+            <RoutesComponent />
         </Provider>
         
     );
