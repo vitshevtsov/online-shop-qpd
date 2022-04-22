@@ -6,20 +6,12 @@ import RoutesComponent from '../routes/Routes';
 import {setupStore} from '../store/store';
 import { Provider } from 'react-redux';
 import Cart from './Cart/Cart';
-import { useAppDispatch, useAppSelector } from '../hooks/redux';
-import { categoriesSlice } from '../store/reducers/categoriesSlice';
 
 const App: React.FC = () => {
     const store = setupStore();
-    const {categories} = useAppSelector(state => state.categoriesReducer);
-
-    const {addCategories} = categoriesSlice.actions;
-    const dispatch = useAppDispatch();
 
     return (
         <Provider store={store}>
-            <div>{categories ? categories.map((item) => <div key={item.id}>{item.name}</div>) : 'категорий пока нет'}</div>
-            <button onClick={() => dispatch(addCategories([{id: 123, name: 'name',}])) }>add categories</button>
             <div>
                 <Header />
                 <SideMenu />

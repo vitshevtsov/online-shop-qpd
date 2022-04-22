@@ -1,19 +1,35 @@
 import React from 'react';
+import { useAppDispatch } from '../../hooks/redux';
+import {cartSlice} from '../../store/reducers/cartSlice';
 
 const ProductItem = (props: any) => {
+
+    // const {stock} = useAppSelector(state => state.categoriesReducer);
+    const {addToCart} = cartSlice.actions;
+    const dispatch = useAppDispatch();
+
+
+    const handleAddToCart = () => {
+        dispatch(addToCart({...props.product, quantity: 1}));
+    };
+
     return (
         <div 
             id={props.product.id} 
             className="list-group-item list-group-item-action"
         >
-            <h6>{props.product.name}</h6>
-            <br/>
-            <p>Цена: {props.product.properties.price} руб.</p>
-            <p>Бренд: {props.product.properties.brand}</p>
-            <p>{'третье свойство'}</p>
-
-            
-
+            <div className="row row-cols-2">
+                <div className="col">
+                    <h6>{props.product.name}</h6>
+                    <br/>
+                    <p>Бренд: {props.product.properties.brand}</p>
+                    <p>{'третье свойство'}</p>
+                </div>
+                <div className="col">
+                    <p>Цена: {props.product.properties.price} руб.</p>
+                    <button className="btn btn-primary" onClick={handleAddToCart}>Добавить в корзину</button>
+                </div>
+            </div>
         </div>
     );
 };
