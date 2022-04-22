@@ -7,6 +7,7 @@ import List from '../List/List';
 const Cart = () => {
 
     const {cart} = useAppSelector(state => state.cartReducer);
+    
 
     const renderCartItem = (cartItem: any) => {
         return (
@@ -18,8 +19,17 @@ const Cart = () => {
 
     const handleClearCart = () => {
         dispatch(clearCart());
-
     };
+
+    // todo переделать хэндлер на переключение модалок с помощью бутстрапа (см. раздел toggle between modals)
+    const handleOpenOrderForm = () => {
+        console.log('lol');
+    };
+
+    const primButton = (cart.length)
+        ? <button type="button" className="btn btn-primary" onClick={handleOpenOrderForm}>Оформить заказ</button>
+        : <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Продолжить покупки</button>;
+ 
 
 
     return (
@@ -36,7 +46,7 @@ const Cart = () => {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" onClick={handleClearCart}>Очистить корзину</button>
-                        <button type="button" className="btn btn-primary">Оформить заказ</button>
+                        {primButton}
                     </div>
                 </div>
             </div>

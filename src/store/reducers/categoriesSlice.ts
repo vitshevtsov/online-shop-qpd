@@ -13,10 +13,6 @@ export const categoriesSlice = createSlice({
     name: 'categories',
     initialState,
     reducers: {
-        addCategories(state, action: PayloadAction<ICategory[]>) {
-            console.log(action.payload);
-            state.categories = [...state.categories, ...action.payload];
-        }
     },
 });
 
