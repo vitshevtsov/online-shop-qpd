@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {ordersSlice} from '../../store/reducers/ordersSlice';
 import { cartSlice } from '../../store/reducers/cartSlice';
+import { stockSlice } from '../../store/reducers/stockSlice';
 import { IOrder } from '../../types/models/IOrder';
 import handleOnChangeRequiredInput from '../../utils/handleOnChangeRequiredInput';
 import CustomInput from '../CustomInput/CustomInput';
@@ -77,6 +78,7 @@ const OrderForm = () => {
     const {orders} = useAppSelector(state => state.ordersReducer);
     const {addToOrders} = ordersSlice.actions;
     const {clearCart} = cartSlice.actions;
+    const {changeStockQuantity} = stockSlice.actions;
     const dispatch = useAppDispatch();
 
     const handleAddToOrders = () => {
@@ -95,6 +97,7 @@ const OrderForm = () => {
             }
             dispatch(addToOrders(order));
             dispatch(clearCart());
+            dispatch(changeStockQuantity(cart));
             alert(JSON.stringify(order));
         } else {
             // setNameIsDirty(true);

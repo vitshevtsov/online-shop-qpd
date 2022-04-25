@@ -5,13 +5,24 @@ import {cartSlice} from '../../store/reducers/cartSlice';
 const ProductItem = (props: any) => {
 
     const {cart} = useAppSelector(state => state.cartReducer);
+    const {stock} = useAppSelector(state => state.stockReducer);
+
 
     const isInCart: boolean = cart.some(item => item.id === props.product.id);
-    const buttonClassNames = (isInCart)
+    const isInStock: boolean = stock.some(item => item.productId === props.product.id && item.quantity > 0);
+    
+    const addInCartButtonClassNames = (isInCart)
         ? 'btn btn-outline-primary'
         : 'btn btn-primary';
 
-    // const {stock} = useAppSelector(state => state.categoriesReducer);
+    const addInCartButton = (isInStock)
+        ? <button className={addInCartButtonClassNames} onClick={() => !isInCart && handleAddToCart()}>
+            {isInCart ? 'Товар уже в корзине' : 'Добавить в корзину'}
+        </button>
+        : <button className="btn btn-outline-secondary" disabled>
+            Товар закончился
+        </button>;
+    
     const {addToCart} = cartSlice.actions;
     const dispatch = useAppDispatch();
 
@@ -34,9 +45,7 @@ const ProductItem = (props: any) => {
                 </div>
                 <div className="col">
                     <p>Цена: {props.product.properties.price} руб.</p>
-                    <button className={buttonClassNames} onClick={() => !isInCart && handleAddToCart()}>
-                        {isInCart ? 'Товар уже в корзине' : 'Добавить в корзину'}
-                    </button>
+                    {addInCartButton}
                 </div>
             </div>
         </div>

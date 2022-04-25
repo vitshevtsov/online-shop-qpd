@@ -1,9 +1,11 @@
 import React from 'react';
-import { useAppDispatch } from '../../hooks/redux';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {cartSlice} from '../../store/reducers/cartSlice';
 
 
 const CartItem = (props: any) => {
+    const {stock} = useAppSelector(state => state.stockReducer);
+    const stockQuantity = stock.find((item) => item.productId === props.product.id)?.quantity;
     const {removeFromCart, changeQuantity} = cartSlice.actions;
     const dispatch = useAppDispatch();
     const handleRemoveFromCart = () => {
@@ -11,7 +13,7 @@ const CartItem = (props: any) => {
     };
 
     const handleQuantityInput = (e: any) => {
-        if (e.target.value >=1) {
+        if (e.target.value >=1 && stockQuantity && e.target.value <= stockQuantity) {
             dispatch(changeQuantity([e.target.value, props.product.id]));
         }
     };
