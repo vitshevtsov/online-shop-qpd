@@ -4,10 +4,16 @@ import {cartSlice} from '../../store/reducers/cartSlice';
 
 
 const CartItem = (props: any) => {
-    const {removeFromCart} = cartSlice.actions;
+    const {removeFromCart, changeQuantity} = cartSlice.actions;
     const dispatch = useAppDispatch();
     const handleRemoveFromCart = () => {
         dispatch(removeFromCart(props.product.id));
+    };
+
+    const handleQuantityInput = (e: any) => {
+        if (e.target.value >=1) {
+            dispatch(changeQuantity([e.target.value, props.product.id]));
+        }
     };
 
     return (
@@ -24,7 +30,13 @@ const CartItem = (props: any) => {
                 <div className="col-4">
                     <p>Цена: {props.product.properties.price} руб.</p>
                     <label htmlFor="quantity" className="form-label">Quantity</label>
-                    <input type="number" className="form-control" id="quantity"></input>
+                    <input 
+                        type="number" 
+                        className="form-control" 
+                        id="quantity" 
+                        value={props.product.quantity}
+                        onChange={handleQuantityInput}
+                    />
                     <button className="btn-primary" onClick={handleRemoveFromCart}>Удалить из корзины</button>
                 </div>
             </div>

@@ -30,7 +30,7 @@
         "semi": [
             "warn", "always"
         ],
-        "indent": ["error", 4],
+        "indent": ["warn", 4],
         "no-multi-spaces": ["warn"]
     }
 }

@@ -6,6 +6,7 @@ import RoutesComponent from '../routes/Routes';
 import {setupStore} from '../store/store';
 import { Provider } from 'react-redux';
 import Cart from './Cart/Cart';
+import OrderForm from './OrderForm.ts/OrderForm';
 
 const App: React.FC = () => {
     const store = setupStore();
@@ -15,6 +16,7 @@ const App: React.FC = () => {
             <Header />
             <SideMenu />
             <Cart />
+            <OrderForm />
             <RoutesComponent />
         </Provider>
         

@@ -20,6 +20,14 @@ export const cartSlice = createSlice({
         },
         clearCart(state) {
             state.cart = [];
+        },
+        changeQuantity(state, action: PayloadAction<[number, number]>) {
+            for (let i = 0; i < state.cart.length; i++) {
+                if (state.cart[i].id === action.payload[1]) {
+                    state.cart[i].quantity = action.payload[0];
+                    break;
+                }
+            }
         }
     },
 });

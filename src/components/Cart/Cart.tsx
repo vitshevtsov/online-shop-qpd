@@ -21,16 +21,9 @@ const Cart = () => {
         dispatch(clearCart());
     };
 
-    // todo переделать хэндлер на переключение модалок с помощью бутстрапа (см. раздел toggle between modals)
-    const handleOpenOrderForm = () => {
-        console.log('lol');
-    };
-
     const primButton = (cart.length)
-        ? <button type="button" className="btn btn-primary" onClick={handleOpenOrderForm}>Оформить заказ</button>
+        ? <button type="button" className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Оформить заказ</button>
         : <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Продолжить покупки</button>;
- 
-
 
     return (
         <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
