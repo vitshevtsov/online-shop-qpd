@@ -147,7 +147,7 @@
 							"id": 5493326664410312,
 							"name": "Стиральные машины",
 							"properties": ["price", "brand", "volume"],
-							"imgPath": "/assets/categories/washingmachines.jpg"
+							"imgPath": "/assets/categories/washingmachines.png"
 						}
 					]
 				},
