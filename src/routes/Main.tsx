@@ -1,12 +1,16 @@
 import React from 'react';
 import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
-import { useAppSelector } from '../hooks/redux';
+import getPopularCategories from '../utils/getPopularCategories';
 
 const Main = () => {
-    const {categories} = useAppSelector(state => state.categoriesReducer); // todo логика популярных категорий
     return (
-        <CategoryGroupsPanel categories={categories} />
+        <div className="container-md">
+            <h5>Популярные категории</h5>
+            <CategoryGroupsPanel categories={getPopularCategories()} />
+        </div>
     );
+
+
 };
 
 export default Main;

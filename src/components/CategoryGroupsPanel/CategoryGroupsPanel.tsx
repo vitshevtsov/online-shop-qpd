@@ -6,10 +6,10 @@ const CategoryGroupsPanel = (props: any) => {
     const renderPanelCategory =(category: any) => {
         return (
             <div key={category.id} className="col">
-                <Link to={`/category${category.id}`} className="card h-100 list-group-item list-group-item-action">
-                    <img src="..." className="card-img-top" alt="..." />
+                <Link to={`/category${category.id}`} className="card h-100 list-group-item list-group-item-action text-center">
+                    <img src={category.imgPath} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title">{category.name}</h5>
+                        <h6 className="card-title">{category.name}</h6>
                     </div>
                 </Link>
             </div>
