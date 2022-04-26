@@ -17,9 +17,11 @@ const Orders = () => {
         );
     };
     return (
-        (orders.length !== 0)
-            ? <List items={orders} renderItem={renderOrders}/>
-            : <div>Пока нет заказов</div>
+        <div className="container-md">
+            {(orders.length !== 0)
+                ? <List items={orders} renderItem={renderOrders}/>
+                : <div>Пока нет заказов</div>}
+        </div>
     );
 };
 
