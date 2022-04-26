@@ -1,7 +1,6 @@
 import React from 'react';
 import CheckFilter from '../../components/UI/CheckFilter/CheckFilter';
 import RangeFilter from '../../components/UI/RangeFilter/RangeFilter';
-import mapPropertyName from '../../utils/mapPropertyName';
 
 const CategoryFilters = (props: any) => {
     const categoryFilters = props.category.properties.map((propertyName: string) => {
@@ -10,7 +9,12 @@ const CategoryFilters = (props: any) => {
             return <RangeFilter key='price' />;
         }
         const propertyVariants = Array.from(new Set(props.categoryProducts.map((item: any) => item.properties[propertyName])));
-        return <CheckFilter key={propertyName} filterTitle={mapPropertyName(propertyName)} properties={propertyVariants} />;
+        return <CheckFilter 
+            key={propertyName} 
+            filterTitle={propertyName} 
+            variants={propertyVariants}
+            onChangeCheckboxes={props.onChangeCheckboxes}
+        />;
 
     });
 
