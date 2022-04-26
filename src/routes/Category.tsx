@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
 import List from '../components/List/List';
@@ -12,20 +12,52 @@ const Category = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const {id} = useParams();
     const category = searchCategory(categories, id);
+    const isChildCategory: boolean = (category.properties);
     const currentCategoryProducts = products.filter((item: any) => item.categoryId === Number(id));
 
     const properties = category.properties;
     const initialState: any = {};
-    properties.forEach((propertyName: string) => {
-        initialState[propertyName] = [];
-    });
-    console.log(initialState);
-    const [selectedProperties, setSelectedProperties] = useState(initialState);
+    if (properties) {
+        properties.forEach((propertyName: string) => {
+            initialState[propertyName] = [];
+        });
+    }
 
+    const [selectedProperties, setSelectedProperties] = useState(initialState);
+    console.log(selectedProperties);
+
+    // без использования эффекта состояние не обновляется при переходе на другую категорию каталога
+    useEffect(() => {
+        setSelectedProperties(initialState);
+    }, [category]);
+    
+
+    const filterProducts = (productsArr: any[], filterQuery: any) => {
+        let result = productsArr;
+        for (const property in filterQuery) {
+            if (filterQuery[property].length) {
+                result = result.filter((item: any) => filterQuery[property].includes(item.properties[property]));
+            }
+        }
+        return result;
+    };
+    const filteredProducts = filterProducts(currentCategoryProducts, selectedProperties);
 
     const handleSelectProperty = (e: any) => {
+        const newProperties = {...selectedProperties};
+        console.log(typeof e.target.value);
+        console.log(e.target.name);
+
+        if (newProperties[e.target.name].includes(e.target.value)) {
+            newProperties[e.target.name] = newProperties[e.target.name].filter((item: any) => item !== e.target.value);
+        } else {
+            newProperties[e.target.name] = [...newProperties[e.target.name], e.target.value];
+        }
+        setSelectedProperties(newProperties);
+        console.log(selectedProperties);
+
         console.log(e.target.value);
-        console.log(e.target.id);
+        console.log(e.target.name);
     };
 
     const renderProducts = (product: any) => {
@@ -43,15 +75,21 @@ const Category = () => {
                         <h5>
                             {category.name}
                         </h5>
-                        <List items={currentCategoryProducts} renderItem={renderProducts} />
+                        <List items={filteredProducts} renderItem={renderProducts} />
                     </div>
                     <div className="col-4">
-                        <CategoryFilters 
+                        {isChildCategory && <CategoryFilters 
                             category={category} 
                             categoryProducts={currentCategoryProducts}
                             onChangeCheckboxes={handleSelectProperty}
                         
-                        />
+                        />}
+                        {/* <CategoryFilters 
+                            category={category} 
+                            categoryProducts={currentCategoryProducts}
+                            onChangeCheckboxes={handleSelectProperty}
+                        
+                        /> */}
                     </div>
                 </div>
             </div>     

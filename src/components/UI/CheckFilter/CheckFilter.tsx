@@ -8,7 +8,7 @@ const CheckFilter = (props: any) => {
             {props.variants.map((propertyVariant: string) => {
                 return (
                     <div key={propertyVariant} className="form-check">
-                        <input className="form-check-input" type="checkbox" value={propertyVariant} id={props.filterTitle} onChange={props.onChangeCheckboxes}/>
+                        <input className="form-check-input" type="checkbox" value={propertyVariant} name={props.filterTitle} onChange={props.onChangeCheckboxes}/>
                         <label className="form-check-label" htmlFor={props.filterTitle}>
                             {propertyVariant}
                         </label>
