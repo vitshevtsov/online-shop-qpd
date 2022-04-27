@@ -79,13 +79,13 @@ const Category = () => {
             ? <CategoryGroupsPanel categories={category.children} />
             : <div className="container-md">
                 <div className="row">
-                    <div className="col-8">
+                    <div className="col-9">
                         <h5>
                             {category.name}
                         </h5>
                         <List items={filteredProducts} renderItem={renderProducts} />
                     </div>
-                    <div className="col-4">
+                    <div className="col-3">
                         {isChildCategory && <CategoryFilters 
                             category={category} 
                             categoryProducts={currentCategoryProducts}
