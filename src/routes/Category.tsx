@@ -82,14 +82,7 @@ const Category = () => {
                             category={category} 
                             categoryProducts={currentCategoryProducts}
                             onChangeCheckboxes={handleSelectProperty}
-                        
                         />}
-                        {/* <CategoryFilters 
-                            category={category} 
-                            categoryProducts={currentCategoryProducts}
-                            onChangeCheckboxes={handleSelectProperty}
-                        
-                        /> */}
                     </div>
                 </div>
             </div>     

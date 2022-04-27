@@ -1,10 +1,11 @@
 import React from 'react';
+import List from '../../components/List/List';
 import CheckFilter from '../../components/UI/CheckFilter/CheckFilter';
 import RangeFilter from '../../components/UI/RangeFilter/RangeFilter';
 
 const CategoryFilters = (props: any) => {
-    const categoryFilters = props.category.properties.map((propertyName: string) => {
 
+    const renderCategoryFilters = (propertyName: string) => {
         if (propertyName === 'price') {
             return <RangeFilter key='price' />;
         }
@@ -15,13 +16,12 @@ const CategoryFilters = (props: any) => {
             variants={propertyVariants}
             onChangeCheckboxes={props.onChangeCheckboxes}
         />;
-
-    });
+    };
 
     return (
         <>
             <h5>Фильтры</h5>
-            {categoryFilters}
+            <List items={props.category.properties} renderItem={renderCategoryFilters} />
         </>
     );
 };

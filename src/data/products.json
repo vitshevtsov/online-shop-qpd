@@ -206,7 +206,7 @@
 		"properties": {
 			"price": 113292,
 			"brand": "iRU",
-			"RAM": 16
+			"RAM": "16"
 		}
 	},
 	{
@@ -216,7 +216,7 @@
 		"properties": {
 			"price": 7277,
 			"brand": "iRU",
-			"RAM": 16
+			"RAM": "16"
 		}
 	},
 	{
@@ -226,7 +226,7 @@
 		"properties": {
 			"price": 90837,
 			"brand": "Acer",
-			"RAM": 8
+			"RAM": "8"
 		}
 	},
 	{
@@ -236,7 +236,7 @@
 		"properties": {
 			"price": 136217,
 			"brand": "Acer",
-			"RAM": 8
+			"RAM": "8"
 		}
 	},
 	{
@@ -246,7 +246,7 @@
 		"properties": {
 			"price": 302387,
 			"brand": "iRU",
-			"RAM": 32
+			"RAM": "32"
 		}
 	},
 	{
@@ -256,7 +256,7 @@
 		"properties": {
 			"price": 116458,
 			"brand": "Huawei",
-			"RAM": 16
+			"RAM": "16"
 		}
 	},
 	{
@@ -266,7 +266,7 @@
 		"properties": {
 			"price": 213212,
 			"brand": "Lenovo",
-			"RAM": 16
+			"RAM": "16"
 		}
 	},
 	{
@@ -276,7 +276,7 @@
 		"properties": {
 			"price": 72253,
 			"brand": "Acer",
-			"RAM": 16
+			"RAM": "16"
 		}
 	},
 	{
@@ -286,7 +286,7 @@
 		"properties": {
 			"price": 42508,
 			"brand": "Digma",
-			"RAM": 8
+			"RAM": "8"
 		}
 	},
 	{
@@ -296,7 +296,7 @@
 		"properties": {
 			"price": 390849,
 			"brand": "ASUS",
-			"RAM": 32
+			"RAM": "32"
 		}
 	},
 	{
@@ -406,7 +406,7 @@
 		"properties": {
 			"price": 85000,
 			"brand": "Xiaomi",
-			"diagonal": 32
+			"diagonal": "32"
 		}
 	},
 	{
@@ -416,7 +416,7 @@
 		"properties": {
 			"price": 194375,
 			"brand": "LG",
-			"diagonal": 32
+			"diagonal": "32"
 		}
 	},
 	{
@@ -426,7 +426,7 @@
 		"properties": {
 			"price": 294276,
 			"brand": "LG",
-			"diagonal": 43
+			"diagonal": "43"
 		}
 	},
 	{
@@ -436,7 +436,7 @@
 		"properties": {
 			"price": 381782,
 			"brand": "Digma",
-			"diagonal": 32
+			"diagonal": "32"
 		}
 	},
 	{
@@ -446,7 +446,7 @@
 		"properties": {
 			"price": 177210,
 			"brand": "BBK",
-			"diagonal": 32
+			"diagonal": "32"
 		}
 	},
 	{
@@ -456,7 +456,7 @@
 		"properties": {
 			"price": 46051,
 			"brand": "Xiaomi",
-			"RAM": 2
+			"RAM": "2"
 		}
 	},
 	{
@@ -466,7 +466,7 @@
 		"properties": {
 			"price": 24016,
 			"brand": "ЯНДЕКС",
-			"RAM": 2
+			"RAM": "2"
 		}
 	},
 	{
@@ -476,7 +476,7 @@
 		"properties": {
 			"price": 206770,
 			"brand": "Xiaomi",
-			"RAM": 4
+			"RAM": "4"
 		}
 	},
 	{
@@ -486,7 +486,7 @@
 		"properties": {
 			"price": 364108,
 			"brand": "SBER",
-			"RAM": 1
+			"RAM": "1"
 		}
 	},
 	{
@@ -496,7 +496,7 @@
 		"properties": {
 			"price": 126611,
 			"brand": "ROMBICA",
-			"RAM": 2
+			"RAM": "2"
 		}
 	},
 	{
@@ -506,7 +506,7 @@
 		"properties": {
 			"price": 389661,
 			"brand": "Xiaomi",
-			"power": 150
+			"power": "150"
 		}
 	},
 	{
@@ -516,7 +516,7 @@
 		"properties": {
 			"price": 119713,
 			"brand": "JBL",
-			"power": 200
+			"power": "200"
 		}
 	},
 	{
@@ -526,7 +526,7 @@
 		"properties": {
 			"price": 26258,
 			"brand": "LG",
-			"power": 200
+			"power": "200"
 		}
 	},
 	{
@@ -536,7 +536,7 @@
 		"properties": {
 			"price": 348434,
 			"brand": "Ginzzu",
-			"power": 150
+			"power": "150"
 		}
 	},
 	{
@@ -546,7 +546,7 @@
 		"properties": {
 			"price": 91834,
 			"brand": "Hisense",
-			"power": 180
+			"power": "180"
 		}
 	},
 	{
@@ -556,7 +556,7 @@
 		"properties": {
 			"price": 325099,
 			"brand": "Hyundai",
-			"power": 100
+			"power": "100"
 		}
 	},
 	{
@@ -566,7 +566,7 @@
 		"properties": {
 			"price": 355637,
 			"brand": "Hyundai",
-			"power": 90
+			"power": "90"
 		}
 	},
 	{
@@ -576,7 +576,7 @@
 		"properties": {
 			"price": 70266,
 			"brand": "Hyundai",
-			"power": 90
+			"power": "90"
 		}
 	},
 	{
@@ -586,7 +586,7 @@
 		"properties": {
 			"price": 152186,
 			"brand": "Panasonic",
-			"power": 110
+			"power": "110"
 		}
 	},
 	{
@@ -596,7 +596,7 @@
 		"properties": {
 			"price": 123488,
 			"brand": "Supra",
-			"power": 130
+			"power": "130"
 		}
 	},
 	{
@@ -606,7 +606,7 @@
 		"properties": {
 			"price": 363391,
 			"brand": "STINOL",
-			"height": 205
+			"height": "205"
 		}
 	},
 	{
@@ -616,7 +616,7 @@
 		"properties": {
 			"price": 32328,
 			"brand": "Indesit",
-			"height": 180
+			"height": "180"
 		}
 	},
 	{
@@ -626,7 +626,7 @@
 		"properties": {
 			"price": 262189,
 			"brand": "NORDFROST",
-			"height": 150
+			"height": "150"
 		}
 	},
 	{
@@ -646,7 +646,7 @@
 		"properties": {
 			"price": 129549,
 			"brand": "Indesit",
-			"height": 220
+			"height": "220"
 		}
 	},
 	{
@@ -656,7 +656,7 @@
 		"properties": {
 			"price": 221680,
 			"brand": "Candy",
-			"volume": 5
+			"volume": "5"
 		}
 	},
 	{
@@ -666,7 +666,7 @@
 		"properties": {
 			"price": 242602,
 			"brand": "Indesit",
-			"volume": 4
+			"volume": "4"
 		}
 	},
 	{
@@ -676,7 +676,7 @@
 		"properties": {
 			"price": 307257,
 			"brand": "LG",
-			"volume": 6
+			"volume": "6"
 		}
 	},
 	{
@@ -686,7 +686,7 @@
 		"properties": {
 			"price": 384644,
 			"brand": "Indesit",
-			"volume": 5
+			"volume": "5"
 		}
 	},
 	{
@@ -696,7 +696,7 @@
 		"properties": {
 			"price": 111344,
 			"brand": "Hotpoint-Ariston",
-			"volume": 4
+			"volume": "4"
 		}
 	},
 	{
@@ -706,7 +706,7 @@
 		"properties": {
 			"price": 187732,
 			"brand": "Electrolux",
-			"height": 100
+			"height": "100"
 		}
 	},
 	{
@@ -716,7 +716,7 @@
 		"properties": {
 			"price": 145654,
 			"brand": "Electrolux",
-			"height": 110
+			"height": "110"
 		}
 	},
 	{
@@ -726,7 +726,7 @@
 		"properties": {
 			"price": 364504,
 			"brand": "Darina",
-			"height": 100
+			"height": "100"
 		}
 	},
 	{
@@ -736,7 +736,7 @@
 		"properties": {
 			"price": 177000,
 			"brand": "Bosch",
-			"height": 120
+			"height": "120"
 		}
 	},
 	{
@@ -746,7 +746,7 @@
 		"properties": {
 			"price": 376519,
 			"brand": "Electrolux",
-			"height": 105
+			"height": "105"
 		}
 	},
 	{
@@ -756,7 +756,7 @@
 		"properties": {
 			"price": 68409,
 			"brand": "MAUNFELD",
-			"height": 80
+			"height": "80"
 		}
 	},
     {
@@ -766,7 +766,7 @@
 		"properties": {
 			"price": 368455,
 			"brand": "Samsung",
-			"height": 90
+			"height": "90"
 		}
 	},
 	{
@@ -776,7 +776,7 @@
 		"properties": {
 			"price": 897,
 			"brand": "Candy",
-			"height": 100
+			"height": "100"
 		}
 	},
 	{
@@ -786,7 +786,7 @@
 		"properties": {
 			"price": 77084,
 			"brand": "MAUNFELD",
-			"height": 90
+			"height": "90"
 		}
 	},
 	{
@@ -796,7 +796,7 @@
 		"properties": {
 			"price": 180231,
 			"brand": "LEX",
-			"height": 150
+			"height": "150"
 		}
 	},
 	{
@@ -806,7 +806,7 @@
 		"properties": {
 			"price": 64549,
 			"brand": "Bosch",
-			"power": 150
+			"power": "150"
 		}
 	},
 	{
@@ -816,7 +816,7 @@
 		"properties": {
 			"price": 315473,
 			"brand": "Bosch",
-			"power": 150
+			"power": "150"
 		}
 	},
 	{
@@ -826,7 +826,7 @@
 		"properties": {
 			"price": 379780,
 			"brand": "DEKO",
-			"power": 140
+			"power": "140"
 		}
 	},
 	{
@@ -836,7 +836,7 @@
 		"properties": {
 			"price": 277305,
 			"brand": "Вихрь",
-			"power": 100
+			"power": "100"
 		}
 	},
 	{
@@ -846,7 +846,7 @@
 		"properties": {
 			"price": 42215,
 			"brand": "METABO",
-			"power": 120
+			"power": "120"
 		}
 	},
 	{
@@ -856,7 +856,7 @@
 		"properties": {
 			"price": 164506,
 			"brand": "Интерскол",
-			"power": 140
+			"power": "140"
 		}
 	},
 	{
@@ -866,7 +866,7 @@
 		"properties": {
 			"price": 200718,
 			"brand": "Makita",
-			"power": 145
+			"power": "145"
 		}
 	},
 	{
@@ -876,7 +876,7 @@
 		"properties": {
 			"price": 219794,
 			"brand": "DEKO",
-			"power": 150
+			"power": "150"
 		}
 	},
 	{
@@ -886,7 +886,7 @@
 		"properties": {
 			"price": 138861,
 			"brand": "Вихрь",
-			"power": 120
+			"power": "120"
 		}
 	},
 	{
@@ -896,7 +896,7 @@
 		"properties": {
 			"price": 135445,
 			"brand": "Makita",
-			"power": 130
+			"power": "130"
 		}
 	},
 	{
