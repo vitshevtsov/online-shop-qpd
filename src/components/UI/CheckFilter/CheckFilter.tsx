@@ -15,7 +15,7 @@ const CheckFilter = (props: any) => {
     };
     return (
         <>
-            <p>{mapPropertyName(props.filterTitle)}</p>
+            <p className="mt-3">{mapPropertyName(props.filterTitle)}</p>
             <List items={props.variants} renderItem={renderPropertyVariant} />
         </>
 

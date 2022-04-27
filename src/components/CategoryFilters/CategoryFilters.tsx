@@ -9,22 +9,22 @@ const CategoryFilters = (props: any) => {
 
     const renderCategoryFilters = (propertyName: string) => {
         if (propertyName === 'price') {
-            return <>
-                <RangeFilter key='price' />
-                <br />
-            </>;
+            return <RangeFilter
+                key='price'
+                priceRange={props.priceRange}
+                maxPriceRange={props.maxPriceRange}
+                onChangeMinPrice={props.onChangeMinPrice}
+                onChangeMaxPrice={props.onChangeMaxPrice}
+                onChangePriceRange={props.onChangePriceRange}
+            />;
         }
         const propertyVariants = Array.from(new Set(props.categoryProducts.map((item: any) => item.properties[propertyName])));
-        return <>
-            <CheckFilter 
-                key={propertyName} 
-                filterTitle={propertyName} 
-                variants={propertyVariants}
-                onChangeCheckboxes={props.onChangeCheckboxes}
-            />
-            <br />
-        </>;
-        
+        return <CheckFilter 
+            key={propertyName} 
+            filterTitle={propertyName} 
+            variants={propertyVariants}
+            onChangeCheckboxes={props.onChangeCheckboxes}
+        />;    
     };
 
     return (

@@ -6,6 +6,7 @@ import ProductItem from '../components/ProductItem/ProductItem';
 import { useAppSelector } from '../hooks/redux';
 import searchCategory from '../utils/searchCategory';
 import CategoryFilters from '../components/CategoryFilters/CategoryFilters';
+import filterProducts from '../utils/filterProducts';
 
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
@@ -14,34 +15,45 @@ const Category = () => {
     const category = searchCategory(categories, id);
     const isChildCategory: boolean = (category.properties);
     const currentCategoryProducts = products.filter((item: any) => item.categoryId === Number(id));
-
+    
     const properties = category.properties;
-    const initialState: any = {};
+    const currentPricesSortedArr = currentCategoryProducts.map(product => product.properties.price).sort((a,b) => a - b);
+    const initialPriceRange = (currentPricesSortedArr.length > 1)
+        ? [currentPricesSortedArr[0], currentPricesSortedArr[currentPricesSortedArr.length - 1]]
+        : [currentPricesSortedArr[0], currentPricesSortedArr[0]];
+
+    const initialCheckboxesState: any = {};
     if (properties) {
         properties.forEach((propertyName: string) => {
-            initialState[propertyName] = [];
+            initialCheckboxesState[propertyName] = [];
         });
     }
 
-    const [selectedProperties, setSelectedProperties] = useState(initialState);
-    const [priceRange, setPriceRange] = useState([0, 400000]);
+    const [selectedProperties, setSelectedProperties] = useState(initialCheckboxesState);
+    const [priceRange, setPriceRange] = useState(initialPriceRange);
+
 
     // без использования эффекта состояние не обновляется при переходе на другую категорию каталога
     useEffect(() => {
-        setSelectedProperties(initialState);
+        setPriceRange(initialPriceRange);
+        setSelectedProperties(initialCheckboxesState);
     }, [category]);
-    
 
-    const filterProducts = (productsArr: any[], filterQuery: any) => {
-        let result = productsArr;
-        for (const property in filterQuery) {
-            if (filterQuery[property].length) {
-                result = result.filter((item: any) => filterQuery[property].includes(item.properties[property]));
-            }
-        }
-        return result;
+    const handleMinPrice = (e: any) => {
+        const newPriceRange = [...priceRange];
+        newPriceRange[0] = e.target.value;
+        setPriceRange(newPriceRange);
     };
-    const filteredProducts = filterProducts(currentCategoryProducts, selectedProperties);
+
+    const handleMaxPrice = (e: any) => {
+        const newPriceRange = [...priceRange];
+        newPriceRange[1] = e.target.value;
+        setPriceRange(newPriceRange);
+    };
+
+    const handlePriceRange = (eventValue: number[]) => {
+        setPriceRange(eventValue);
+    };
 
     const handleSelectProperty = (e: any) => {
         const newProperties = {...selectedProperties};
@@ -59,6 +71,9 @@ const Category = () => {
         );
     };
 
+    const filteredProducts = filterProducts(currentCategoryProducts, priceRange, selectedProperties);
+
+
     return (
         (category?.children)
             ? <CategoryGroupsPanel categories={category.children} />
@@ -74,7 +89,12 @@ const Category = () => {
                         {isChildCategory && <CategoryFilters 
                             category={category} 
                             categoryProducts={currentCategoryProducts}
+                            priceRange={priceRange}
+                            maxPriceRange={initialPriceRange}
                             onChangeCheckboxes={handleSelectProperty}
+                            onChangeMinPrice={handleMinPrice}
+                            onChangeMaxPrice={handleMaxPrice}
+                            onChangePriceRange={handlePriceRange}
                         />}
                     </div>
                 </div>
