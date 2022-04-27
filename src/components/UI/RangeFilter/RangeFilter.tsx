@@ -1,3 +1,4 @@
+import Slider from 'rc-slider';
 import React from 'react';
 
 const RangeFilter = () => {
@@ -12,8 +13,10 @@ const RangeFilter = () => {
                     <input type="text" className="form-control" placeholder="До" aria-label="Max price" />
                 </div>
             </div>
-            <label htmlFor="customRange1" className="form-label">Example range</label>
-            <input type="range" className="form-range" id="customRange1" min="0" max="5" />
+            <br />
+            {/* <label htmlFor="customRange1" className="form-label">Example range</label>
+            <input type="range" className="form-range" id="customRange1" min="0" max="50" defaultValue={['20', '40']} /> */}
+            <Slider range min={20} max={40} defaultValue={[20, 40]}/>
         </>
     );
 };

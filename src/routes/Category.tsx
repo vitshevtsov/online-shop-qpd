@@ -5,7 +5,7 @@ import List from '../components/List/List';
 import ProductItem from '../components/ProductItem/ProductItem';
 import { useAppSelector } from '../hooks/redux';
 import searchCategory from '../utils/searchCategory';
-import CategoryFilters from './CategoryFilters/CategoryFilters';
+import CategoryFilters from '../components/CategoryFilters/CategoryFilters';
 
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
@@ -24,7 +24,7 @@ const Category = () => {
     }
 
     const [selectedProperties, setSelectedProperties] = useState(initialState);
-    console.log(selectedProperties);
+    const [priceRange, setPriceRange] = useState([0, 400000]);
 
     // без использования эффекта состояние не обновляется при переходе на другую категорию каталога
     useEffect(() => {
@@ -45,19 +45,12 @@ const Category = () => {
 
     const handleSelectProperty = (e: any) => {
         const newProperties = {...selectedProperties};
-        console.log(typeof e.target.value);
-        console.log(e.target.name);
-
         if (newProperties[e.target.name].includes(e.target.value)) {
             newProperties[e.target.name] = newProperties[e.target.name].filter((item: any) => item !== e.target.value);
         } else {
             newProperties[e.target.name] = [...newProperties[e.target.name], e.target.value];
         }
         setSelectedProperties(newProperties);
-        console.log(selectedProperties);
-
-        console.log(e.target.value);
-        console.log(e.target.name);
     };
 
     const renderProducts = (product: any) => {
