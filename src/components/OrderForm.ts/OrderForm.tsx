@@ -5,7 +5,7 @@ import { cartSlice } from '../../store/reducers/cartSlice';
 import { stockSlice } from '../../store/reducers/stockSlice';
 import { IOrder } from '../../types/models/IOrder';
 import handleOnChangeRequiredInput from '../../utils/handleOnChangeRequiredInput';
-import CustomInput from '../CustomInput/CustomInput';
+import CustomInput from '../UI/CustomInput/CustomInput';
 
 const OrderForm = () => {
 

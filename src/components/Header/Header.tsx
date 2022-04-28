@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartToggler from '../CartToggler/CartToggler';
+import SearchInput from '../SearchInput/SearchInput';
 import SideMenuToggler from '../SideMenuToggler/SideMenuToggler';
 import styles from './Header.module.css';
 
@@ -13,8 +14,7 @@ const Header: React.FC = ({ children }) => (
                     <SideMenuToggler />
                 </div>
                 <div className="col-6">
-                    <input type="input" className="form-control" id="exampleFormControlInput1" placeholder="Поиск по товарам" />
-
+                    <SearchInput />
                 </div>
                 <div className="col-2">
                     <Link to="orders" className="btn btn-sm btn-outline-light me-3">Заказы</Link>
