@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
-import List from '../components/List/List';
-import ProductItem from '../components/ProductItem/ProductItem';
 import { useAppSelector } from '../hooks/redux';
-import searchCategory from '../utils/searchCategory';
+import searchCategoryById from '../utils/searchCategoryById';
 import CategoryFilters from '../components/CategoryFilters/CategoryFilters';
 import filterProducts from '../utils/filterProducts';
+import ProductsList from '../components/ProductsList/ProductsList';
 
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const {id} = useParams();
-    const category = searchCategory(categories, id);
+    const category = searchCategoryById(categories, id);
     const isChildCategory: boolean = (category.properties);
     const currentCategoryProducts = products.filter((item: any) => item.categoryId === Number(id));
     
@@ -65,14 +64,7 @@ const Category = () => {
         setSelectedProperties(newProperties);
     };
 
-    const renderProducts = (product: any) => {
-        return (
-            <ProductItem key={product.id} product={product} />
-        );
-    };
-
     const filteredProducts = filterProducts(currentCategoryProducts, priceRange, selectedProperties);
-
 
     return (
         (category?.children)
@@ -83,7 +75,7 @@ const Category = () => {
                         <h5>
                             {category.name}
                         </h5>
-                        <List items={filteredProducts} renderItem={renderProducts} />
+                        <ProductsList products={filteredProducts} />
                     </div>
                     <div className="col-3">
                         {isChildCategory && <CategoryFilters 

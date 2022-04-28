@@ -12,7 +12,15 @@ const SearchInput = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <Link to="searchresult" className="btn btn-outline-light" type="button">Поиск</Link>
+            {searchQuery && <Link 
+                to="searchresult"
+                state={searchQuery}
+                className="btn btn-outline-light"
+                type="button"
+            >
+                Поиск
+            </Link>}
+            
         </div>
     );
 };

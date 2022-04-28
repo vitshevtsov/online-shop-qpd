@@ -1,5 +1,5 @@
 import { useAppSelector } from "../hooks/redux";
-import searchCategory from "./searchCategory";
+import searchCategoryById from "./searchCategoryById";
 
 const getPopularCategories = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
@@ -19,8 +19,7 @@ const getPopularCategories = () => {
 
     const sortedEntries = Array.from(popularCategories.entries()).sort((a, b) => b[1] - a[1]);
     const sortedIds = sortedEntries.map(entry => entry[0]);
-    // sortedIds.forEach(item => console.log(searchCategory(categories, item).name));
-    const sortedCategories = sortedIds.map(id => searchCategory(categories, id));
+    const sortedCategories = sortedIds.map(id => searchCategoryById(categories, id));
 
     return sortedCategories;
 };

@@ -13,7 +13,7 @@ const RangeFilter = (props: any) => {
                         aria-label="Min price"
                         min={props.maxPriceRange[0]}
                         max={props.maxPriceRange[1]}
-                        value={props.priceRange[0]} 
+                        value={props.priceRange[0] ?? ''} 
                         onChange={props.onChangeMinPrice} />
                 </div>
                 <div className="col">
@@ -23,7 +23,7 @@ const RangeFilter = (props: any) => {
                         aria-label="Max price"
                         min={props.maxPriceRange[0]}
                         max={props.maxPriceRange[1]}
-                        value={props.priceRange[1]}
+                        value={props.priceRange[1] ?? ''}
                         onChange={props.onChangeMaxPrice}
                     />
                 </div>
@@ -33,10 +33,10 @@ const RangeFilter = (props: any) => {
             <input type="range" className="form-range" id="customRange1" min="0" max="50" defaultValue={['20', '40']} /> */}
             <Slider 
                 className="mb-3"
-                range 
+                range
                 min={props.maxPriceRange[0]}
                 max={props.maxPriceRange[1]}
-                value={props.priceRange}
+                value={props.priceRange ?? ''}
                 onChange={props.onChangePriceRange}
             />
         </>
