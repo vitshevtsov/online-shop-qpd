@@ -87,7 +87,7 @@ const OrderForm = () => {
                 id: orders.length + 1,
                 orderedItems: cart,
                 fullName: `${name} ${surname}`,
-                fullPrice: cart.map((item: any) => item.properties.price).reduce((a,b) => a + b),
+                fullPrice: cart.map((item: any) => item.properties.price * item.quantity).reduce((a,b) => a + b),
                 phone: phone,
                 city: city,
                 street: street

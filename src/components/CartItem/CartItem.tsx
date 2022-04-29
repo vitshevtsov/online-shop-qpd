@@ -1,7 +1,8 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {cartSlice} from '../../store/reducers/cartSlice';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
 const CartItem = (props: any) => {
     const {stock} = useAppSelector(state => state.stockReducer);
@@ -24,14 +25,13 @@ const CartItem = (props: any) => {
             className="list-group-item"
         >
             <div className="row">
-                <div className="col-8">
-                    <h6>{props.product.name}</h6>
-                    <p>Бренд: {props.product.properties.brand}</p>
-                    <p>{'третье свойство'}</p>
+                <div className="col-1 text-center d-flex align-items-center">
+                    <img className="cartItemImg" src={props.product.imgPath}/>
                 </div>
-                <div className="col-4">
-                    <p>Цена: {props.product.properties.price} руб.</p>
-                    <label htmlFor="quantity" className="form-label">Quantity</label>
+                <div className="col-6 text-center d-flex align-items-center ps-5">
+                    <h6 className="align-middle">{props.product.name}</h6>
+                </div>
+                <div className="col-2 text-center d-flex align-items-center">
                     <input 
                         type="number" 
                         className="form-control" 
@@ -39,7 +39,13 @@ const CartItem = (props: any) => {
                         value={props.product.quantity}
                         onChange={handleQuantityInput}
                     />
-                    <button className="btn-primary" onClick={handleRemoveFromCart}>Удалить из корзины</button>
+                    <small className="text-danger">Доступно на складе: {stockQuantity} шт.</small>
+                </div>
+                <div className="col-2 text-center d-flex align-items-center">
+                    <h4>{props.product.properties.price * props.product.quantity} руб.</h4>
+                </div>
+                <div className="col-1 text-center d-flex align-items-center text-secondary">
+                    <FontAwesomeIcon className="icon" size="2x" icon={faTrashCan} onClick={handleRemoveFromCart} />
                 </div>
             </div>
         </div>

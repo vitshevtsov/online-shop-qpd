@@ -40,15 +40,16 @@ const ProductItem = (props: any) => {
             className="list-group-item list-group-item-action"
         >
             <div className="row row-cols">
-                <img src="..." alt="" />
-                <div className="col"></div>
-                <div className="col">
+                <div className="col-3">
+                    <img className="productItemImg" src={props.product.imgPath} alt="" />
+                </div>
+                <div className="col-6">
                     <h6>{props.product.name}</h6>
                     <br/>
                     <List items={productProperties} renderItem={renderProductProperties} />
 
                 </div>
-                <div className="col">
+                <div className="col-3">
                     <p className="mb-1">Цена: {props.product.properties.price} руб.</p>
                     {addInCartButton}
                 </div>

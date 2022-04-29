@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
+
+<FontAwesomeIcon icon={faMagnifyingGlass} />;
 
 const SearchInput = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
+    
+    const handleOnKeyPress = (e: any) => {
+        if (e.code === 'Enter') {
+            navigate('searchresult', {state: searchQuery});
+        }
+    };
+
     return (
         <div className="input-group">
             <input
@@ -11,6 +24,7 @@ const SearchInput = () => {
                 placeholder="Поиск по товарам"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleOnKeyPress}
             />
             {searchQuery && <Link 
                 to="searchresult"
@@ -18,9 +32,8 @@ const SearchInput = () => {
                 className="btn btn-outline-light"
                 type="button"
             >
-                Поиск
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
             </Link>}
-            
         </div>
     );
 };
