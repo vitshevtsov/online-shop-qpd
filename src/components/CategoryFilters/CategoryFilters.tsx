@@ -29,7 +29,14 @@ const CategoryFilters = (props: any) => {
 
     return (
         <>
-            <h5>Фильтры</h5>
+            <div className="row">
+                <div className="col">
+                    <h5>Фильтры</h5>
+                </div>
+                <div className="col">
+                    <small className=" btn btn-sm text-warning" onClick={props.onClickClearFilters}>Очистить</small>
+                </div>
+            </div>
             <List items={props.category.properties} renderItem={renderCategoryFilters} />
         </>
     );

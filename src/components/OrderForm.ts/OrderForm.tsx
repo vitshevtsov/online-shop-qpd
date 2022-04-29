@@ -17,11 +17,11 @@ const OrderForm = () => {
     const [surnameIsDirty, setSurnameIsDirty] = useState(false);
     const [surnameError, setSurnameError] = useState('Поле обязательно для заполнения');
 
-    const [phone, setPhone] = useState(0);
+    const [phone, setPhone] = useState<number | string>('');
     const [phoneIsDirty, setPhoneIsDirty] = useState(false);
     const [phoneError, setPhoneError] = useState('Поле обязательно для заполнения');
     
-    const [secondPhone, setSecondPhone] = useState(0);
+    const [secondPhone, setSecondPhone] = useState<number | string>('');
     
     const [city, setCity] = useState('');
     const [cityIsDirty, setCityIsDirty] = useState(false);
@@ -30,6 +30,8 @@ const OrderForm = () => {
     const [street, setStreet] = useState('');
     const [streetIsDirty, setStreetIsDirty] = useState(false);
     const [streetError, setStreetError] = useState('Поле обязательно для заполнения');
+
+    const isValid = !!(name && surname && phone && city && street);
     
     const handleOnChangeNameInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         handleOnChangeRequiredInput(e, setName, setNameError);
@@ -82,7 +84,7 @@ const OrderForm = () => {
     const dispatch = useAppDispatch();
 
     const handleAddToOrders = () => {
-        if (name && surname && phone && city && street) {
+        if (isValid) {
             const order: IOrder = {
                 id: orders.length + 1,
                 orderedItems: cart,
@@ -98,11 +100,28 @@ const OrderForm = () => {
             dispatch(addToOrders(order));
             dispatch(clearCart());
             dispatch(changeStockQuantity(cart));
-            alert(JSON.stringify(order));
+            setName('');
+            setSurname('');
+            setPhone('');
+            setSecondPhone('');
+            setCity('');
+            setStreet('');
+            setNameIsDirty(false);
+            setSurnameIsDirty(false);
+            setPhoneIsDirty(false);
+            setCityIsDirty(false);
+            setStreetIsDirty(false);
+            setNameError('Поле обязательно для заполнения');
+            setSurnameError('Поле обязательно для заполнения');
+            setPhoneError('Поле обязательно для заполнения');
+            setCityError('Поле обязательно для заполнения');
+            setStreetError('Поле обязательно для заполнения');
         } else {
-            // setNameIsDirty(true);
-            // setNameError('Поле обязательно для заполнения');
-            alert('Заполните все поля');
+            setNameIsDirty(true);
+            setSurnameIsDirty(true);
+            setPhoneIsDirty(true);
+            setCityIsDirty(true);
+            setStreetIsDirty(true);
         }
     };
 
@@ -123,6 +142,8 @@ const OrderForm = () => {
                             <div className="row">
                                 <div className="col-6">
                                     <CustomInput
+                                        type="text"
+                                        className='form-control'
                                         label='Имя*'
                                         placeholder='Введите имя'
                                         value={name}
@@ -134,6 +155,8 @@ const OrderForm = () => {
                                 </div>
                                 <div className="col-6">
                                     <CustomInput 
+                                        type="text"
+                                        className='form-control'
                                         label='Фамилия*'
                                         placeholder='Введите фамилию'
                                         value={surname}
@@ -148,6 +171,8 @@ const OrderForm = () => {
                             <div className="row">
                                 <div className="col-6">
                                     <CustomInput 
+                                        type='number'
+                                        className='form-control numberInputWithoutSpin'
                                         label='Телефон*'
                                         placeholder='Введите номер телефона'
                                         value={phone}
@@ -159,6 +184,8 @@ const OrderForm = () => {
                                 </div>
                                 <div className="col-6">
                                     <CustomInput 
+                                        type='number'
+                                        className='form-control numberInputWithoutSpin'
                                         label='Телефон, если не дозвонимся'
                                         placeholder='Введите номер телефона'
                                         value={secondPhone}
@@ -169,6 +196,8 @@ const OrderForm = () => {
                             <div className="row">
                                 <div className="col-6">
                                     <CustomInput 
+                                        type="text"
+                                        className='form-control'
                                         label='Город*'
                                         placeholder='Введите город'
                                         value={city}
@@ -180,6 +209,8 @@ const OrderForm = () => {
                                 </div>
                                 <div className="col-6">
                                     <CustomInput 
+                                        type="text"
+                                        className='form-control'
                                         label='Улица*'
                                         placeholder='Введите улицу'
                                         value={street}
@@ -193,7 +224,8 @@ const OrderForm = () => {
                         </form>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleAddToOrders}>Оформить заказ</button>
+                        {isValid && <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleAddToOrders}>Оформить заказ</button>}
+                        {!isValid && <button type="button" className="btn btn-secondary" onClick={handleAddToOrders}>Оформить заказ</button>}
                     </div>
                 </div>
             </div>

@@ -5,8 +5,8 @@ export interface IOrder {
     orderedItems: ICart[];
     fullName: string;
     fullPrice: number;
-    phone: number;
-    secondPhone?: number;
+    phone: number | string;
+    secondPhone?: number | string;
     city: string;
     street: string;
 }

@@ -55,3 +55,14 @@ body {
     opacity: 50%;
     color: red;
 }
+
+.numberInputWithoutSpin::-webkit-outer-spin-button,
+.numberInputWithoutSpin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.errorDiv {
+    font-size: 12px;
+    color: #EC1D1D;
+}

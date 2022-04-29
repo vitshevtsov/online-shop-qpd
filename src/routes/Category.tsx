@@ -64,6 +64,11 @@ const Category = () => {
         setSelectedProperties(newProperties);
     };
 
+    const handleClearFilters = () => {
+        setPriceRange(initialPriceRange);
+        setSelectedProperties(initialCheckboxesState);
+    };
+
     const filteredProducts = filterProducts(currentCategoryProducts, priceRange, selectedProperties);
 
     return (
@@ -75,7 +80,7 @@ const Category = () => {
                         <h5>
                             {category.name}
                         </h5>
-                        <ProductsList products={filteredProducts} />
+                        {filteredProducts && <ProductsList products={filteredProducts} />}
                     </div>
                     <div className="col-3">
                         {isChildCategory && <CategoryFilters 
@@ -87,6 +92,7 @@ const Category = () => {
                             onChangeMinPrice={handleMinPrice}
                             onChangeMaxPrice={handleMaxPrice}
                             onChangePriceRange={handlePriceRange}
+                            onClickClearFilters={handleClearFilters}
                         />}
                     </div>
                 </div>
