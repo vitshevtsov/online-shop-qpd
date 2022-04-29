@@ -1,36 +1,35 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {cartSlice} from '../../store/reducers/cartSlice';
+import { ICart } from '../../types/models/ICart';
 import CartItem from '../CartItem/CartItem';
 import List from '../List/List';
 
 const Cart = () => {
-
     const {cart} = useAppSelector(state => state.cartReducer);
+    const {clearCart} = cartSlice.actions;
+    const dispatch = useAppDispatch();
     
-
-    const renderCartItem = (cartItem: any) => {
+    const renderCartItem = (cartItem: ICart) => {
         return (
             <CartItem key={cartItem.id} product={cartItem} />
         );
     };
-    const {clearCart} = cartSlice.actions;
-    const dispatch = useAppDispatch();
 
     const handleClearCart = () => {
         dispatch(clearCart());
     };
 
     const primButton = (cart.length)
-        ? <button type="button" className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Оформить заказ</button>
+        ? <button type="button" className="btn btn-primary" data-bs-target="#orderFormModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Оформить заказ</button>
         : <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Продолжить покупки</button>;
 
     return (
-        <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="cartModal" tabIndex={-1} aria-labelledby="cartModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-xl">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Корзина</h5>
+                        <h5 className="modal-title" id="cartModalLabel">Корзина</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">

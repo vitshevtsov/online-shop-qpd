@@ -1,11 +1,12 @@
 import React from 'react';
 import List from '../components/List/List';
 import { useAppSelector } from '../hooks/redux';
+import { IOrder } from '../types/models/IOrder';
 
 const Orders = () => {
     const {orders} = useAppSelector(state => state.ordersReducer);
 
-    const renderOrders = (order: any) => {
+    const renderOrders = (order: IOrder) => {
         return (
             <div className="list-group-item" key={order.id}>
                 <div>Заказ № {order.id}</div>

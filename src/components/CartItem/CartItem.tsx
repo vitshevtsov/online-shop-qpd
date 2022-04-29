@@ -3,8 +3,10 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {cartSlice} from '../../store/reducers/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { ICartItemProps } from '../../types/props/ICartItemProps';
 
-const CartItem = (props: any) => {
+
+const CartItem = (props: ICartItemProps) => {
     const {stock} = useAppSelector(state => state.stockReducer);
     const stockQuantity = stock.find((item) => item.productId === props.product.id)?.quantity;
     const {removeFromCart, changeQuantity} = cartSlice.actions;
@@ -21,7 +23,7 @@ const CartItem = (props: any) => {
 
     return (
         <div 
-            id={props.product.id} 
+            id={props.product.id.toString()} 
             className="list-group-item"
         >
             <div className="row">
@@ -39,7 +41,7 @@ const CartItem = (props: any) => {
                         value={props.product.quantity}
                         onChange={handleQuantityInput}
                     />
-                    <small className="text-danger">Доступно на складе: {stockQuantity} шт.</small>
+                    <small className="text-secondary">Доступно на складе: {stockQuantity} шт.</small>
                 </div>
                 <div className="col-2 text-center d-flex align-items-center">
                     <h4>{props.product.properties.price * props.product.quantity} руб.</h4>

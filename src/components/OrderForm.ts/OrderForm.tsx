@@ -127,11 +127,11 @@ const OrderForm = () => {
 
 
     return (
-        <div className="modal fade" id="exampleModalToggle2" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="orderFormModalToggle2" tabIndex={-1} aria-labelledby="orderFormModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-xl">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Оформление заказа</h5>
+                        <h5 className="modal-title" id="orderFormModalLabel">Оформление заказа</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">

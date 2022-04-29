@@ -3,9 +3,10 @@ import List from '../List/List';
 import CheckFilter from '../UI/CheckFilter/CheckFilter';
 import RangeFilter from '../UI/RangeFilter/RangeFilter';
 import 'rc-slider/assets/index.css';
+import { ICategoryFiltersProps } from '../../types/props/ICategoryFiltersProps';
 
 
-const CategoryFilters = (props: any) => {
+const CategoryFilters = (props: ICategoryFiltersProps) => {
 
     const renderCategoryFilters = (propertyName: string) => {
         if (propertyName === 'price') {
