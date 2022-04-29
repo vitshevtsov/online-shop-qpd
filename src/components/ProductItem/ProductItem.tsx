@@ -6,7 +6,9 @@ import mapPropertyName from '../../utils/mapPropertyName';
 import List from '../List/List';
 
 /**
- * Компонент рендерит элемент списка товаров
+ * Компонент рендерит элемент списка товаров. Кнопка заказа м.б. в трех состояниях:
+ * Добавить в корзину, товар уже в корзине, товар закончился (в случае, если ранее заказано
+ * всё имеющееся на складе количество данного товара)
  */
 const ProductItem = (props: IProductItemProps) => {
     const {cart} = useAppSelector(state => state.cartReducer);

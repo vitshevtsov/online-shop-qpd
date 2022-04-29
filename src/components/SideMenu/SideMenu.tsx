@@ -46,7 +46,7 @@ const SideMenu = () => {
                     <List items={categories} renderItem={renderCategory} /> 
                 </div>
                 <div className="col-8">
-                    <h5 className="openedCategoryTitle">
+                    <h5 className="openedCategoryTitle mb-4">
                         {openedCategory && openedCategory.name}
                     </h5>
                     <div className="row row-cols-2">
