@@ -1,15 +1,17 @@
 import React from 'react';
+import { ICustominputProps } from '../../../types/props/ICustomInputProps';
 
-const CustomInput = (props: any) => {
+
+const CustomInput = (props: ICustominputProps) => {
     const errorDiv = <div className="errorDiv">{props.error}</div>;
 
     return (
         <div className="mb-3">
-            <label htmlFor="exampleFormControlInput1" className="form-label">{props.label}</label>
+            <label htmlFor={props.id} className="form-label">{props.label}</label>
             <input 
                 type={props.type} 
                 className={props.className} 
-                id="exampleFormControlInput1" 
+                id={props.id} 
                 placeholder={props.placeholder} 
                 value={props.value}
                 onChange={props.handleOnChange}

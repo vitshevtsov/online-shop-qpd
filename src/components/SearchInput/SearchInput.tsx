@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 
-<FontAwesomeIcon icon={faMagnifyingGlass} />;
-
 const SearchInput = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();

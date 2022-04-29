@@ -21,7 +21,7 @@ const Orders = () => {
         <div className="container-md">
             {(orders.length !== 0)
                 ? <List items={orders} renderItem={renderOrders}/>
-                : <div>Пока нет заказов</div>}
+                : <div>Пока не сделано ни одного заказа</div>}
         </div>
     );
 };

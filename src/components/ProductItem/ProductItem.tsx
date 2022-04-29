@@ -1,10 +1,11 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import {cartSlice} from '../../store/reducers/cartSlice';
+import { IProductItemProps } from '../../types/props/IProductItemprops';
 import mapPropertyName from '../../utils/mapPropertyName';
 import List from '../List/List';
 
-const ProductItem = (props: any) => {
+const ProductItem = (props: IProductItemProps) => {
     const {cart} = useAppSelector(state => state.cartReducer);
     const {stock} = useAppSelector(state => state.stockReducer);
     const isInCart: boolean = cart.some(item => item.id === props.product.id);
@@ -36,12 +37,12 @@ const ProductItem = (props: any) => {
 
     return (
         <div 
-            id={props.product.id} 
+            id={props.product.id.toString()} 
             className="list-group-item list-group-item-action"
         >
             <div className="row row-cols">
                 <div className="col-3">
-                    <img className="productItemImg" src={props.product.imgPath} alt="" />
+                    <img className="productItemImg" src={props.product.imgPath} alt="product img" />
                 </div>
                 <div className="col-6">
                     <h6>{props.product.name}</h6>

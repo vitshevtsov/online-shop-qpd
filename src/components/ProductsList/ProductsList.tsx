@@ -1,9 +1,11 @@
 import React from 'react';
+import { IProduct } from '../../types/models/IProduct';
+import { IProductsList } from '../../types/props/IProductsListProps';
 import List from '../List/List';
 import ProductItem from '../ProductItem/ProductItem';
 
-const ProductsList = (props: any) => {
-    const renderProducts = (product: any) => {
+const ProductsList = (props: IProductsList) => {
+    const renderProducts = (product: IProduct) => {
         return (
             <ProductItem key={product.id} product={product} />
         );

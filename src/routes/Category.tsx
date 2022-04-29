@@ -6,6 +6,7 @@ import searchCategoryById from '../utils/searchCategoryById';
 import CategoryFilters from '../components/CategoryFilters/CategoryFilters';
 import filterProducts from '../utils/filterProducts';
 import ProductsList from '../components/ProductsList/ProductsList';
+import { IProduct } from '../types/models/IProduct';
 
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
@@ -13,7 +14,7 @@ const Category = () => {
     const {id} = useParams();
     const category = searchCategoryById(categories, id);
     const isChildCategory: boolean = (category.properties);
-    const currentCategoryProducts = products.filter((item: any) => item.categoryId === Number(id));
+    const currentCategoryProducts = products.filter((item: IProduct) => item.categoryId === Number(id));
     
     const properties = category.properties;
     const currentPricesSortedArr = currentCategoryProducts.map(product => product.properties.price).sort((a,b) => a - b);

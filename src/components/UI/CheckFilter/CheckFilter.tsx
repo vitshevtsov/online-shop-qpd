@@ -1,8 +1,9 @@
 import React from 'react';
+import { ICheckFilterProps } from '../../../types/props/ICheckFilterProps';
 import mapPropertyName from '../../../utils/mapPropertyName';
 import List from '../../List/List';
 
-const CheckFilter = (props: any) => {
+const CheckFilter = (props: ICheckFilterProps) => {
 
     const renderPropertyVariant = (propertyVariant: string) => {
         return (

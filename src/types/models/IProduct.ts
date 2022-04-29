@@ -3,5 +3,5 @@ export interface IProduct {
     categoryId: number;
     name: string;
     imgPath: string;
-    properties: any; //todo 
+    properties: any;
 }

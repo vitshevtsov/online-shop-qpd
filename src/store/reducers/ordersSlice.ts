@@ -4,8 +4,6 @@ import {IOrdersState} from '../../types/state/IOrdersState';
 
 const initialState: IOrdersState = {
     orders: [],
-    isLoading: false,
-    error: '',
 };
 
 export const ordersSlice = createSlice({

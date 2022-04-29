@@ -6,6 +6,7 @@ import { stockSlice } from '../../store/reducers/stockSlice';
 import { IOrder } from '../../types/models/IOrder';
 import handleOnChangeRequiredInput from '../../utils/handleOnChangeRequiredInput';
 import CustomInput from '../UI/CustomInput/CustomInput';
+import { ICart } from '../../types/models/ICart';
 
 const OrderForm = () => {
 
@@ -89,7 +90,7 @@ const OrderForm = () => {
                 id: orders.length + 1,
                 orderedItems: cart,
                 fullName: `${name} ${surname}`,
-                fullPrice: cart.map((item: any) => item.properties.price * item.quantity).reduce((a,b) => a + b),
+                fullPrice: cart.map((item: ICart) => item.properties.price * item.quantity).reduce((a,b) => a + b),
                 phone: phone,
                 city: city,
                 street: street
@@ -100,17 +101,20 @@ const OrderForm = () => {
             dispatch(addToOrders(order));
             dispatch(clearCart());
             dispatch(changeStockQuantity(cart));
+
             setName('');
             setSurname('');
             setPhone('');
             setSecondPhone('');
             setCity('');
             setStreet('');
+
             setNameIsDirty(false);
             setSurnameIsDirty(false);
             setPhoneIsDirty(false);
             setCityIsDirty(false);
             setStreetIsDirty(false);
+            
             setNameError('Поле обязательно для заполнения');
             setSurnameError('Поле обязательно для заполнения');
             setPhoneError('Поле обязательно для заполнения');

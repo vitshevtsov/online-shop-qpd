@@ -1,15 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IStockItem } from '../../types/models/IStockItem';
 import {IStockState} from '../../types/state/IStockState';
 import * as stockData from '../../data/stock.json';
-import { ICartState } from '../../types/state/ICartState';
 import { ICart } from '../../types/models/ICart';
-import { useAppSelector } from '../../hooks/redux';
 
 const initialState: IStockState = {
     stock: Array.from(stockData),
-    isLoading: false,
-    error: '',
 };
 
 export const stockSlice = createSlice({

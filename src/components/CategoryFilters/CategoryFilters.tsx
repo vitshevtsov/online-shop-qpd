@@ -38,7 +38,7 @@ const CategoryFilters = (props: ICategoryFiltersProps) => {
                     <small className=" btn btn-sm text-warning" onClick={props.onClickClearFilters}>Очистить</small>
                 </div>
             </div>
-            <List items={props.category.properties} renderItem={renderCategoryFilters} />
+            {props.category.properties && <List items={props.category.properties} renderItem={renderCategoryFilters} />}
         </>
     );
 };

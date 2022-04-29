@@ -3,5 +3,5 @@ export interface ICategory {
     name: string;
     children?: ICategory[];
     properties?: string[];
-    img?: string;
+    imgPath?: string;
 }

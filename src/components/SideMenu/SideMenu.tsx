@@ -1,23 +1,24 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../hooks/redux';
+import { ICategory } from '../../types/models/ICategory';
 import CategoryGroup from '../CategoryGroup/CategoryGroup';
 import List from '../List/List';
 
 const SideMenu = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
-    const [openedCategory, setOpenedCategory] = useState<any>(categories[0]); // todo сделать проверку есть ли в сторе категории
+    const [openedCategory, setOpenedCategory] = useState<ICategory | undefined>(categories[0]);
 
-    const selectedCategory = (id: any) => categories.find((item: any) => item.id === id);
+    const selectedCategory = (id: number) => categories.find((item: ICategory) => item.id === id);
     const handleOnMouseOverCategory = (e: any) => {
         setOpenedCategory(selectedCategory(+e.currentTarget.id));
     };
 
-    const renderCategory = (category: any) => {
+    const renderCategory = (category: ICategory) => {
         return (
             <li 
                 key={category.id} 
-                id={category.id} 
+                id={category.id.toString()} 
                 onMouseOver={handleOnMouseOverCategory}
                 data-bs-dismiss="offcanvas"
             >
@@ -25,7 +26,7 @@ const SideMenu = () => {
             </li>
         );
     };
-    const renderCategoryGroups =(category: any) => {
+    const renderCategoryGroups =(category: ICategory) => {
         return (
             <CategoryGroup key={category.id} category={category} />
         );
@@ -43,10 +44,10 @@ const SideMenu = () => {
                 </div>
                 <div className="col-8">
                     <h5 className="openedCategoryTitle">
-                        {openedCategory.name}
+                        {openedCategory && openedCategory.name}
                     </h5>
                     <div className="row row-cols-2">
-                        <List items={openedCategory.children} renderItem={renderCategoryGroups} />
+                        {openedCategory?.children && <List items={openedCategory.children} renderItem={renderCategoryGroups} />}
                     </div>
                 </div>
             </div>  

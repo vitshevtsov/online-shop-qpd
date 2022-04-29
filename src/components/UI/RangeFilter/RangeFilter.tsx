@@ -1,7 +1,9 @@
 import Slider from 'rc-slider';
 import React from 'react';
+import { IRangeFilterProps } from '../../../types/props/IRangeFilterProps';
 
-const RangeFilter = (props: any) => {
+
+const RangeFilter = (props: IRangeFilterProps) => {
     return (
         <>
             <p className="mt-3">Цена, руб.</p>
@@ -29,8 +31,6 @@ const RangeFilter = (props: any) => {
                 </div>
             </div>
             <br />
-            {/* <label htmlFor="customRange1" className="form-label">Example range</label>
-            <input type="range" className="form-range" id="customRange1" min="0" max="50" defaultValue={['20', '40']} /> */}
             <Slider 
                 className="mb-3"
                 range
@@ -41,8 +41,6 @@ const RangeFilter = (props: any) => {
             />
         </>
     );
-};
-
-    
+};  
 
 export default RangeFilter;

@@ -4,8 +4,6 @@ import {ICartState} from '../../types/state/ICartState';
 
 const initialState: ICartState = {
     cart: [],
-    isLoading: false,
-    error: '',
 };
 
 export const cartSlice = createSlice({
