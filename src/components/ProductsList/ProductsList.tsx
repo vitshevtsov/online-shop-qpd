@@ -4,6 +4,10 @@ import { IProductsList } from '../../types/props/IProductsListProps';
 import List from '../List/List';
 import ProductItem from '../ProductItem/ProductItem';
 
+/**
+ * Компонент списка товаров, создан в целях переиспользования рендер-функции
+ * и задания стиля корневому элементу
+ */
 const ProductsList = (props: IProductsList) => {
     const renderProducts = (product: IProduct) => {
         return (

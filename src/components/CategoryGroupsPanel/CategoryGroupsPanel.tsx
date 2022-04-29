@@ -4,6 +4,11 @@ import { ICategory } from '../../types/models/ICategory';
 import { ICategoryGroupsPanelProps } from '../../types/props/ICategoryGroupsPanelProps';
 import List from '../List/List';
 
+/**
+ * Компонент рендерит панель категорий в соответствии с переданным списком,
+ * используется на главной странице (передаются популярные категории) и 
+ * в результатах поиска
+ */
 const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
     const renderPanelCategory =(category: ICategory) => {
         return (

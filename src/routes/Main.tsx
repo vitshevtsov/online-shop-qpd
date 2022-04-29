@@ -3,6 +3,9 @@ import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroup
 import { useAppSelector } from '../hooks/redux';
 import getPopularCategories from '../utils/getPopularCategories';
 
+/**
+ * Главная страница, на которой рендерится список популярных категорий
+ */
 const Main = () => {
     const {orders} = useAppSelector(state => state.ordersReducer);
 

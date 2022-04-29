@@ -5,6 +5,9 @@ import { IProductItemProps } from '../../types/props/IProductItemprops';
 import mapPropertyName from '../../utils/mapPropertyName';
 import List from '../List/List';
 
+/**
+ * Компонент рендерит элемент списка товаров
+ */
 const ProductItem = (props: IProductItemProps) => {
     const {cart} = useAppSelector(state => state.cartReducer);
     const {stock} = useAppSelector(state => state.stockReducer);

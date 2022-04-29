@@ -2,10 +2,12 @@
 		{
 			"id": 4751657638013128,
 			"name": "Смартфоны и гаджеты",
+			"imgPath": "/assets/categories/smartphones.png",
 			"children": [
 				{
 					"id": 4172272771097664,
 					"name": "Смартфоны и кнопочные телефоны",
+					"imgPath": "/assets/categories/smartphones.png",
 					"children": [
 						{
 							"id": 6916904882880694,
@@ -25,13 +27,13 @@
 				{
 					"id": 1906848139122592,
 					"name": "Гаджеты",
+					"imgPath": "/assets/categories/smartwatches.jpg",
 					"children": [
 						{
 							"id": 4542478618009742,
 							"name": "Смарт-часы",
 							"properties": ["price", "brand", "color"],
 							"imgPath": "/assets/categories/smartwatches.jpg"
-							
 						},
 						{
 							"id": 523746442731178,
@@ -47,10 +49,12 @@
 		{
 			"id": 2445285560919976,
 			"name": "Компьютеры и комплектующие",
+			"imgPath": "/assets/categories/computers.jpg",
 			"children": [
 				{
 					"id": 6645108749832748,
 					"name": "Компьютеры и ноутбуки",
+					"imgPath": "/assets/categories/computers.jpg",
 					"children": [
 						{
 							"id": 572877343295800,
@@ -69,6 +73,7 @@
 				{
 					"id": 2690092677364440,
 					"name": "Комплектующие",
+					"imgPath": "/assets/categories/processors.png",
 					"children": [
 						{
 							"id": 488663833006086,
@@ -89,10 +94,12 @@
 		{
 			"id": 1198100965728306,
 			"name": "Телевизоры, аудио-видео, фото",
+			"imgPath": "/assets/categories/tv.png",
 			"children": [
 				{
 					"id": 7306213911002320,
 					"name": "Телевизоры и приставки",
+					"imgPath": "/assets/categories/tv.png",
 					"children": [
 						{
 							"id": 1115084996950174,
@@ -112,6 +119,7 @@
 				{
 					"id": 6580024055030528,
 					"name": "Аудиотехника",
+					"imgPath": "/assets/categories/soundbars.jpg",
 					"children": [
 						{
 							"id": 3999786304527930,
@@ -132,10 +140,12 @@
 		{
 			"id": 3155249512345034,
 			"name": "Бытовая техника",
+			"imgPath": "/assets/categories/fridges.png",
 			"children": [
 				{
 					"id": 4749867204081548,
 					"name": "Крупная бытовая техника",
+					"imgPath": "/assets/categories/fridges.png",
 					"children": [
 						{
 							"id": 6344086368913802,
@@ -154,6 +164,7 @@
 				{
 					"id": 940416826880242,
 					"name": "Встраиваемая техника",
+					"imgPath": "/assets/categories/ovens.jpg",
 					"children": [
 						{
 							"id": 3311772441592944,
@@ -174,10 +185,12 @@
 		{
 			"id": 6910861333003292,
 			"name": "Строительство и ремонт",
+			"imgPath": "/assets/categories/screwdrivers.jpg",
 			"children": [
 				{
 					"id": 7984295965465778,
 					"name": "Электроинструмент",
+					"imgPath": "/assets/categories/screwdrivers.jpg",
 					"children": [
 						{
 							"id": 1030817562911076,
@@ -196,6 +209,7 @@
 				{
 					"id": 5631771676127358,
 					"name": "Электрика",
+					"imgPath": "/assets/categories/sockets.jpg",
 					"children": [
 						{
 							"id": 943498683944736,

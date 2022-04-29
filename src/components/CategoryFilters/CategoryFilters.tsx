@@ -5,7 +5,10 @@ import RangeFilter from '../UI/RangeFilter/RangeFilter';
 import 'rc-slider/assets/index.css';
 import { ICategoryFiltersProps } from '../../types/props/ICategoryFiltersProps';
 
-
+/**
+ * Компонент рендерит боковую панель фильтров для списка характеристик текущей категории
+ * Для цены - компонент RangeFilter, для иных - лист чекбоксов (компонент CheckFilter)
+ */
 const CategoryFilters = (props: ICategoryFiltersProps) => {
 
     const renderCategoryFilters = (propertyName: string) => {

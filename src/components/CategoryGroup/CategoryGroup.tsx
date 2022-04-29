@@ -4,7 +4,10 @@ import { ICategory } from '../../types/models/ICategory';
 import { ICategoryGroupProps } from '../../types/props/ICategoryGroupProps';
 import List from '../List/List';
 
-
+/**
+ * Компонент рендерит группу связанных категорий (родительскую и список дочерних)
+ * Используется в боковом меню
+ */
 const CategoryGroup = (props: ICategoryGroupProps) => {
     const subCategories = props.category.children;
     const renderSubCategories = (category: ICategory) => {

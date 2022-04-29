@@ -5,6 +5,9 @@ import { ICategory } from '../../types/models/ICategory';
 import CategoryGroup from '../CategoryGroup/CategoryGroup';
 import List from '../List/List';
 
+/**
+ * Компонент бокового меню - каталог товаров
+ */
 const SideMenu = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const [openedCategory, setOpenedCategory] = useState<ICategory | undefined>(categories[0]);

@@ -5,6 +5,9 @@ import { ICart } from '../../types/models/ICart';
 import CartItem from '../CartItem/CartItem';
 import List from '../List/List';
 
+/**
+ * Компонент рендерит модальное окно корзины
+ */
 const Cart = () => {
     const {cart} = useAppSelector(state => state.cartReducer);
     const {clearCart} = cartSlice.actions;

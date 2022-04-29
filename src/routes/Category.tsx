@@ -8,6 +8,15 @@ import filterProducts from '../utils/filterProducts';
 import ProductsList from '../components/ProductsList/ProductsList';
 import { IProduct } from '../types/models/IProduct';
 
+/**
+ * Страница категорий. В соответствии с моделью, категория может быть:
+ * 
+ * 1) родительской, т.е. содержащей дочерние категории и не содержащей товары,
+ * в этом случае рендерится панель дочерних категорий
+ * 
+ * 2) дочерней, содержащей товары - в этом случае рендерится список товаров
+ * и панель фильтрации
+ */
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
     const {categories} = useAppSelector(state => state.categoriesReducer);

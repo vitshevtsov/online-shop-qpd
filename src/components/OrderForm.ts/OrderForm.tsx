@@ -8,6 +8,11 @@ import handleOnChangeRequiredInput from '../../utils/handleOnChangeRequiredInput
 import CustomInput from '../UI/CustomInput/CustomInput';
 import { ICart } from '../../types/models/ICart';
 
+/**
+ * Компонент модального окна оформления заказа, открывается из корзины
+ * Все поля, кроме второго телефона, содержат валидацию на обязательность заполнения
+ * Состояние валидации сбрасывается при успешном оформлении заказа
+ */
 const OrderForm = () => {
 
     const [name, setName] = useState('');

@@ -6,6 +6,10 @@ import { useAppSelector } from '../hooks/redux';
 import searchCategoriesContainsQuery from '../utils/searchCategoriesContainsQuery';
 import searchProductsContainsQuery from '../utils/searchProductsContainsQuery';
 
+/**
+ * Страница результатов поиска. Рендерит результаты для поиска по категориям
+ * и по товарам / их характеристикам.
+ */
 const SearchResult = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const {products} = useAppSelector(state => state.productsReducer);

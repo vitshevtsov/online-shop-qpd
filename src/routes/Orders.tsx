@@ -3,6 +3,9 @@ import List from '../components/List/List';
 import { useAppSelector } from '../hooks/redux';
 import { IOrder } from '../types/models/IOrder';
 
+/**
+ * Страница списка совершенных заказов
+ */
 const Orders = () => {
     const {orders} = useAppSelector(state => state.ordersReducer);
 
