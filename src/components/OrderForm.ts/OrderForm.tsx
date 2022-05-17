@@ -7,6 +7,7 @@ import { IOrder } from '../../types/models/IOrder';
 import handleOnChangeRequiredInput from '../../utils/handleOnChangeRequiredInput';
 import CustomInput from '../UI/CustomInput/CustomInput';
 import { ICart } from '../../types/models/ICart';
+import { initInputErrorState } from '../../constants/initInputErrorState';
 
 /**
  * Компонент модального окна оформления заказа, открывается из корзины
@@ -15,29 +16,27 @@ import { ICart } from '../../types/models/ICart';
  */
 const OrderForm = () => {
 
-    const initErrorState = 'Поле обязательно для заполнения';
-
     const [name, setName] = useState('');
     const [nameIsDirty, setNameIsDirty] = useState(false);
-    const [nameError, setNameError] = useState(initErrorState);
+    const [nameError, setNameError] = useState(initInputErrorState);
 
     const [surname, setSurname] = useState('');
     const [surnameIsDirty, setSurnameIsDirty] = useState(false);
-    const [surnameError, setSurnameError] = useState(initErrorState);
+    const [surnameError, setSurnameError] = useState(initInputErrorState);
 
     const [phone, setPhone] = useState<number | string>('');
     const [phoneIsDirty, setPhoneIsDirty] = useState(false);
-    const [phoneError, setPhoneError] = useState(initErrorState);
+    const [phoneError, setPhoneError] = useState(initInputErrorState);
     
     const [secondPhone, setSecondPhone] = useState<number | string>('');
     
     const [city, setCity] = useState('');
     const [cityIsDirty, setCityIsDirty] = useState(false);
-    const [cityError, setCityError] = useState(initErrorState);
+    const [cityError, setCityError] = useState(initInputErrorState);
     
     const [street, setStreet] = useState('');
     const [streetIsDirty, setStreetIsDirty] = useState(false);
-    const [streetError, setStreetError] = useState(initErrorState);
+    const [streetError, setStreetError] = useState(initInputErrorState);
 
     const isValid = !!(name && surname && phone && city && street);
     
@@ -65,25 +64,25 @@ const OrderForm = () => {
         handleOnChangeRequiredInput(e, setStreet, setStreetError);
     };
 
-    const handleOnFocusNameInput = () => {
-        setNameIsDirty(true);
-    };
+    // const handleOnFocusNameInput = () => {
+    //     setNameIsDirty(true);
+    // };
     
-    const handleOnFocusSurnameInput = () => {
-        setSurnameIsDirty(true);
-    };
+    // const handleOnFocusSurnameInput = () => {
+    //     setSurnameIsDirty(true);
+    // };
 
-    const handleOnFocusPhoneInput = () => {
-        setPhoneIsDirty(true);
-    };
+    // const handleOnFocusPhoneInput = () => {
+    //     setPhoneIsDirty(true);
+    // };
 
-    const handleOnFocusCityInput = () => {
-        setCityIsDirty(true);
-    };
+    // const handleOnFocusCityInput = () => {
+    //     setCityIsDirty(true);
+    // };
 
-    const handleOnFocusStreetInput = () => {
-        setStreetIsDirty(true);
-    };
+    // const handleOnFocusStreetInput = () => {
+    //     setStreetIsDirty(true);
+    // };
     const {cart} = useAppSelector(state => state.cartReducer);
     const {orders} = useAppSelector(state => state.ordersReducer);
     const {addToOrders} = ordersSlice.actions;
@@ -115,18 +114,18 @@ const OrderForm = () => {
             setSecondPhone('');
             setCity('');
             setStreet('');
-
+            // todo сделать логику того что при нажатии на кнопку isDirty в инпуте обновляется (false при успешном заказе либо true если валидация не пройдена)
             setNameIsDirty(false);
             setSurnameIsDirty(false);
             setPhoneIsDirty(false);
             setCityIsDirty(false);
             setStreetIsDirty(false);
             
-            setNameError(initErrorState);
-            setSurnameError(initErrorState);
-            setPhoneError(initErrorState);
-            setCityError(initErrorState);
-            setStreetError(initErrorState);
+            setNameError(initInputErrorState);
+            setSurnameError(initInputErrorState);
+            setPhoneError(initInputErrorState);
+            setCityError(initInputErrorState);
+            setStreetError(initInputErrorState);
         } else {
             setNameIsDirty(true);
             setSurnameIsDirty(true);
@@ -155,26 +154,27 @@ const OrderForm = () => {
                                     <CustomInput
                                         type="text"
                                         className='form-control'
-                                        label='Имя*'
+                                        label='Имя'
                                         placeholder='Введите имя'
                                         value={name}
                                         isDirty={nameIsDirty}
+                                        isRequired
                                         error={nameError}
                                         handleOnChange={handleOnChangeNameInput}
-                                        handleOnFocus={handleOnFocusNameInput}
                                     />
                                 </div>
                                 <div className="col-6">
                                     <CustomInput 
                                         type="text"
                                         className='form-control'
-                                        label='Фамилия*'
+                                        label='Фамилия'
                                         placeholder='Введите фамилию'
                                         value={surname}
                                         isDirty={surnameIsDirty}
+                                        isRequired
                                         error={surnameError}
                                         handleOnChange={handleOnChangeSurnameInput}
-                                        handleOnFocus={handleOnFocusSurnameInput}
+                                        // handleOnFocus={handleOnFocusSurnameInput}
                                         
                                     />
                                 </div>
@@ -184,13 +184,14 @@ const OrderForm = () => {
                                     <CustomInput 
                                         type='number'
                                         className='form-control numberInputWithoutSpin'
-                                        label='Телефон*'
+                                        label='Телефон'
                                         placeholder='Введите номер телефона'
                                         value={phone}
                                         isDirty={phoneIsDirty}
+                                        isRequired
                                         error={phoneError}
                                         handleOnChange={handleOnChangePhoneInput}
-                                        handleOnFocus={handleOnFocusPhoneInput}
+                                        // handleOnFocus={handleOnFocusPhoneInput}
                                     />
                                 </div>
                                 <div className="col-6">
@@ -209,26 +210,28 @@ const OrderForm = () => {
                                     <CustomInput 
                                         type="text"
                                         className='form-control'
-                                        label='Город*'
+                                        label='Город'
                                         placeholder='Введите город'
                                         value={city}
                                         isDirty={cityIsDirty}
+                                        isRequired
                                         error={cityError}
                                         handleOnChange={handleOnChangeCityInput}
-                                        handleOnFocus={handleOnFocusCityInput}
+                                        // handleOnFocus={handleOnFocusCityInput}
                                     />
                                 </div>
                                 <div className="col-6">
                                     <CustomInput 
                                         type="text"
                                         className='form-control'
-                                        label='Улица*'
+                                        label='Улица'
                                         placeholder='Введите улицу'
                                         value={street}
                                         isDirty={streetIsDirty}
+                                        isRequired
                                         error={streetError}
                                         handleOnChange={handleOnChangeStreetInput}
-                                        handleOnFocus={handleOnFocusStreetInput}
+                                        // handleOnFocus={handleOnFocusStreetInput}
                                     />
                                 </div>
                             </div>

@@ -1,20 +1,6 @@
-import {IPropertiesMapperRuEng} from '../types/other/IPropertiesMapperRuEng';
+import { propertiesMapperRuEng } from '../constants/propertiesMapperRuEng';
 
 const mapPropertyName = (property: string): string => {
-    
-    const propertiesMapperRuEng: IPropertiesMapperRuEng = {
-        price: 'Цена',
-        brand: 'Бренд',
-        color: 'Цвет',
-        RAM: 'Оперативная память',
-        series: 'Серия',
-        chipset: 'Чипсет',
-        diagonal: 'Диагональ',
-        power: 'Мощность',
-        height: 'Высота',
-        volume: 'Объем',
-    };
-
     return propertiesMapperRuEng[property];
 };
 

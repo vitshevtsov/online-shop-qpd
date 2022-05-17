@@ -8,5 +8,6 @@ export interface ICustominputProps {
     handleOnChange: (e: any) => void;
     handleOnFocus?: () => void;
     isDirty?: boolean;
+    isRequired?: boolean;
     id?: string;
 }
