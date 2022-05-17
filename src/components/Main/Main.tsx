@@ -1,7 +1,7 @@
 import React from 'react';
-import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
-import { useAppSelector } from '../hooks/redux';
-import getPopularCategories from '../utils/getPopularCategories';
+import CategoryGroupsPanel from '../CategoryGroupsPanel/CategoryGroupsPanel';
+import { useAppSelector } from '../../hooks/redux';
+import getPopularCategories from '../../utils/getPopularCategories';
 
 /**
  * Главная страница, на которой рендерится список популярных категорий

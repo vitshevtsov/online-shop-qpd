@@ -15,27 +15,29 @@ import { ICart } from '../../types/models/ICart';
  */
 const OrderForm = () => {
 
+    const initErrorState = 'Поле обязательно для заполнения';
+
     const [name, setName] = useState('');
     const [nameIsDirty, setNameIsDirty] = useState(false);
-    const [nameError, setNameError] = useState('Поле обязательно для заполнения');
+    const [nameError, setNameError] = useState(initErrorState);
 
     const [surname, setSurname] = useState('');
     const [surnameIsDirty, setSurnameIsDirty] = useState(false);
-    const [surnameError, setSurnameError] = useState('Поле обязательно для заполнения');
+    const [surnameError, setSurnameError] = useState(initErrorState);
 
     const [phone, setPhone] = useState<number | string>('');
     const [phoneIsDirty, setPhoneIsDirty] = useState(false);
-    const [phoneError, setPhoneError] = useState('Поле обязательно для заполнения');
+    const [phoneError, setPhoneError] = useState(initErrorState);
     
     const [secondPhone, setSecondPhone] = useState<number | string>('');
     
     const [city, setCity] = useState('');
     const [cityIsDirty, setCityIsDirty] = useState(false);
-    const [cityError, setCityError] = useState('Поле обязательно для заполнения');
+    const [cityError, setCityError] = useState(initErrorState);
     
     const [street, setStreet] = useState('');
     const [streetIsDirty, setStreetIsDirty] = useState(false);
-    const [streetError, setStreetError] = useState('Поле обязательно для заполнения');
+    const [streetError, setStreetError] = useState(initErrorState);
 
     const isValid = !!(name && surname && phone && city && street);
     
@@ -120,11 +122,11 @@ const OrderForm = () => {
             setCityIsDirty(false);
             setStreetIsDirty(false);
             
-            setNameError('Поле обязательно для заполнения');
-            setSurnameError('Поле обязательно для заполнения');
-            setPhoneError('Поле обязательно для заполнения');
-            setCityError('Поле обязательно для заполнения');
-            setStreetError('Поле обязательно для заполнения');
+            setNameError(initErrorState);
+            setSurnameError(initErrorState);
+            setPhoneError(initErrorState);
+            setCityError(initErrorState);
+            setStreetError(initErrorState);
         } else {
             setNameIsDirty(true);
             setSurnameIsDirty(true);

@@ -1,8 +1,8 @@
-const mapPropertyName = (property: string): string => {
+import {IPropertiesMapperRuEng} from '../types/other/IPropertiesMapperRuEng';
 
-    // todo types
-    // https://stackoverflow.com/questions/56568423/typescript-no-index-signature-with-a-parameter-of-type-string-was-found-on-ty
-    const propertiesMapperRuEng: any = {
+const mapPropertyName = (property: string): string => {
+    
+    const propertiesMapperRuEng: IPropertiesMapperRuEng = {
         price: 'Цена',
         brand: 'Бренд',
         color: 'Цвет',

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import CategoryGroupsPanel from '../components/CategoryGroupsPanel/CategoryGroupsPanel';
-import { useAppSelector } from '../hooks/redux';
-import searchCategoryById from '../utils/searchCategoryById';
-import CategoryFilters from '../components/CategoryFilters/CategoryFilters';
-import filterProducts from '../utils/filterProducts';
-import ProductsList from '../components/ProductsList/ProductsList';
-import { IProduct } from '../types/models/IProduct';
+import CategoryGroupsPanel from '../CategoryGroupsPanel/CategoryGroupsPanel';
+import { useAppSelector } from '../../hooks/redux';
+import searchCategoryById from '../../utils/searchCategoryById';
+import CategoryFilters from '../CategoryFilters/CategoryFilters';
+import filterProducts from '../../utils/filterProducts';
+import ProductsList from '../ProductsList/ProductsList';
+import { IProduct } from '../../types/models/IProduct';
 
 /**
  * Страница категорий. В соответствии с моделью, категория может быть:
@@ -22,7 +22,6 @@ const Category = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const {id} = useParams();
     const category = searchCategoryById(categories, id);
-    const isChildCategory: boolean = (category.properties);
     const currentCategoryProducts = products.filter((item: IProduct) => item.categoryId === Number(id));
     
     const properties = category.properties;
@@ -93,7 +92,7 @@ const Category = () => {
                         {filteredProducts && <ProductsList products={filteredProducts} />}
                     </div>
                     <div className="col-3">
-                        {isChildCategory && <CategoryFilters 
+                        {category.properties && <CategoryFilters 
                             category={category} 
                             categoryProducts={currentCategoryProducts}
                             priceRange={priceRange}
