@@ -1,6 +1,5 @@
 const searchProductsContainsQuery = (arr: any, searchQuery: string) => {
     const result: any[] = [];
-    console.log('search');
     arr.forEach((item: any) => {
         if (item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
             result.push(item);

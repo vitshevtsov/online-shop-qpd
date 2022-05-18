@@ -25,32 +25,60 @@ const SideMenu = () => {
                 onMouseOver={handleOnMouseOverCategory}
                 data-bs-dismiss="offcanvas"
             >
-                <Link to={`/category${category.id}`} className="list-group-item list-group-item-action">{category.name}</Link>
+                <Link
+                    to={`/category${category.id}`}
+                    className="list-group-item list-group-item-action"
+                >{category.name}
+                </Link>
             </li>
         );
     };
     const renderCategoryGroups =(category: ICategory) => {
         return (
-            <CategoryGroup key={category.id} category={category} />
+            <CategoryGroup
+                key={category.id}
+                category={category}
+            />
         );
     };
         
     return (
-        <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div
+            className="offcanvas offcanvas-start"
+            tabIndex={-1}
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+        >
             <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasExampleLabel">Каталог</h5>
-                <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h5
+                    className="offcanvas-title"
+                    id="offcanvasExampleLabel"
+                >Каталог
+                </h5>
+                <button
+                    type="button"
+                    className="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                >
+                </button>
             </div>
             <div className="offcanvas-body row">
                 <div className="col-4">
-                    <List items={categories} renderItem={renderCategory} /> 
+                    <List
+                        items={categories}
+                        renderItem={renderCategory}
+                    /> 
                 </div>
                 <div className="col-8">
                     <h5 className="openedCategoryTitle mb-4">
                         {openedCategory && openedCategory.name}
                     </h5>
                     <div className="row row-cols-2">
-                        {openedCategory?.children && <List items={openedCategory.children} renderItem={renderCategoryGroups} />}
+                        {openedCategory?.children && <List
+                            items={openedCategory.children}
+                            renderItem={renderCategoryGroups}
+                        />}
                     </div>
                 </div>
             </div>  

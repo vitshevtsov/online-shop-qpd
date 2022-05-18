@@ -11,12 +11,18 @@ import ProductItem from '../ProductItem/ProductItem';
 const ProductsList = (props: IProductsList) => {
     const renderProducts = (product: IProduct) => {
         return (
-            <ProductItem key={product.id} product={product} />
+            <ProductItem
+                key={product.id}
+                product={product}
+            />
         );
     };
     return (
         <div className={props.rootDivClassName}>
-            <List items={props.products} renderItem={renderProducts} />
+            <List
+                items={props.products}
+                renderItem={renderProducts}
+            />
         </div>
     );
 };

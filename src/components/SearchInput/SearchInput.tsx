@@ -33,7 +33,7 @@ const SearchInput = () => {
                 type="button"
             >
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </Link>}
+                            </Link>}
         </div>
     );
 };

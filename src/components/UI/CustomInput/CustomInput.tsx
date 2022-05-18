@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ICustominputProps } from '../../../types/props/ICustomInputProps';
 
 
 const CustomInput = (props: ICustominputProps) => {
-    const [isDirty, setIsDirty] = useState(props.isDirty);
-    const handleOnFocus = () => {
-        setIsDirty(true);
-    };
 
     const errorDiv = <div className="errorDiv">{props.error}</div>;
     const requiredSign = <span>*</span>;
@@ -27,9 +23,9 @@ const CustomInput = (props: ICustominputProps) => {
                 placeholder={props.placeholder} 
                 value={props.value}
                 onChange={props.handleOnChange}
-                onFocus={handleOnFocus}
+                onFocus={props.handleOnFocus}
             />
-            {isDirty && errorDiv}
+            {props.isDirty && errorDiv}
         </div>
     );
 };

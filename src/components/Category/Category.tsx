@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Params, useParams } from 'react-router-dom';
 import CategoryGroupsPanel from '../CategoryGroupsPanel/CategoryGroupsPanel';
 import { useAppSelector } from '../../hooks/redux';
 import searchCategoryById from '../../utils/searchCategoryById';
@@ -20,19 +20,18 @@ import { IProduct } from '../../types/models/IProduct';
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
     const {categories} = useAppSelector(state => state.categoriesReducer);
-    const {id} = useParams();
+    const {id}: Readonly<Params<string>> = useParams();
     const category = searchCategoryById(categories, id);
     const currentCategoryProducts = products.filter((item: IProduct) => item.categoryId === Number(id));
     
-    const properties = category.properties;
     const currentPricesSortedArr = currentCategoryProducts.map(product => product.properties.price).sort((a,b) => a - b);
     const initialPriceRange = (currentPricesSortedArr.length > 1)
         ? [currentPricesSortedArr[0], currentPricesSortedArr[currentPricesSortedArr.length - 1]]
         : [currentPricesSortedArr[0], currentPricesSortedArr[0]];
 
     const initialCheckboxesState: any = {};
-    if (properties) {
-        properties.forEach((propertyName: string) => {
+    if (category?.properties) {
+        category?.properties.forEach((propertyName: string) => {
             initialCheckboxesState[propertyName] = [];
         });
     }
@@ -87,12 +86,12 @@ const Category = () => {
                 <div className="row">
                     <div className="col-9">
                         <h5>
-                            {category.name}
+                            {category?.name}
                         </h5>
                         {filteredProducts && <ProductsList products={filteredProducts} />}
                     </div>
                     <div className="col-3">
-                        {category.properties && <CategoryFilters 
+                        {category?.properties && <CategoryFilters 
                             category={category} 
                             categoryProducts={currentCategoryProducts}
                             priceRange={priceRange}
@@ -105,7 +104,7 @@ const Category = () => {
                         />}
                     </div>
                 </div>
-            </div>     
+              </div>     
     );
 };
 

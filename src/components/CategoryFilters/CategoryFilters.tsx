@@ -38,10 +38,17 @@ const CategoryFilters = (props: ICategoryFiltersProps) => {
                     <h5>Фильтры</h5>
                 </div>
                 <div className="col">
-                    <small className=" btn btn-sm text-warning" onClick={props.onClickClearFilters}>Очистить</small>
+                    <small
+                        className=" btn btn-sm text-warning"
+                        onClick={props.onClickClearFilters}
+                    >Очистить
+                    </small>
                 </div>
             </div>
-            {props.category.properties && <List items={props.category.properties} renderItem={renderCategoryFilters} />}
+            {props.category.properties && <List
+                items={props.category.properties}
+                renderItem={renderCategoryFilters}
+            />}
         </>
     );
 };

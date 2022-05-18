@@ -47,10 +47,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* .cart-btn {
-    max-height: 38px;
-} */
-
 .offcanvas-start {
     width: 850px;
 }
@@ -58,6 +54,29 @@ body {
 .card-img-top {
     width: auto;
     height: 50px;
+}
+
+.cartContent {
+max-height: 80vh;
+overflow-y: scroll;
+position: relative;
+
+}
+
+.cartContentHeader {
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+.cartContentFooter {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2;
 }
 
 .cartItemImg {

@@ -64,25 +64,25 @@ const OrderForm = () => {
         handleOnChangeRequiredInput(e, setStreet, setStreetError);
     };
 
-    // const handleOnFocusNameInput = () => {
-    //     setNameIsDirty(true);
-    // };
+    const handleOnFocusNameInput = () => {
+        setNameIsDirty(true);
+    };
     
-    // const handleOnFocusSurnameInput = () => {
-    //     setSurnameIsDirty(true);
-    // };
+    const handleOnFocusSurnameInput = () => {
+        setSurnameIsDirty(true);
+    };
 
-    // const handleOnFocusPhoneInput = () => {
-    //     setPhoneIsDirty(true);
-    // };
+    const handleOnFocusPhoneInput = () => {
+        setPhoneIsDirty(true);
+    };
 
-    // const handleOnFocusCityInput = () => {
-    //     setCityIsDirty(true);
-    // };
+    const handleOnFocusCityInput = () => {
+        setCityIsDirty(true);
+    };
 
-    // const handleOnFocusStreetInput = () => {
-    //     setStreetIsDirty(true);
-    // };
+    const handleOnFocusStreetInput = () => {
+        setStreetIsDirty(true);
+    };
     const {cart} = useAppSelector(state => state.cartReducer);
     const {orders} = useAppSelector(state => state.ordersReducer);
     const {addToOrders} = ordersSlice.actions;
@@ -114,7 +114,7 @@ const OrderForm = () => {
             setSecondPhone('');
             setCity('');
             setStreet('');
-            // todo сделать логику того что при нажатии на кнопку isDirty в инпуте обновляется (false при успешном заказе либо true если валидация не пройдена)
+            
             setNameIsDirty(false);
             setSurnameIsDirty(false);
             setPhoneIsDirty(false);
@@ -137,12 +137,28 @@ const OrderForm = () => {
 
 
     return (
-        <div className="modal fade" id="orderFormModalToggle2" tabIndex={-1} aria-labelledby="orderFormModalLabel" aria-hidden="true">
+        <div
+            className="modal fade"
+            id="orderFormModalToggle2"
+            tabIndex={-1}
+            aria-labelledby="orderFormModalLabel"
+            aria-hidden="true"
+        >
             <div className="modal-dialog modal-xl">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="orderFormModalLabel">Оформление заказа</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5
+                            className="modal-title"
+                            id="orderFormModalLabel"
+                        >Оформление заказа
+                        </h5>
+                        <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        >
+                        </button>
                     </div>
                     <div className="modal-body">
                         <form>
@@ -161,6 +177,7 @@ const OrderForm = () => {
                                         isRequired
                                         error={nameError}
                                         handleOnChange={handleOnChangeNameInput}
+                                        handleOnFocus={handleOnFocusNameInput}
                                     />
                                 </div>
                                 <div className="col-6">
@@ -174,7 +191,7 @@ const OrderForm = () => {
                                         isRequired
                                         error={surnameError}
                                         handleOnChange={handleOnChangeSurnameInput}
-                                        // handleOnFocus={handleOnFocusSurnameInput}
+                                        handleOnFocus={handleOnFocusSurnameInput}
                                         
                                     />
                                 </div>
@@ -191,7 +208,7 @@ const OrderForm = () => {
                                         isRequired
                                         error={phoneError}
                                         handleOnChange={handleOnChangePhoneInput}
-                                        // handleOnFocus={handleOnFocusPhoneInput}
+                                        handleOnFocus={handleOnFocusPhoneInput}
                                     />
                                 </div>
                                 <div className="col-6">
@@ -217,7 +234,7 @@ const OrderForm = () => {
                                         isRequired
                                         error={cityError}
                                         handleOnChange={handleOnChangeCityInput}
-                                        // handleOnFocus={handleOnFocusCityInput}
+                                        handleOnFocus={handleOnFocusCityInput}
                                     />
                                 </div>
                                 <div className="col-6">
@@ -231,15 +248,26 @@ const OrderForm = () => {
                                         isRequired
                                         error={streetError}
                                         handleOnChange={handleOnChangeStreetInput}
-                                        // handleOnFocus={handleOnFocusStreetInput}
+                                        handleOnFocus={handleOnFocusStreetInput}
                                     />
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div className="modal-footer">
-                        {isValid && <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleAddToOrders}>Оформить заказ</button>}
-                        {!isValid && <button type="button" className="btn btn-secondary" onClick={handleAddToOrders}>Оформить заказ</button>}
+                        {isValid && <button
+                            type="button"
+                            className="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            onClick={handleAddToOrders}
+                        >Оформить заказ
+                                    </button>}
+                        {!isValid && <button
+                            type="button"
+                            className="btn btn-secondary"
+                            onClick={handleAddToOrders}
+                        >Оформить заказ
+                                     </button>}
                     </div>
                 </div>
             </div>

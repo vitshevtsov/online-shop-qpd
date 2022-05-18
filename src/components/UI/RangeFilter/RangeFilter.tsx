@@ -16,7 +16,8 @@ const RangeFilter = (props: IRangeFilterProps) => {
                         min={props.maxPriceRange[0]}
                         max={props.maxPriceRange[1]}
                         value={props.priceRange[0] ?? ''} 
-                        onChange={props.onChangeMinPrice} />
+                        onChange={props.onChangeMinPrice}
+                    />
                 </div>
                 <div className="col">
                     <input

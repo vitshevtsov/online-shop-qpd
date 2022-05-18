@@ -28,7 +28,10 @@ const CartItem = (props: ICartItemProps) => {
         >
             <div className="row">
                 <div className="col-1 text-center d-flex align-items-center">
-                    <img className="cartItemImg" src={props.product.imgPath}/>
+                    <img
+                        className="cartItemImg"
+                        src={props.product.imgPath}
+                    />
                 </div>
                 <div className="col-6 text-center d-flex align-items-center ps-5">
                     <h6 className="align-middle">{props.product.name}</h6>
@@ -47,7 +50,12 @@ const CartItem = (props: ICartItemProps) => {
                     <h4>{props.product.properties.price * props.product.quantity} руб.</h4>
                 </div>
                 <div className="col-1 text-center d-flex align-items-center text-secondary">
-                    <FontAwesomeIcon className="icon" size="2x" icon={faTrashCan} onClick={handleRemoveFromCart} />
+                    <FontAwesomeIcon
+                        className="icon"
+                        size="2x"
+                        icon={faTrashCan}
+                        onClick={handleRemoveFromCart}
+                    />
                 </div>
             </div>
         </div>

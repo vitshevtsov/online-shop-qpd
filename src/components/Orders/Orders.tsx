@@ -11,7 +11,10 @@ const Orders = () => {
 
     const renderOrders = (order: IOrder) => {
         return (
-            <div className="list-group-item" key={order.id}>
+            <div
+                className="list-group-item"
+                key={order.id}
+            >
                 <div>Заказ № {order.id}</div>
                 <div>Список товаров:</div>
                 {order.orderedItems.map((item: any) => <li key={item.id}>{item.name} - {item.quantity} шт.</li>)}
@@ -23,7 +26,10 @@ const Orders = () => {
     return (
         <div className="container-md">
             {(orders.length !== 0)
-                ? <List items={orders} renderItem={renderOrders}/>
+                ? <List
+                    items={orders}
+                    renderItem={renderOrders}
+                />
                 : <div>Пока не сделано ни одного заказа</div>}
         </div>
     );

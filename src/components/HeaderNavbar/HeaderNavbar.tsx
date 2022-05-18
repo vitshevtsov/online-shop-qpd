@@ -9,14 +9,22 @@ const HeaderNavbar = () => {
         <nav className="navbar navbar-light d-flex w-75 mx-auto">
             <div className="row w-100 ps-5">
                 <div className="col-3 text-center">
-                    <Link to="main" className="btn btn-md btn-outline-light me-3">Главная</Link>
+                    <Link
+                        to="main"
+                        className="btn btn-md btn-outline-light me-3"
+                    >Главная
+                    </Link>
                     <SideMenuToggler />
                 </div>
                 <div className="col-6 text-center">
                     <SearchInput />
                 </div>
                 <div className="col-3 text-center">
-                    <Link to="orders" className="btn btn-md btn-outline-light me-3">Заказы</Link>
+                    <Link
+                        to="orders"
+                        className="btn btn-md btn-outline-light me-3"
+                    >Заказы
+                    </Link>
                     <CartToggler/>
                 </div>
             </div>  
