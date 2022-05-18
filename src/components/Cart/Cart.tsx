@@ -34,13 +34,13 @@ const Cart = () => {
             data-bs-toggle="modal"
             data-bs-dismiss="modal"
         >Оформить заказ
-          </button>
+        </button>
         : <button
             type="button"
             className="btn btn-primary"
             data-bs-dismiss="modal"
         >Продолжить покупки
-          </button>;
+        </button>;
 
     return (
         <div

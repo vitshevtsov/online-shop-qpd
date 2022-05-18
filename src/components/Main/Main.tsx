@@ -26,7 +26,7 @@ const Main = () => {
                         aria-controls="offcanvasExample"
                     >К покупкам!
                     </a>
-                  </div>}
+                </div>}
         </div>
     );
 

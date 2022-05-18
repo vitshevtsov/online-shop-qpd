@@ -261,13 +261,13 @@ const OrderForm = () => {
                             data-bs-dismiss="modal"
                             onClick={handleAddToOrders}
                         >Оформить заказ
-                                    </button>}
+                        </button>}
                         {!isValid && <button
                             type="button"
                             className="btn btn-secondary"
                             onClick={handleAddToOrders}
                         >Оформить заказ
-                                     </button>}
+                        </button>}
                     </div>
                 </div>
             </div>

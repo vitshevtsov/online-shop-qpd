@@ -27,13 +27,13 @@ const ProductItem = (props: IProductItemProps) => {
             onClick={() => !isInCart && handleAddToCart()}
         >
             {isInCart ? 'Товар уже в корзине' : 'Добавить в корзину'}
-          </button>
+        </button>
         : <button
             className="btn btn-outline-secondary"
             disabled
         >
             Товар закончился
-          </button>;
+        </button>;
     
     const handleAddToCart = () => {
         dispatch(addToCart({...props.product, quantity: 1}));
