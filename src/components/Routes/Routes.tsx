@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Main from '../Main/Main';
-import Orders from '../Orders/Orders';
-import Category from '../Category/Category';
-import SearchResult from '../SearchResult/SearchResult';
-import NoMatchRoute from '../NoMatchRoute/NoMatchRoute';
+import Main from 'components/Main/Main';
+import Orders from 'components/Orders/Orders';
+import Category from 'components/Category/Category';
+import SearchResult from 'components/SearchResult/SearchResult';
+import NoMatchRoute from 'components/NoMatchRoute/NoMatchRoute';
 
 const RoutesComponent = () => {
     return (

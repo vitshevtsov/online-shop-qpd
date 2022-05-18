@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import {ordersSlice} from '../../store/reducers/ordersSlice';
-import { cartSlice } from '../../store/reducers/cartSlice';
-import { stockSlice } from '../../store/reducers/stockSlice';
-import { IOrder } from '../../types/models/IOrder';
-import handleOnChangeRequiredInput from '../../utils/handleOnChangeRequiredInput';
-import CustomInput from '../UI/CustomInput/CustomInput';
-import { ICart } from '../../types/models/ICart';
-import { initInputErrorState } from '../../constants/initInputErrorState';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
+import {ordersSlice} from 'store/reducers/ordersSlice';
+import { cartSlice } from 'store/reducers/cartSlice';
+import { stockSlice } from 'store/reducers/stockSlice';
+import { IOrder } from 'types/models/IOrder';
+import handleOnChangeRequiredInput from 'utils/handleOnChangeRequiredInput';
+import CustomInput from 'components/UI/CustomInput/CustomInput';
+import { ICart } from 'types/models/ICart';
+import { initInputErrorState } from 'constants/initInputErrorState';
 
 /**
  * Компонент модального окна оформления заказа, открывается из корзины

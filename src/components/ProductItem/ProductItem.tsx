@@ -1,9 +1,9 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import {cartSlice} from '../../store/reducers/cartSlice';
-import { IProductItemProps } from '../../types/props/IProductItemprops';
-import mapPropertyName from '../../utils/mapPropertyName';
-import List from '../List/List';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
+import {cartSlice} from 'store/reducers/cartSlice';
+import { IProductItemProps } from 'types/props/IProductItemprops';
+import mapPropertyName from 'utils/mapPropertyName';
+import List from 'components/List/List';
 
 /**
  * Компонент рендерит элемент списка товаров. Кнопка заказа м.б. в трех состояниях:

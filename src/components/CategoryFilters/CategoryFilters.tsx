@@ -1,9 +1,9 @@
 import React from 'react';
-import List from '../List/List';
-import CheckFilter from '../UI/CheckFilter/CheckFilter';
-import RangeFilter from '../UI/RangeFilter/RangeFilter';
+import List from 'components/List/List';
+import CheckFilter from 'components/UI/CheckFilter/CheckFilter';
+import RangeFilter from 'components/UI/RangeFilter/RangeFilter';
 import 'rc-slider/assets/index.css';
-import { ICategoryFiltersProps } from '../../types/props/ICategoryFiltersProps';
+import { ICategoryFiltersProps } from 'types/props/ICategoryFiltersProps';
 
 /**
  * Компонент рендерит боковую панель фильтров для списка характеристик текущей категории

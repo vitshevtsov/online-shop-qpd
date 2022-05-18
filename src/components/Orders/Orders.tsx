@@ -1,7 +1,7 @@
 import React from 'react';
-import List from '../List/List';
-import { useAppSelector } from '../../hooks/redux';
-import { IOrder } from '../../types/models/IOrder';
+import List from 'components/List/List';
+import { useAppSelector } from 'hooks/redux';
+import { IOrder } from 'types/models/IOrder';
 
 /**
  * Страница списка совершенных заказов

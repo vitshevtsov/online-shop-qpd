@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import { useAppSelector } from '../../hooks/redux';
-import { ICategory } from '../../types/models/ICategory';
-import CategoryGroup from '../CategoryGroup/CategoryGroup';
-import List from '../List/List';
+import { useAppSelector } from 'hooks/redux';
+import { ICategory } from 'types/models/ICategory';
+import CategoryGroup from 'components/CategoryGroup/CategoryGroup';
+import List from 'components/List/List';
 
 /**
  * Компонент бокового меню - каталог товаров

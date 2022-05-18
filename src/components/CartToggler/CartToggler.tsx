@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector } from '../../hooks/redux';
+import { useAppSelector } from 'hooks/redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 

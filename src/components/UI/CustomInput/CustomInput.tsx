@@ -1,5 +1,5 @@
 import React from 'react';
-import { ICustominputProps } from '../../../types/props/ICustomInputProps';
+import { ICustominputProps } from 'types/props/ICustomInputProps';
 
 
 const CustomInput = (props: ICustominputProps) => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ICategory } from '../../types/models/ICategory';
-import { ICategoryGroupsPanelProps } from '../../types/props/ICategoryGroupsPanelProps';
-import List from '../List/List';
+import { ICategory } from 'types/models/ICategory';
+import { ICategoryGroupsPanelProps } from 'types/props/ICategoryGroupsPanelProps';
+import List from 'components/List/List';
 
 /**
  * Компонент рендерит панель категорий в соответствии с переданным списком,

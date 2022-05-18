@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import CategoryGroupsPanel from '../CategoryGroupsPanel/CategoryGroupsPanel';
-import ProductsList from '../ProductsList/ProductsList';
-import { useAppSelector } from '../../hooks/redux';
-import searchCategoriesContainsQuery from '../../utils/searchCategoriesContainsQuery';
-import searchProductsContainsQuery from '../../utils/searchProductsContainsQuery';
+import CategoryGroupsPanel from 'components/CategoryGroupsPanel/CategoryGroupsPanel';
+import ProductsList from 'components/ProductsList/ProductsList';
+import { useAppSelector } from 'hooks/redux';
+import searchCategoriesContainsQuery from 'utils/searchCategoriesContainsQuery';
+import searchProductsContainsQuery from 'utils/searchProductsContainsQuery';
 
 /**
  * Страница результатов поиска. Рендерит результаты для поиска по категориям

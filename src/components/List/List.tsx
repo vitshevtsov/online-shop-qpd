@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { IListProps } from '../../types/props/IListProps';
+import { IListProps } from 'types/props/IListProps';
 
 /**
  * Универсальный компонент для рендера всех списков приложения

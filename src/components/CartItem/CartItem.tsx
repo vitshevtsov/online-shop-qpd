@@ -1,9 +1,9 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import {cartSlice} from '../../store/reducers/cartSlice';
+import { useAppDispatch, useAppSelector } from 'hooks/redux';
+import {cartSlice} from 'store/reducers/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { ICartItemProps } from '../../types/props/ICartItemProps';
+import { ICartItemProps } from 'types/props/ICartItemProps';
 
 
 const CartItem = (props: ICartItemProps) => {

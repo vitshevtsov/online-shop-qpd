@@ -1,6 +1,6 @@
 import Slider from 'rc-slider';
 import React from 'react';
-import { IRangeFilterProps } from '../../../types/props/IRangeFilterProps';
+import { IRangeFilterProps } from 'types/props/IRangeFilterProps';
 
 
 const RangeFilter = (props: IRangeFilterProps) => {

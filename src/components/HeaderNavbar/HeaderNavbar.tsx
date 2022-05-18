@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CartToggler from '../CartToggler/CartToggler';
-import SearchInput from '../SearchInput/SearchInput';
-import SideMenuToggler from '../SideMenuToggler/SideMenuToggler';
+import CartToggler from 'components/CartToggler/CartToggler';
+import SearchInput from 'components/SearchInput/SearchInput';
+import SideMenuToggler from 'components/SideMenuToggler/SideMenuToggler';
 
 const HeaderNavbar = () => {
     return (

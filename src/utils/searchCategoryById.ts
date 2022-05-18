@@ -1,4 +1,4 @@
-import { ICategory } from "../types/models/ICategory";
+import { ICategory } from "types/models/ICategory";
 
 /**
  * Функция поиска категории по id, принимает массив категорий и id, возвращает

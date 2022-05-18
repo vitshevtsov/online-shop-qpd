@@ -1,7 +1,7 @@
 import React from 'react';
-import { ICheckFilterProps } from '../../../types/props/ICheckFilterProps';
-import mapPropertyName from '../../../utils/mapPropertyName';
-import List from '../../List/List';
+import { ICheckFilterProps } from 'types/props/ICheckFilterProps';
+import mapPropertyName from 'utils/mapPropertyName';
+import List from 'components/List/List';
 
 const CheckFilter = (props: ICheckFilterProps) => {
 

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {IStockState} from '../../types/state/IStockState';
-import * as stockData from '../../data/stock.json';
-import { ICart } from '../../types/models/ICart';
+import {IStockState} from 'types/state/IStockState';
+import * as stockData from 'data/stock.json';
+import { ICart } from 'types/models/ICart';
 
 const initialState: IStockState = {
     stock: Array.from(stockData),

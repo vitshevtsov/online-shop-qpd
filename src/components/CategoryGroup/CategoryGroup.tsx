@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ICategory } from '../../types/models/ICategory';
-import { ICategoryGroupProps } from '../../types/props/ICategoryGroupProps';
-import List from '../List/List';
+import { ICategory } from 'types/models/ICategory';
+import { ICategoryGroupProps } from 'types/props/ICategoryGroupProps';
+import List from 'components/List/List';
 
 /**
  * Компонент рендерит группу связанных категорий (родительскую и список дочерних)

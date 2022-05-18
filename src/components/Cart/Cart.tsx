@@ -1,9 +1,9 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import {cartSlice} from '../../store/reducers/cartSlice';
-import { ICart } from '../../types/models/ICart';
-import CartItem from '../CartItem/CartItem';
-import List from '../List/List';
+import {cartSlice} from 'store/reducers/cartSlice';
+import { ICart } from 'types/models/ICart';
+import CartItem from 'components/CartItem/CartItem';
+import List from 'components/List/List';
 
 /**
  * Компонент рендерит модальное окно корзины

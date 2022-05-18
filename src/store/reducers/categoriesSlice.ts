@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {ICategoriesState} from '../../types/state/ICategoriesState';
-import * as categoriesData from '../../data/categories.json';
+import {ICategoriesState} from 'types/state/ICategoriesState';
+import * as categoriesData from 'data/categories.json';
 
 const initialState: ICategoriesState = {
     categories: Array.from(categoriesData),
