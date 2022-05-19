@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ICustominputProps {
     error?: string;
     label: string;
@@ -5,8 +7,8 @@ export interface ICustominputProps {
     className: string;
     placeholder: string;
     value: string | number;
-    handleOnChange: (e: any) => void;
-    handleOnFocus?: () => void;
+    handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleOnFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
     isDirty?: boolean;
     isRequired?: boolean;
     id?: string;
