@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-import { IObjOfSetters } from "types/other/IArrayOfSetters";
+import { IObjOfSetters } from "types/other/IObjOfSetters";
 
 /**
  * Функция смены состояния всех валидируемых инпутов на Dirty (при сабмите).

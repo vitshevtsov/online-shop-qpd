@@ -12,7 +12,7 @@ import { ICart } from 'types/models/ICart';
 import { initInputErrorState } from 'constants/initInputErrorState';
 import clearForm from 'utils/clearForm';
 import setDirtyForAll from 'utils/setDirtyForAll';
-import { IObjOfSetters } from 'types/other/IArrayOfSetters';
+import { IObjOfSetters } from 'types/other/IObjOfSetters';
 
 /**
  * Компонент модального окна оформления заказа, открывается из корзины

@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 import { initInputErrorState } from "constants/initInputErrorState";
-import { IObjOfSetters } from "types/other/IArrayOfSetters";
+import { IObjOfSetters } from "types/other/IObjOfSetters";
 
 /**
  * Функция очистки формы. Принимает объект сеттеров состояния
