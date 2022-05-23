@@ -17,7 +17,7 @@ const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
                 className="col"
             >
                 <Link
-                    to={`/category${category.id}`}
+                    to={`/category${category.id}-${category.name.toLowerCase()}`}
                     className="card h-100 list-group-item list-group-item-action text-center"
                 >
                     <img

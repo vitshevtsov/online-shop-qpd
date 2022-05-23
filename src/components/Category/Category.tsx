@@ -20,7 +20,8 @@ import { IProduct } from 'types/models/IProduct';
 const Category = () => {
     const {products} = useAppSelector(state => state.productsReducer);
     const {categories} = useAppSelector(state => state.categoriesReducer);
-    const {id}: Readonly<Params<string>> = useParams();
+    const {idAndName}: Readonly<Params<string>> = useParams();
+    const id = idAndName?.split('-')[0];
     const category = searchCategoryById(categories, id);
     const currentCategoryProducts = products.filter((item: IProduct) => item.categoryId === Number(id));
     

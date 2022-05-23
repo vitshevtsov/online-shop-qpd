@@ -33,7 +33,7 @@ const RoutesComponent = () => {
                 element={<NoMatchRoute />}
             />
             <Route
-                path="/category:id"
+                path="/category:idAndName"
                 element={<Category />}
             />
         </Routes>
