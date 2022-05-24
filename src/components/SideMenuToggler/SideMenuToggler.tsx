@@ -4,7 +4,7 @@ const SideMenuToggler = () => {
     return (
         <a
             role="button"
-            className="btn btn-md btn-outline-light"
+            className="nav-link text-light"
             data-bs-toggle="offcanvas"
             href="#offcanvasExample"
             aria-controls="offcanvasExample"

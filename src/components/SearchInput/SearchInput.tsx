@@ -17,7 +17,7 @@ const SearchInput = () => {
     };
 
     return (
-        <div className="input-group">
+        <div className="input-group searchInput me-3 mb-3 mb-lg-0">
             <input
                 type="input"
                 className="form-control"
