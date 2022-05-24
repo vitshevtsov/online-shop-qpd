@@ -27,36 +27,39 @@ const CartItem = (props: ICartItemProps) => {
             className="list-group-item"
         >
             <div className="row">
-                <div className="col-1 text-center d-flex align-items-center">
+                <div className="col-lg-1 text-center d-flex align-items-center p-2">
                     <img
-                        className="cartItemImg"
+                        className="cartItemImg mx-auto"
                         src={props.product.imgPath}
                     />
                 </div>
-                <div className="col-6 text-center d-flex align-items-center ps-5">
+                <div className="col-lg-6 d-flex align-items-center ps-5 my-3">
                     <h6 className="align-middle">{props.product.name}</h6>
                 </div>
-                <div className="col-2 text-center d-flex align-items-center">
-                    <input 
-                        type="number" 
-                        className="form-control" 
-                        id="quantity" 
-                        value={props.product.quantity}
-                        onChange={handleQuantityInput}
-                    />
-                    <small className="text-secondary">Доступно на складе: {stockQuantity} шт.</small>
+                <div className="col-lg-5 row text-center d-flex justify-content-center mx-auto">
+                    <div className="col-6 d-flex align-items-center row">
+                        <input 
+                            type="number" 
+                            className="form-control col" 
+                            id="quantity" 
+                            value={props.product.quantity}
+                            onChange={handleQuantityInput}
+                        />
+                        <small className="text-secondary col">Доступно на складе: {stockQuantity} шт.</small>
+                    </div>
+                    <div className="col-4 text-center d-flex align-items-center">
+                        <h5>{props.product.properties.price * props.product.quantity} руб.</h5>
+                    </div>
+                    <div className="col-2 text-center d-flex align-items-center text-secondary">
+                        <FontAwesomeIcon
+                            className="icon"
+                            size="1x"
+                            icon={faTrashCan}
+                            onClick={handleRemoveFromCart}
+                        />
+                    </div>
                 </div>
-                <div className="col-2 text-center d-flex align-items-center">
-                    <h4>{props.product.properties.price * props.product.quantity} руб.</h4>
-                </div>
-                <div className="col-1 text-center d-flex align-items-center text-secondary">
-                    <FontAwesomeIcon
-                        className="icon"
-                        size="2x"
-                        icon={faTrashCan}
-                        onClick={handleRemoveFromCart}
-                    />
-                </div>
+
             </div>
         </div>
     );

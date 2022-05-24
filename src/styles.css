@@ -25,10 +25,6 @@ body {
     margin-right: calc(-1 * (100vw - 100%));
 }
 
-/* body.modal-open {
-    margin-right: 17px;
-  } */
-
 .app {
     min-height: 100vh;
     background-color: var(--background);
@@ -88,13 +84,14 @@ position: relative;
 }
 
 .cartItemImg {
-    width: 100px;
-    height: auto;
+    max-height: 100px;
+    max-width: 100px;
+    /* height: auto; */
 }
 
 .productItemImg {
-    width: auto;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 .icon:hover {

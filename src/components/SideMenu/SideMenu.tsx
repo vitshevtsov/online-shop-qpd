@@ -64,17 +64,17 @@ const SideMenu = () => {
                 </button>
             </div>
             <div className="offcanvas-body row">
-                <div className="col-4">
+                <div className="col-md-4">
                     <List
                         items={categories}
                         renderItem={renderCategory}
                     /> 
                 </div>
-                <div className="col-8">
+                <div className="col-md-8">
                     <h5 className="openedCategoryTitle mb-4">
                         {openedCategory && openedCategory.name}
                     </h5>
-                    <div className="row row-cols-2">
+                    <div className="row row-cols-md-2">
                         {openedCategory?.children && <List
                             items={openedCategory.children}
                             renderItem={renderCategoryGroups}

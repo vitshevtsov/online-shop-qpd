@@ -6,31 +6,12 @@ import SideMenuToggler from 'components/SideMenuToggler/SideMenuToggler';
 
 const HeaderNavbar = () => {
     return (
-    // <div className="container">
-    //     <nav className="navbar navbar-light d-flex">
-    //         <Link
-    //             to="main"
-    //             className="btn btn-md btn-outline-light me-3"
-    //         >Главная
-    //         </Link>
-    //         <SideMenuToggler />
-    //         <Link
-    //             to="orders"
-    //             className="btn btn-md btn-outline-light me-3"
-    //         >Заказы
-    //         </Link>
-    //     </nav>
-    //     <SearchInput />
-    //     <CartToggler/>
-    // </div>
-
-  
         <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container align-items-center">
                 <Link
                     to="main"
                     className="navbar-brand"
-                >Online<span className="text-warning">Shop</span>
+                ><b>Online<span className="text-warning">Shop</span></b>
                 </Link>
                 <button
                     className="navbar-toggler"
