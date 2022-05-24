@@ -34,7 +34,7 @@ const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
     };
     return (
         <div className="container-md">
-            <div className="row row-cols-5">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
                 <List
                     items={props.categories}
                     renderItem={renderPanelCategory}

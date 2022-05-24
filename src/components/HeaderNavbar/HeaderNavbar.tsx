@@ -6,7 +6,9 @@ import SideMenuToggler from 'components/SideMenuToggler/SideMenuToggler';
 
 const HeaderNavbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav
+            className="navbar navbar-expand-lg navbar-light"
+        >
             <div className="container align-items-center">
                 <Link
                     to="main"

@@ -55,15 +55,15 @@ const ProductItem = (props: IProductItemProps) => {
             id={props.product.id.toString()} 
             className="list-group-item list-group-item-action"
         >
-            <div className="row row-cols">
-                <div className="col-3">
+            <div className="row  text-center text-lg-start">
+                <div className="col-lg-3">
                     <img
                         className="productItemImg"
                         src={props.product.imgPath}
                         alt="product img"
                     />
                 </div>
-                <div className="col-6">
+                <div className="col-lg-6">
                     <h6>{props.product.name}</h6>
                     <br/>
                     <List
@@ -72,7 +72,7 @@ const ProductItem = (props: IProductItemProps) => {
                     />
 
                 </div>
-                <div className="col-3">
+                <div className="col-lg-3">
                     <p className="mb-1">Цена: {props.product.properties.price} руб.</p>
                     {addInCartButton}
                 </div>

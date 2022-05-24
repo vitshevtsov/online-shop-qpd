@@ -25,7 +25,7 @@ const CategoryGroup = (props: ICategoryGroupProps) => {
         );
     };
     return (
-        <div>
+        <div className='text-center text-md-start'>
             <Link
                 to={`/category${props.category.id}-${props.category.name.toLowerCase()}`}
                 className="list-group-item-action"

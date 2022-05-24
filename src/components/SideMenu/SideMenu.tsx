@@ -71,7 +71,7 @@ const SideMenu = () => {
                     /> 
                 </div>
                 <div className="col-md-8">
-                    <h5 className="openedCategoryTitle mb-4">
+                    <h5 className="openedCategoryTitle mb-4 text-center text-md-start">
                         {openedCategory && openedCategory.name}
                     </h5>
                     <div className="row row-cols-md-2">

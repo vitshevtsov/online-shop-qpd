@@ -159,7 +159,7 @@ const OrderForm = () => {
                                 <h6>Получатель</h6>
                             </div>
                             <div className="row">
-                                <div className="col-6">
+                                <div className="col-lg-6">
                                     <CustomInput
                                         id='name'
                                         type="text"
@@ -174,7 +174,7 @@ const OrderForm = () => {
                                         handleOnFocus={handleOnFocusInput}
                                     />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-lg-6">
                                     <CustomInput 
                                         id='surname'
                                         type="text"
@@ -192,7 +192,7 @@ const OrderForm = () => {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-6">
+                                <div className="col-lg-6">
                                     <CustomInput 
                                         id='phone'
                                         type='number'
@@ -207,7 +207,7 @@ const OrderForm = () => {
                                         handleOnFocus={handleOnFocusInput}
                                     />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-lg-6">
                                     <CustomInput 
                                         id='secondPhone'
                                         type='number'
@@ -220,7 +220,7 @@ const OrderForm = () => {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-6">
+                                <div className="col-lg-6">
                                     <CustomInput 
                                         id='city'
                                         type="text"
@@ -235,7 +235,7 @@ const OrderForm = () => {
                                         handleOnFocus={handleOnFocusInput}
                                     />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-lg-6">
                                     <CustomInput 
                                         id='street'
                                         type="text"
