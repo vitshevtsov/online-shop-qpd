@@ -22,6 +22,7 @@ const ProductsList = (props: IProductsList) => {
             <List
                 items={props.products}
                 renderItem={renderProducts}
+                paginationLimit={20}
             />
         </div>
     );

@@ -1,4 +1,5 @@
 export interface IListProps {
-    items: any[];
+    items: unknown[];
     renderItem: (arg: any) => React.ReactNode;
+    paginationLimit?: number;
 }
