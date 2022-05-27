@@ -61,10 +61,9 @@ body {
 }
 
 .cartContent {
-max-height: 80vh;
-overflow-y: scroll;
-position: relative;
-
+    max-height: 80vh;
+    overflow-y: scroll;
+    position: relative;
 }
 
 .cartContentHeader {
@@ -86,7 +85,6 @@ position: relative;
 .cartItemImg {
     max-height: 100px;
     max-width: 100px;
-    /* height: auto; */
 }
 
 .productItemImg {

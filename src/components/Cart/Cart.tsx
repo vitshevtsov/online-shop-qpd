@@ -4,6 +4,7 @@ import {cartSlice} from 'store/reducers/cartSlice';
 import { ICart } from 'types/models/ICart';
 import CartItem from 'components/CartItem/CartItem';
 import List from 'components/List/List';
+import ModalWrapperBS from 'components/UI/ModalWrapperBS/ModalWrapperBS';
 
 /**
  * Компонент рендерит модальное окно корзины
@@ -42,49 +43,36 @@ const Cart = () => {
         >Продолжить покупки
         </button>;
 
+    const modalBody = <>
+        {!cart.length && 'Корзина пуста'}
+        <List
+            items={cart}
+            renderItem={renderCartItem}
+        />
+    </>;
+
+    const modalFooter = <>
+        <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={handleClearCart}
+        >Очистить корзину
+        </button>
+        {primButton}
+    </>;
+
     return (
-        <div
-            className="modal fade"
-            id="cartModal"
-            tabIndex={-1}
-            aria-labelledby="cartModalLabel"
-            aria-hidden="true"
-        >
-            <div className="modal-dialog modal-xl">
-                <div className="modal-content cartContent">
-                    <div className="modal-header cartContentHeader">
-                        <h5
-                            className="modal-title"
-                            id="cartModalLabel"
-                        >Корзина
-                        </h5>
-                        <button
-                            type="button"
-                            className="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        >
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        {!cart.length && 'Корзина пуста'}
-                        <List
-                            items={cart}
-                            renderItem={renderCartItem}
-                        />
-                    </div>
-                    <div className="modal-footer cartContentFooter">
-                        <button
-                            type="button"
-                            className="btn btn-secondary"
-                            onClick={handleClearCart}
-                        >Очистить корзину
-                        </button>
-                        {primButton}
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ModalWrapperBS
+            id='cartModal'
+            labelId='cartModalLabel'
+            title='Корзина'
+            body={modalBody}
+            footer={modalFooter}
+            classNameSize='modal-xl'
+            classNameContent='cartContent'
+            classNameHeader='cartContentHeader'
+            classNameFooter='cartContentFooter'
+        />
     );
 };
 

@@ -13,6 +13,7 @@ import { initInputErrorState } from 'constants/initInputErrorState';
 import clearForm from 'utils/clearForm';
 import setDirtyForAll from 'utils/setDirtyForAll';
 import { IObjOfSetters } from 'types/other/IObjOfSetters';
+import ModalWrapperBS from 'components/UI/ModalWrapperBS/ModalWrapperBS';
 
 /**
  * Компонент модального окна оформления заказа, открывается из корзины
@@ -129,148 +130,132 @@ const OrderForm = () => {
         }
     };
 
-    return (
-        <div
-            className="modal fade"
-            id="orderFormModalToggle2"
-            tabIndex={-1}
-            aria-labelledby="orderFormModalLabel"
-            aria-hidden="true"
-        >
-            <div className="modal-dialog modal-xl">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h5
-                            className="modal-title"
-                            id="orderFormModalLabel"
-                        >Оформление заказа
-                        </h5>
-                        <button
-                            type="button"
-                            className="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        >
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        <form>
-                            <div className="row">
-                                <h6>Получатель</h6>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <CustomInput
-                                        id='name'
-                                        type="text"
-                                        className='form-control'
-                                        label='Имя'
-                                        placeholder='Введите имя'
-                                        value={name}
-                                        isDirty={nameIsDirty}
-                                        isRequired
-                                        error={nameError}
-                                        handleOnChange={handleOnChangeInput}
-                                        handleOnFocus={handleOnFocusInput}
-                                    />
-                                </div>
-                                <div className="col-lg-6">
-                                    <CustomInput 
-                                        id='surname'
-                                        type="text"
-                                        className='form-control'
-                                        label='Фамилия'
-                                        placeholder='Введите фамилию'
-                                        value={surname}
-                                        isDirty={surnameIsDirty}
-                                        isRequired
-                                        error={surnameError}
-                                        handleOnChange={handleOnChangeInput}
-                                        handleOnFocus={handleOnFocusInput}
+    const modalBody = <>
+        <form>
+            <div className="row">
+                <h6>Получатель</h6>
+            </div>
+            <div className="row">
+                <div className="col-lg-6">
+                    <CustomInput
+                        id='name'
+                        type="text"
+                        className='form-control'
+                        label='Имя'
+                        placeholder='Введите имя'
+                        value={name}
+                        isDirty={nameIsDirty}
+                        isRequired
+                        error={nameError}
+                        handleOnChange={handleOnChangeInput}
+                        handleOnFocus={handleOnFocusInput}
+                    />
+                </div>
+                <div className="col-lg-6">
+                    <CustomInput 
+                        id='surname'
+                        type="text"
+                        className='form-control'
+                        label='Фамилия'
+                        placeholder='Введите фамилию'
+                        value={surname}
+                        isDirty={surnameIsDirty}
+                        isRequired
+                        error={surnameError}
+                        handleOnChange={handleOnChangeInput}
+                        handleOnFocus={handleOnFocusInput}
                                         
-                                    />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <CustomInput 
-                                        id='phone'
-                                        type='number'
-                                        className='form-control numberInputWithoutSpin'
-                                        label='Телефон'
-                                        placeholder='Введите номер телефона'
-                                        value={phone}
-                                        isDirty={phoneIsDirty}
-                                        isRequired
-                                        error={phoneError}
-                                        handleOnChange={handleOnChangeInput}
-                                        handleOnFocus={handleOnFocusInput}
-                                    />
-                                </div>
-                                <div className="col-lg-6">
-                                    <CustomInput 
-                                        id='secondPhone'
-                                        type='number'
-                                        className='form-control numberInputWithoutSpin'
-                                        label='Телефон, если не дозвонимся'
-                                        placeholder='Введите номер телефона'
-                                        value={secondPhone}
-                                        handleOnChange={handleOnChangeInput}
-                                    />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <CustomInput 
-                                        id='city'
-                                        type="text"
-                                        className='form-control'
-                                        label='Город'
-                                        placeholder='Введите город'
-                                        value={city}
-                                        isDirty={cityIsDirty}
-                                        isRequired
-                                        error={cityError}
-                                        handleOnChange={handleOnChangeInput}
-                                        handleOnFocus={handleOnFocusInput}
-                                    />
-                                </div>
-                                <div className="col-lg-6">
-                                    <CustomInput 
-                                        id='street'
-                                        type="text"
-                                        className='form-control'
-                                        label='Улица'
-                                        placeholder='Введите улицу'
-                                        value={street}
-                                        isDirty={streetIsDirty}
-                                        isRequired
-                                        error={streetError}
-                                        handleOnChange={handleOnChangeInput}
-                                        handleOnFocus={handleOnFocusInput}
-                                    />
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div className="modal-footer">
-                        {isValid && <button
-                            type="button"
-                            className="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                            onClick={handleAddToOrders}
-                        >Оформить заказ
-                        </button>}
-                        {!isValid && <button
-                            type="button"
-                            className="btn btn-secondary"
-                            onClick={handleAddToOrders}
-                        >Оформить заказ
-                        </button>}
-                    </div>
+                    />
                 </div>
             </div>
-        </div>
+            <div className="row">
+                <div className="col-lg-6">
+                    <CustomInput 
+                        id='phone'
+                        type='number'
+                        className='form-control numberInputWithoutSpin'
+                        label='Телефон'
+                        placeholder='Введите номер телефона'
+                        value={phone}
+                        isDirty={phoneIsDirty}
+                        isRequired
+                        error={phoneError}
+                        handleOnChange={handleOnChangeInput}
+                        handleOnFocus={handleOnFocusInput}
+                    />
+                </div>
+                <div className="col-lg-6">
+                    <CustomInput 
+                        id='secondPhone'
+                        type='number'
+                        className='form-control numberInputWithoutSpin'
+                        label='Телефон, если не дозвонимся'
+                        placeholder='Введите номер телефона'
+                        value={secondPhone}
+                        handleOnChange={handleOnChangeInput}
+                    />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-lg-6">
+                    <CustomInput 
+                        id='city'
+                        type="text"
+                        className='form-control'
+                        label='Город'
+                        placeholder='Введите город'
+                        value={city}
+                        isDirty={cityIsDirty}
+                        isRequired
+                        error={cityError}
+                        handleOnChange={handleOnChangeInput}
+                        handleOnFocus={handleOnFocusInput}
+                    />
+                </div>
+                <div className="col-lg-6">
+                    <CustomInput 
+                        id='street'
+                        type="text"
+                        className='form-control'
+                        label='Улица'
+                        placeholder='Введите улицу'
+                        value={street}
+                        isDirty={streetIsDirty}
+                        isRequired
+                        error={streetError}
+                        handleOnChange={handleOnChangeInput}
+                        handleOnFocus={handleOnFocusInput}
+                    />
+                </div>
+            </div>
+        </form>
+    </>;
+
+    const modalFooter = <>
+        {isValid && <button
+            type="button"
+            className="btn btn-secondary"
+            data-bs-dismiss="modal"
+            onClick={handleAddToOrders}
+        >Оформить заказ
+        </button>}
+        {!isValid && <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={handleAddToOrders}
+        >Оформить заказ
+        </button>}
+    </>;
+
+    return (
+        <ModalWrapperBS
+            id='orderFormModalToggle2'
+            labelId='orderFormModalLabel'
+            title='Оформление заказа'
+            body={modalBody}
+            footer={modalFooter}
+            classNameSize='modal-xl'
+        />
     );
 };
 
