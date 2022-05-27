@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import Pagination from 'components/UI/Pagination/Pagination';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IListProps } from 'types/props/IListProps';
 import getCurrentPageItems from 'utils/getCurrentPageItems';
 
@@ -33,6 +33,10 @@ export default function List(props: IListProps) {
         e.preventDefault();
         setPage(prevState => prevState + 1);
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [page]);
 
     return (
         <>
