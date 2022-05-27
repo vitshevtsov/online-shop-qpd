@@ -10,11 +10,6 @@ const HeaderNavbar = () => {
             className="navbar navbar-expand-lg navbar-light"
         >
             <div className="container align-items-center">
-                <Link
-                    to="main"
-                    className="navbar-brand"
-                ><b>Online<span className="text-warning">Shop</span></b>
-                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -26,6 +21,11 @@ const HeaderNavbar = () => {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
+                <Link
+                    to="main"
+                    className="navbar-brand"
+                ><b>Online<span className="text-warning">Shop</span></b>
+                </Link>
                 <div
                     className="collapse navbar-collapse"
                     id="navbarSupportedContent"
@@ -50,8 +50,8 @@ const HeaderNavbar = () => {
                         </li>
                     </ul>
                     <SearchInput />
-                    <CartToggler/>
                 </div>
+                <CartToggler/>
             </div>
         </nav>
     );
