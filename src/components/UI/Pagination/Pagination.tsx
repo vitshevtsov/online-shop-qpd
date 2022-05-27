@@ -1,19 +1,21 @@
 import React from 'react';
+import { IPaginationProps } from 'types/props/IPaginationProps';
 import getPagesArray from 'utils/getPagesArray';
 import getTotalPages from 'utils/getTotalPages';
 
-const Pagination = (props: any) => {
+const Pagination = (props: IPaginationProps) => {
     const totalPages = getTotalPages(props.items, props.limit);
     const pagesArray = getPagesArray(totalPages);
-    const pagesPagination = pagesArray.map(num => {
+
+    const paginationControl = pagesArray.map(num => {
         return <li
             key={num}
-            className="page-item"
-            
+            className={props.activePage === num ? "page-item active" : "page-item"}
         >
             <a
                 className="page-link"
                 href="#"
+                onClick={props.onClickPageNum}
             >
                 {num}
             </a>
@@ -23,21 +25,23 @@ const Pagination = (props: any) => {
     return (
         <nav aria-label="Page navigation example">
             <ul className="pagination justify-content-center">
-                <li className="page-item">
+                <li className={props.activePage === 1 ? "page-item disabled" : "page-item"}>
                     <a
                         className="page-link"
                         href="#"
                         aria-label="Previous"
+                        onClick={props.onClickPagePrev}
                     >
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-                {pagesPagination}
-                <li className="page-item">
+                {paginationControl}
+                <li className={props.activePage === totalPages ? "page-item disabled" : "page-item"}>
                     <a
                         className="page-link"
                         href="#"
                         aria-label="Next"
+                        onClick={props.onClickPageNext}
                     >
                         <span aria-hidden="true">&raquo;</span>
                     </a>

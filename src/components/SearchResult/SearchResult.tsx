@@ -31,7 +31,7 @@ const SearchResult = () => {
             {!searchInCategoriesResult && 'Поиск не дал результатов'}
             <h6 className="mt-4 mb-4">Результаты поиска среди товаров:</h6>
             {searchInProductsResult && <ProductsList
-                rootDivClassName='w-75'
+                rootDivClassName='w-75 mx-auto'
                 products={searchInProductsResult}
             />}
             {!searchInProductsResult && 'Поиск не дал результатов'}
