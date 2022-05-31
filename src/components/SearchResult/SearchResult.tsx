@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import CategoryGroupsPanel from 'components/CategoryGroupsPanel/CategoryGroupsPanel';
 import ProductsList from 'components/ProductsList/ProductsList';
@@ -11,6 +11,7 @@ import searchProductsContainsQuery from 'utils/searchProductsContainsQuery';
  * и по товарам / их характеристикам.
  */
 const SearchResult = () => {
+    const titleSearchInProductsRef = useRef<null | HTMLDivElement>(null);
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const {products} = useAppSelector(state => state.productsReducer);
     const data = useLocation();
@@ -29,10 +30,14 @@ const SearchResult = () => {
             <h6 className="mt-4 mb-4">Результаты поиска среди категорий:</h6>
             {searchInCategoriesResult && <CategoryGroupsPanel categories={searchInCategoriesResult} />}
             {!searchInCategoriesResult && 'Поиск не дал результатов'}
-            <h6 className="mt-4 mb-4">Результаты поиска среди товаров:</h6>
+            <h6
+                ref={titleSearchInProductsRef}
+                className="mt-4 mb-4"
+            >Результаты поиска среди товаров:</h6>
             {searchInProductsResult && <ProductsList
                 rootDivClassName='w-75 mx-auto'
                 products={searchInProductsResult}
+                titleRef={titleSearchInProductsRef}
             />}
             {!searchInProductsResult && 'Поиск не дал результатов'}
         </div>

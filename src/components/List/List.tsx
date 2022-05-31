@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import Pagination from 'components/UI/Pagination/Pagination';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { IListProps } from 'types/props/IListProps';
 import getCurrentPageItems from 'utils/getCurrentPageItems';
 
@@ -22,21 +22,33 @@ export default function List(props: IListProps) {
     const handleOnClickPageNum = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         setPage(Number(e.currentTarget.innerHTML));
+
+        if (props.titleRef && props.titleRef.current) {
+            props.titleRef.current.scrollIntoView();
+        }
     };
 
     const handleOnClickPagePrev = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         setPage(prevState => prevState - 1);
+
+        if (props.titleRef && props.titleRef.current) {
+            props.titleRef.current.scrollIntoView();
+        }
     };
 
     const handleOnClickPageNext = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         setPage(prevState => prevState + 1);
+
+        if (props.titleRef && props.titleRef.current) {
+            props.titleRef.current.scrollIntoView();
+        }
     };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [page]);
+
+
+
 
     return (
         <>

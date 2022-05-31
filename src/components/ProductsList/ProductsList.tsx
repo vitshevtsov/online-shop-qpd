@@ -23,6 +23,7 @@ const ProductsList = (props: IProductsList) => {
                 items={props.products}
                 renderItem={renderProducts}
                 paginationLimit={20}
+                titleRef={props.titleRef}
             />
         </div>
     );
