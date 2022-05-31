@@ -9,7 +9,9 @@ import { ICategoryFiltersProps } from 'types/props/ICategoryFiltersProps';
  * Компонент рендерит боковую панель фильтров для списка характеристик текущей категории
  * Для цены - компонент RangeFilter, для иных - лист чекбоксов (компонент CheckFilter)
  */
-const CategoryFilters = (props: ICategoryFiltersProps) => {
+// const CategoryFilters = (props: ICategoryFiltersProps) => {
+const CategoryFilters = (props: any) => {
+
 
     const renderCategoryFilters = (propertyName: string) => {
         if (propertyName === 'price') {
@@ -27,7 +29,8 @@ const CategoryFilters = (props: ICategoryFiltersProps) => {
             key={propertyName} 
             filterTitle={propertyName} 
             variants={propertyVariants}
-            onChangeCheckboxes={props.onChangeCheckboxes}
+            checkboxesState={props.checkboxesState[propertyName]}
+            onChangeCheckboxesState={props.onChangeCheckboxesState}
         />;    
     };
 

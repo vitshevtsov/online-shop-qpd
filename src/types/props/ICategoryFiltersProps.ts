@@ -7,7 +7,7 @@ export interface ICategoryFiltersProps {
     onChangeMinPrice: (e: any) => void;
     onChangeMaxPrice: (e: any) => void;
     onChangePriceRange: (e: any) => void;
-    onChangeCheckboxes: (e: any) => void;
+    onChangeCheckboxesState: (e: any) => void;
     onClickClearFilters: (e: any) => void;
     categoryProducts: IProduct[];
     category: ICategory;

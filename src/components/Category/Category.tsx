@@ -4,7 +4,7 @@ import CategoryGroupsPanel from 'components/CategoryGroupsPanel/CategoryGroupsPa
 import { useAppSelector } from 'hooks/redux';
 import searchCategoryById from 'utils/searchCategoryById';
 import CategoryFilters from 'components/CategoryFilters/CategoryFilters';
-import filterProducts from 'utils/filterProducts';
+import getFilteredProducts from 'utils/getFilteredProducts';
 import ProductsList from 'components/ProductsList/ProductsList';
 import { IProduct } from 'types/models/IProduct';
 
@@ -32,19 +32,29 @@ const Category = () => {
 
     const initialCheckboxesState: any = {};
     if (category?.properties) {
-        category?.properties.forEach((propertyName: string) => {
-            initialCheckboxesState[propertyName] = [];
+        category?.properties.forEach(propertyName => {
+            if (propertyName !== 'price') {
+                const result: any = {};
+                const propertyVariants = Array.from(new Set(currentCategoryProducts.map((item: any) => item.properties[propertyName])));
+
+                propertyVariants.forEach(variantName => {
+                    if (propertyName !== 'price')
+                        result[variantName] = false;
+                });
+                initialCheckboxesState[propertyName] = result;
+            }
+
         });
     }
 
-    const [selectedProperties, setSelectedProperties] = useState(initialCheckboxesState);
     const [priceRange, setPriceRange] = useState(initialPriceRange);
-
+    const [checkboxesState, setCheckboxesState] = useState(initialCheckboxesState);
 
     // без использования эффекта состояние не обновляется при переходе на другую категорию каталога
     useEffect(() => {
         setPriceRange(initialPriceRange);
-        setSelectedProperties(initialCheckboxesState);
+        setCheckboxesState(initialCheckboxesState);
+        console.log(initialCheckboxesState);
     }, [category]);
 
     const handleMinPrice = (e: any) => {
@@ -63,22 +73,18 @@ const Category = () => {
         setPriceRange(eventValue);
     };
 
-    const handleSelectProperty = (e: any) => {
-        const newProperties = {...selectedProperties};
-        if (newProperties[e.target.name].includes(e.target.value)) {
-            newProperties[e.target.name] = newProperties[e.target.name].filter((item: any) => item !== e.target.value);
-        } else {
-            newProperties[e.target.name] = [...newProperties[e.target.name], e.target.value];
-        }
-        setSelectedProperties(newProperties);
+    const handleCheckboxesState = (e: any) => {
+        const newCheckboxesState = {...checkboxesState};
+        newCheckboxesState[e.currentTarget.name][e.currentTarget.value] = e.currentTarget.checked;
+        setCheckboxesState(newCheckboxesState);
     };
 
     const handleClearFilters = () => {
         setPriceRange(initialPriceRange);
-        setSelectedProperties(initialCheckboxesState);
+        setCheckboxesState(initialCheckboxesState);
     };
 
-    const filteredProducts = filterProducts(currentCategoryProducts, priceRange, selectedProperties);
+    const filteredProducts = getFilteredProducts(currentCategoryProducts, priceRange, checkboxesState);
 
     return (
         (category?.children)
@@ -97,7 +103,8 @@ const Category = () => {
                             categoryProducts={currentCategoryProducts}
                             priceRange={priceRange}
                             maxPriceRange={initialPriceRange}
-                            onChangeCheckboxes={handleSelectProperty}
+                            checkboxesState={checkboxesState}
+                            onChangeCheckboxesState={handleCheckboxesState}
                             onChangeMinPrice={handleMinPrice}
                             onChangeMaxPrice={handleMaxPrice}
                             onChangePriceRange={handlePriceRange}

@@ -3,9 +3,12 @@ import { ICheckFilterProps } from 'types/props/ICheckFilterProps';
 import mapPropertyName from 'utils/mapPropertyName';
 import List from 'components/List/List';
 
-const CheckFilter = (props: ICheckFilterProps) => {
+// const CheckFilter = (props: ICheckFilterProps) => {
+const CheckFilter = (props: any) => {
 
     const renderPropertyVariant = (propertyVariant: string) => {
+        // console.log(propertyVariant);
+        console.log(props.checkboxesState);
         return (
             <div
                 key={propertyVariant}
@@ -16,7 +19,9 @@ const CheckFilter = (props: ICheckFilterProps) => {
                     type="checkbox"
                     value={propertyVariant}
                     name={props.filterTitle}
-                    onChange={props.onChangeCheckboxes}
+                    onChange={props.onChangeCheckboxesState}
+                    checked={props.checkboxesState[propertyVariant]}
+                    
                 />
                 <label
                     className="form-check-label"
@@ -34,7 +39,6 @@ const CheckFilter = (props: ICheckFilterProps) => {
                 renderItem={renderPropertyVariant}
             />
         </>
-
     );
 };
 
