@@ -1,14 +1,17 @@
+import React from "react";
+import { ICheckboxesState } from "types/state/ICheckboxesState";
 import { ICategory } from "../models/ICategory";
 import { IProduct } from "../models/IProduct";
 
 export interface ICategoryFiltersProps {
     priceRange: number[];
     maxPriceRange: number[];
-    onChangeMinPrice: (e: any) => void;
-    onChangeMaxPrice: (e: any) => void;
-    onChangePriceRange: (e: any) => void;
-    onChangeCheckboxesState: (e: any) => void;
-    onClickClearFilters: (e: any) => void;
+    checkboxesState: ICheckboxesState;
+    onChangeMinPrice: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChangeMaxPrice: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChangePriceRange: (e: number[]) => void;
+    onChangeCheckboxesState: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onClickClearFilters: () => void;
     categoryProducts: IProduct[];
     category: ICategory;
 }

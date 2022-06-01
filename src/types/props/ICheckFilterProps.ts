@@ -1,5 +1,8 @@
+import { ICheckboxesState } from "types/state/ICheckboxesState";
+
 export interface ICheckFilterProps {
     filterTitle: string;
     variants: string[];
-    onChangeCheckboxesState: (e: any) => void;
+    checkboxesState: ICheckboxesState;
+    onChangeCheckboxesState: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

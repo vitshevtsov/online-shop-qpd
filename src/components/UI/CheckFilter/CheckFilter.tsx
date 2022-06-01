@@ -3,12 +3,8 @@ import { ICheckFilterProps } from 'types/props/ICheckFilterProps';
 import mapPropertyName from 'utils/mapPropertyName';
 import List from 'components/List/List';
 
-// const CheckFilter = (props: ICheckFilterProps) => {
-const CheckFilter = (props: any) => {
-
+const CheckFilter = (props: ICheckFilterProps) => {
     const renderPropertyVariant = (propertyVariant: string) => {
-        // console.log(propertyVariant);
-        console.log(props.checkboxesState);
         return (
             <div
                 key={propertyVariant}
@@ -20,8 +16,7 @@ const CheckFilter = (props: any) => {
                     value={propertyVariant}
                     name={props.filterTitle}
                     onChange={props.onChangeCheckboxesState}
-                    checked={props.checkboxesState[propertyVariant]}
-                    
+                    checked={props?.checkboxesState?.[props?.filterTitle]?.[propertyVariant]}
                 />
                 <label
                     className="form-check-label"
@@ -31,6 +26,7 @@ const CheckFilter = (props: any) => {
                 </label>
             </div>);
     };
+    
     return (
         <>
             <p className="mt-3">{mapPropertyName(props.filterTitle)}</p>

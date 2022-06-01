@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Params, useParams } from 'react-router-dom';
 import CategoryGroupsPanel from 'components/CategoryGroupsPanel/CategoryGroupsPanel';
 import { useAppSelector } from 'hooks/redux';
@@ -7,6 +7,7 @@ import CategoryFilters from 'components/CategoryFilters/CategoryFilters';
 import getFilteredProducts from 'utils/getFilteredProducts';
 import ProductsList from 'components/ProductsList/ProductsList';
 import { IProduct } from 'types/models/IProduct';
+import { ICheckboxesState, IPropertyState } from 'types/state/ICheckboxesState';
 
 /**
  * Страница категорий. В соответствии с моделью, категория может быть:
@@ -30,42 +31,40 @@ const Category = () => {
         ? [currentPricesSortedArr[0], currentPricesSortedArr[currentPricesSortedArr.length - 1]]
         : [currentPricesSortedArr[0], currentPricesSortedArr[0]];
 
-    const initialCheckboxesState: any = {};
+    const initialCheckboxesState: ICheckboxesState = {};
     if (category?.properties) {
         category?.properties.forEach(propertyName => {
             if (propertyName !== 'price') {
-                const result: any = {};
+                const result: IPropertyState = {};
                 const propertyVariants = Array.from(new Set(currentCategoryProducts.map((item: any) => item.properties[propertyName])));
-
+    
                 propertyVariants.forEach(variantName => {
-                    if (propertyName !== 'price')
-                        result[variantName] = false;
+                    result[variantName] = false;
                 });
+
                 initialCheckboxesState[propertyName] = result;
             }
-
         });
     }
 
-    const [priceRange, setPriceRange] = useState(initialPriceRange);
-    const [checkboxesState, setCheckboxesState] = useState(initialCheckboxesState);
+    const [priceRange, setPriceRange] = useState<number[]>(initialPriceRange);
+    const [checkboxesState, setCheckboxesState] = useState<ICheckboxesState>(initialCheckboxesState);
 
     // без использования эффекта состояние не обновляется при переходе на другую категорию каталога
     useEffect(() => {
         setPriceRange(initialPriceRange);
         setCheckboxesState(initialCheckboxesState);
-        console.log(initialCheckboxesState);
     }, [category]);
 
-    const handleMinPrice = (e: any) => {
+    const handleMinPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newPriceRange = [...priceRange];
-        newPriceRange[0] = e.target.value;
+        newPriceRange[0] = Number(e.target.value);
         setPriceRange(newPriceRange);
     };
 
-    const handleMaxPrice = (e: any) => {
+    const handleMaxPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newPriceRange = [...priceRange];
-        newPriceRange[1] = e.target.value;
+        newPriceRange[1] = Number(e.target.value);
         setPriceRange(newPriceRange);
     };
 
@@ -73,7 +72,7 @@ const Category = () => {
         setPriceRange(eventValue);
     };
 
-    const handleCheckboxesState = (e: any) => {
+    const handleCheckboxesState = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newCheckboxesState = {...checkboxesState};
         newCheckboxesState[e.currentTarget.name][e.currentTarget.value] = e.currentTarget.checked;
         setCheckboxesState(newCheckboxesState);

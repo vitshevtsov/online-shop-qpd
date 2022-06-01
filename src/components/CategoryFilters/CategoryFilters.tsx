@@ -4,13 +4,14 @@ import CheckFilter from 'components/UI/CheckFilter/CheckFilter';
 import RangeFilter from 'components/UI/RangeFilter/RangeFilter';
 import 'rc-slider/assets/index.css';
 import { ICategoryFiltersProps } from 'types/props/ICategoryFiltersProps';
+import { IProductsState } from 'types/state/IProductsState';
+import { IProduct } from 'types/models/IProduct';
 
 /**
  * Компонент рендерит боковую панель фильтров для списка характеристик текущей категории
  * Для цены - компонент RangeFilter, для иных - лист чекбоксов (компонент CheckFilter)
  */
-// const CategoryFilters = (props: ICategoryFiltersProps) => {
-const CategoryFilters = (props: any) => {
+const CategoryFilters = (props: ICategoryFiltersProps) => {
 
 
     const renderCategoryFilters = (propertyName: string) => {
@@ -24,12 +25,14 @@ const CategoryFilters = (props: any) => {
                 onChangePriceRange={props.onChangePriceRange}
             />;
         }
-        const propertyVariants = Array.from(new Set(props.categoryProducts.map((item: any) => item.properties[propertyName])));
+
+        const propertyVariants = Array.from(new Set(props.categoryProducts.map((item: IProduct) => item.properties[propertyName])));
+
         return <CheckFilter 
             key={propertyName} 
             filterTitle={propertyName} 
-            variants={propertyVariants}
-            checkboxesState={props.checkboxesState[propertyName]}
+            variants={propertyVariants as string[]}
+            checkboxesState={props.checkboxesState}
             onChangeCheckboxesState={props.onChangeCheckboxesState}
         />;    
     };
