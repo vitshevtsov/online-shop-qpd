@@ -14,4 +14,5 @@ export interface ICategoryFiltersProps {
     onClickClearFilters: () => void;
     categoryProducts: IProduct[];
     category: ICategory;
+    classNameRootDiv?: string;
 }

@@ -38,7 +38,7 @@ const CategoryFilters = (props: ICategoryFiltersProps) => {
     };
 
     return (
-        <>
+        <div className={props.classNameRootDiv}>
             <div className="row">
                 <div className="col">
                     <h5>Фильтры</h5>
@@ -55,7 +55,7 @@ const CategoryFilters = (props: ICategoryFiltersProps) => {
                 items={props.category.properties}
                 renderItem={renderCategoryFilters}
             />}
-        </>
+        </div>
     );
 };
 

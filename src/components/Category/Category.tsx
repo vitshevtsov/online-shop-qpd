@@ -8,6 +8,8 @@ import getFilteredProducts from 'utils/getFilteredProducts';
 import ProductsList from 'components/ProductsList/ProductsList';
 import { IProduct } from 'types/models/IProduct';
 import { ICheckboxesState, IPropertyState } from 'types/state/ICheckboxesState';
+import CategoryFiltersMobileWrapper from 'components/CategoryFiltersMobileWrapper/CategoryFiltersMobileWrapper';
+import CategoryFiltersToggler from 'components/CategoryFiltersMobileWrapper/CategoryFiltersToggler/CategoryFiltersToggler';
 
 /**
  * Страница категорий. В соответствии с моделью, категория может быть:
@@ -90,13 +92,16 @@ const Category = () => {
             ? <CategoryGroupsPanel categories={category.children} />
             : <div className="container-md">
                 <div className="row">
-                    <div className="col-9">
+                    <div className="col-md-9">
                         <h5>
                             {category?.name}
                         </h5>
-                        {filteredProducts && <ProductsList products={filteredProducts} />}
+                        {category?.properties && <CategoryFiltersToggler />}
+                        {filteredProducts && <ProductsList
+                            products={filteredProducts}
+                        />}
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3">
                         {category?.properties && <CategoryFilters 
                             category={category} 
                             categoryProducts={currentCategoryProducts}
@@ -108,7 +113,22 @@ const Category = () => {
                             onChangeMaxPrice={handleMaxPrice}
                             onChangePriceRange={handlePriceRange}
                             onClickClearFilters={handleClearFilters}
+                            classNameRootDiv="d-none d-md-block"
                         />}
+                        {category?.properties && <CategoryFiltersMobileWrapper
+                            category={category} 
+                            categoryProducts={currentCategoryProducts}
+                            priceRange={priceRange}
+                            maxPriceRange={initialPriceRange}
+                            checkboxesState={checkboxesState}
+                            onChangeCheckboxesState={handleCheckboxesState}
+                            onChangeMinPrice={handleMinPrice}
+                            onChangeMaxPrice={handleMaxPrice}
+                            onChangePriceRange={handlePriceRange}
+                            onClickClearFilters={handleClearFilters}
+                            classNameRootDiv="d-md-none"
+                        />}
+                        
                     </div>
                 </div>
             </div>     
