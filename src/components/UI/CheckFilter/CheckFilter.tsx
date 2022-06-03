@@ -16,7 +16,7 @@ const CheckFilter = (props: ICheckFilterProps) => {
                     value={propertyVariant}
                     name={props.filterTitle}
                     onChange={props.onChangeCheckboxesState}
-                    checked={props?.checkboxesState?.[props?.filterTitle]?.[propertyVariant] || false}
+                    checked={props?.checkboxesState?.[props?.filterTitle]?.[propertyVariant] ?? false}
                 />
                 <label
                     className="form-check-label"
