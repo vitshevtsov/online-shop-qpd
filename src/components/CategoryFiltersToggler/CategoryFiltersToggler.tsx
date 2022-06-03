@@ -6,7 +6,7 @@ const CategoryFiltersToggler = () => {
     return (
         <button
             type="button"
-            className="btn btn-md btn-outline-primary d-md-none"
+            className="btn btn-md btn-outline-primary d-md-none my-2"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasCategoryFilters"
             aria-controls="offcanvasCategoryFilters"

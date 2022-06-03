@@ -9,7 +9,7 @@ import ProductsList from 'components/ProductsList/ProductsList';
 import { IProduct } from 'types/models/IProduct';
 import { ICheckboxesState, IPropertyState } from 'types/state/ICheckboxesState';
 import CategoryFiltersMobileWrapper from 'components/CategoryFiltersMobileWrapper/CategoryFiltersMobileWrapper';
-import CategoryFiltersToggler from 'components/CategoryFiltersMobileWrapper/CategoryFiltersToggler/CategoryFiltersToggler';
+import CategoryFiltersToggler from 'components/CategoryFiltersToggler/CategoryFiltersToggler';
 
 /**
  * Страница категорий. В соответствии с моделью, категория может быть:
