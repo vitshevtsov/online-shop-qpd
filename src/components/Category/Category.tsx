@@ -25,10 +25,11 @@ const Category = () => {
     const {categories} = useAppSelector(state => state.categoriesReducer);
     const {idAndName}: Readonly<Params<string>> = useParams();
     const id = idAndName?.split('-')[0];
-    const category = searchCategoryById(categories, id);
-    const currentCategoryProducts = products.filter((item: IProduct) => item.categoryId === Number(id));
     
-    const currentPricesSortedArr = currentCategoryProducts.map(product => product.properties.price).sort((a,b) => a - b);
+    const category = useMemo(() => searchCategoryById(categories, id), [categories, id]);
+    const currentCategoryProducts = useMemo(() => products.filter((item: IProduct) => item.categoryId === Number(id)), [products, id]); 
+    const currentPricesSortedArr = useMemo(() => currentCategoryProducts.map(product => product.properties.price).sort((a,b) => a - b), [currentCategoryProducts]);
+    
     const initialPriceRange = (currentPricesSortedArr.length > 1)
         ? [currentPricesSortedArr[0], currentPricesSortedArr[currentPricesSortedArr.length - 1]]
         : [currentPricesSortedArr[0], currentPricesSortedArr[0]];
