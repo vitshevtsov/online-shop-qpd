@@ -26,7 +26,8 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks"
     ],
     "rules": {
         "linebreak-style": [
@@ -43,6 +44,8 @@
         "react/jsx-first-prop-new-line": ["warn", "multiline-multiprop"],
         "react/jsx-max-props-per-line": ["warn", { "maximum": 1}],
         // "react/jsx-closing-tag-location": ["warn"],
-        "react/jsx-closing-bracket-location": ["warn", "line-aligned"]
+        "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
+        "react-hooks/rules-of-hooks": ["error"],
+        "react-hooks/exhaustive-deps": ["warn"]
     }
 }

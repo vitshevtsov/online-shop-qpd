@@ -34,7 +34,6 @@ const Category = () => {
         : [currentPricesSortedArr[0], currentPricesSortedArr[0]];
 
     const initialCheckboxesState = () => {
-        console.log('count checkboxesState');
         const initialCheckboxesState: ICheckboxesState = {};
         if (category?.properties) {
             category?.properties.forEach(propertyName => {
@@ -52,7 +51,6 @@ const Category = () => {
         }
         return initialCheckboxesState;
     };
-    
 
     const [priceRange, setPriceRange] = useState<number[]>(initialPriceRange);
     const [checkboxesState, setCheckboxesState] = useState<ICheckboxesState>(initialCheckboxesState);
