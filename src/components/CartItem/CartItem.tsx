@@ -15,9 +15,9 @@ const CartItem = (props: ICartItemProps) => {
         dispatch(removeFromCart(props.product.id));
     };
 
-    const handleQuantityInput = (e: any) => {
-        if (e.target.value >=1 && stockQuantity && e.target.value <= stockQuantity) {
-            dispatch(changeQuantity([e.target.value, props.product.id]));
+    const handleQuantityInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (Number(e.target.value) >=1 && stockQuantity && Number(e.target.value) <= stockQuantity) {
+            dispatch(changeQuantity([Number(e.target.value), props.product.id]));
         }
     };
 

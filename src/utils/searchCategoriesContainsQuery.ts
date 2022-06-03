@@ -1,6 +1,8 @@
-const searchCategoriesContainsQuery = (arr: any, searchQuery: string) => {
-    const result: any[] = [];
-    arr.forEach((item: any) => {
+import { ICategory } from "types/models/ICategory";
+
+const searchCategoriesContainsQuery = (arr: ICategory[], searchQuery: string) => {
+    const result: ICategory[] = [];
+    arr.forEach((item: ICategory) => {
         if (item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
             result.push(item);
         }

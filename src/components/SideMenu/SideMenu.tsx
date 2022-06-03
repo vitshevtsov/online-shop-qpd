@@ -13,7 +13,7 @@ const SideMenu = () => {
     const [openedCategory, setOpenedCategory] = useState<ICategory | undefined>(categories[0]);
 
     const selectedCategory = (id: number) => categories.find((item: ICategory) => item.id === id);
-    const handleOnMouseOverCategory = (e: any) => {
+    const handleOnMouseOverCategory = (e: React.MouseEvent<HTMLLIElement>) => {
         setOpenedCategory(selectedCategory(+e.currentTarget.id));
     };
 

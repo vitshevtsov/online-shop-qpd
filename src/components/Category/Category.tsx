@@ -74,8 +74,8 @@ const Category = () => {
         setPriceRange(newPriceRange);
     };
 
-    const handlePriceRange = (eventValue: number[]) => {
-        setPriceRange(eventValue);
+    const handlePriceRange = (eventValue: number | number[]) => {
+        setPriceRange(eventValue as number[]);
     };
 
     const handleCheckboxesState = (e: React.ChangeEvent<HTMLInputElement>) => {

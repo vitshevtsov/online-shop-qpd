@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useAppSelector } from "hooks/redux";
 import { ICart } from "types/models/ICart";
 import { ICategory } from "types/models/ICategory";

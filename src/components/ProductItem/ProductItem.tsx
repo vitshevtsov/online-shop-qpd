@@ -42,7 +42,7 @@ const ProductItem = (props: IProductItemProps) => {
     // константа хранит entries всех свойств товара, за исключением цены (она рендерится в разметке отдельно)
     const productProperties = Object.entries(props.product.properties).filter(property => property[0] !== 'price');
     
-    const renderProductProperties = (property: any) => {
+    const renderProductProperties = (property: [string, string]) => {
         return <p
             className="mb-1"
             key={property[0]}

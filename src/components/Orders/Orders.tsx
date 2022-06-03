@@ -2,6 +2,7 @@ import React from 'react';
 import List from 'components/List/List';
 import { useAppSelector } from 'hooks/redux';
 import { IOrder } from 'types/models/IOrder';
+import { ICart } from 'types/models/ICart';
 
 /**
  * Страница списка совершенных заказов
@@ -17,7 +18,7 @@ const Orders = () => {
             >
                 <div>Заказ № {order.id}</div>
                 <div>Список товаров:</div>
-                {order.orderedItems.map((item: any) => <li key={item.id}>{item.name} - {item.quantity} шт.</li>)}
+                {order.orderedItems.map((item: ICart) => <li key={item.id}>{item.name} - {item.quantity} шт.</li>)}
                 <div>ФИО: {order.fullName}</div>
                 <div>Сумма заказа: {order.fullPrice}</div>          
             </div>

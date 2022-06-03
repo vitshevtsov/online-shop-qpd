@@ -1,6 +1,8 @@
-const searchProductsContainsQuery = (arr: any, searchQuery: string) => {
-    const result: any[] = [];
-    arr.forEach((item: any) => {
+import { IProduct } from "types/models/IProduct";
+
+const searchProductsContainsQuery = (arr: IProduct[], searchQuery: string) => {
+    const result: IProduct[] = [];
+    arr.forEach((item: IProduct) => {
         if (item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
             result.push(item);
         }

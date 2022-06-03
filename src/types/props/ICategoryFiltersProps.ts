@@ -9,7 +9,7 @@ export interface ICategoryFiltersProps {
     checkboxesState: ICheckboxesState;
     onChangeMinPrice: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onChangeMaxPrice: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    onChangePriceRange: (e: number[]) => void;
+    onChangePriceRange: (e: number | number[]) => void;
     onChangeCheckboxesState: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onClickClearFilters: () => void;
     categoryProducts: IProduct[];

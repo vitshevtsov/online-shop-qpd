@@ -10,7 +10,7 @@ const SearchInput = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
     
-    const handleOnKeyPress = (e: any) => {
+    const handleOnKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.code === 'Enter') {
             navigate('searchresult', {state: searchQuery});
         }

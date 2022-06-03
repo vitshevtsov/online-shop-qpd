@@ -1,4 +1,7 @@
-const getFilteredProducts = (productsArr: any[], priceRange: number[], checkboxesState: any) => {
+import { IProduct } from "types/models/IProduct";
+import { ICheckboxesState } from "types/state/ICheckboxesState";
+
+const getFilteredProducts = (productsArr: IProduct[], priceRange: number[], checkboxesState: ICheckboxesState) => {
     let result = productsArr;
 
     for (const property in checkboxesState) {

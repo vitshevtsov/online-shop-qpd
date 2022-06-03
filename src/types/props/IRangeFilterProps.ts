@@ -1,7 +1,7 @@
 export interface IRangeFilterProps {
     maxPriceRange: number[];
     priceRange: number[];
-    onChangeMinPrice: (e: any) => void;
-    onChangeMaxPrice: (e: any) => void;
-    onChangePriceRange: (e: any) => void;
+    onChangeMinPrice: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChangeMaxPrice: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChangePriceRange: (e: number | number[]) => void;
 }
