@@ -31,7 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "type-coverage": "type-coverage"
+    "type-coverage": "type-coverage",
+    "type-coverage-report": "typescript-coverage-report"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,7 @@
     "eslint": "^8.12.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.6.0-next-d300cebde-20220601",
-    "type-coverage": "^2.21.1"
+    "type-coverage": "^2.21.1",
+    "typescript-coverage-report": "^0.6.4"
   }
 }

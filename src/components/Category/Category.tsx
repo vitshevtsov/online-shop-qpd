@@ -40,10 +40,10 @@ const Category = () => {
             category?.properties.forEach(propertyName => {
                 if (propertyName !== 'price') {
                     const result: IPropertyState = {};
-                    const propertyVariants = Array.from(new Set(currentCategoryProducts.map((item: any) => item.properties[propertyName])));
+                    const propertyVariants = Array.from(new Set(currentCategoryProducts.map(item => item.properties[propertyName])));
         
                     propertyVariants.forEach(variantName => {
-                        result[variantName] = false;
+                        result[variantName as string] = false;
                     });
     
                     initialCheckboxesState[propertyName] = result;
