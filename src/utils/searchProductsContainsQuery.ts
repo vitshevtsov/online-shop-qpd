@@ -8,8 +8,8 @@ const searchProductsContainsQuery = (arr: IProduct[], searchQuery: string) => {
         }
 
         const propertiesEntries = Object.entries(item.properties);
-        propertiesEntries.forEach((propertyEntry: any[]) => {
-            if (propertyEntry[0] !== 'price') {
+        propertiesEntries.forEach((propertyEntry: [string, string | number | undefined]) => {
+            if (propertyEntry[0] !== 'price' && typeof propertyEntry[1] === 'string') {
                 if (propertyEntry[1].toLowerCase().includes(searchQuery.toLowerCase())) {
                     result.push(item);
                 }

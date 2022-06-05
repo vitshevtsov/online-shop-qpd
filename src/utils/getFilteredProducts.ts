@@ -11,7 +11,7 @@ const getFilteredProducts = (productsArr: IProduct[], priceRange: number[], chec
         // если длина массива === 2, значит оставляем только товары, соотв-е выбранным чекбоксам
         const valuesSet = Array.from(new Set(Object.values(checkboxesState[property])));
         if (valuesSet.length === 2) {
-            result = result.filter((item: any) => checkboxesState[property][item.properties[property]]);
+            result = result.filter((item: IProduct) => checkboxesState[property][item.properties[property]!]);
         }
     }
 
