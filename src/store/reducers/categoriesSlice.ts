@@ -37,3 +37,21 @@ export const selectCategoryById: ISearchCategorySelector = (categories, category
         }
     }
 };
+
+export const selectCategoriesContainsQuery = (categories: ICategory[], searchQuery: string) => {
+    const result: ICategory[] = [];
+    categories.forEach((item: ICategory) => {
+        if (item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+            result.push(item);
+        }
+        if (item.children) {
+            const childResult = selectCategoriesContainsQuery(item.children, searchQuery);
+            if (childResult) {
+                result.push(...childResult);
+            }
+        }
+    });
+    if (result.length) {
+        return result;
+    }
+};

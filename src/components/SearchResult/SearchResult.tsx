@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import CategoryGroupsPanel from 'components/CategoryGroupsPanel/CategoryGroupsPanel';
 import ProductsList from 'components/ProductsList/ProductsList';
 import { useAppSelector } from 'hooks/redux';
-import searchCategoriesContainsQuery from 'utils/searchCategoriesContainsQuery';
-import searchProductsContainsQuery from 'utils/searchProductsContainsQuery';
+import { selectCategoriesContainsQuery } from 'store/reducers/categoriesSlice';
+import { selectProductsContainsQuery } from 'store/reducers/productsSlice';
 
 /**
  * Страница результатов поиска. Рендерит результаты для поиска по категориям
@@ -12,16 +13,14 @@ import searchProductsContainsQuery from 'utils/searchProductsContainsQuery';
  */
 const SearchResult = () => {
     const titleSearchInProductsRef = useRef<null | HTMLDivElement>(null);
-    const {categories} = useAppSelector(state => state.categoriesReducer);
-    const {products} = useAppSelector(state => state.productsReducer);
     const data = useLocation();
 
     const searchInCategoriesResult = typeof data.state === 'string'
-        ? searchCategoriesContainsQuery(categories, data.state)
+        ? useAppSelector(state => selectCategoriesContainsQuery(state.categoriesReducer.categories, data.state as string))
         : null;
 
     const searchInProductsResult = typeof data.state === 'string'
-        ? searchProductsContainsQuery(products, data.state)
+        ? useAppSelector(state => selectProductsContainsQuery(state.productsReducer.products, data.state as string))
         : null;
 
     return (
