@@ -1,0 +1,1102 @@
+[
+	{
+		"id": 5771118700844550,
+		"categoryId": 6916904882880694,
+		"name": "Смартфон Xiaomi Redmi 9A 32Gb",
+		"imgPath": "/assets/categories/smartphones.png",
+		"properties": {
+			"price": 22144,
+			"brand": "Xiaomi Redmi",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 1358509539604880,
+		"categoryId": 6916904882880694,
+		"name": "Смартфон Xiaomi Redmi Note 10S 6/128Gb",
+		"imgPath": "/assets/categories/smartphones.png",
+		"properties": {
+			"price": 24136,
+			"brand": "Xiaomi Redmi",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 1491039536013120,
+		"categoryId": 6916904882880694,
+		"name": "Смартфон REALME 8 6/128Gb",
+		"imgPath": "/assets/categories/smartphones.png",
+		"properties": {
+			"price": 18225,
+			"brand": "REALME",
+			"color": "Белый"
+		}
+	},
+	{
+		"id": 8577052304098006,
+		"categoryId": 6916904882880694,
+		"name": "Смартфон Motorola Moto G20 64Gb",
+		"imgPath": "/assets/categories/smartphones.png",
+		"properties": {
+			"price": 29785,
+			"brand": "Motorola",
+			"color": "Синий"
+		}
+	},
+	{
+		"id": 1482516877589080,
+		"categoryId": 6916904882880694,
+		"name": "Смартфон Xiaomi Poco M3 Pro 6/128Gb",
+		"imgPath": "/assets/categories/smartphones.png",
+		"properties": {
+			"price": 31492,
+			"brand": "Xiaomi Poco",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 3393988449288538,
+		"categoryId": 4050952776871174,
+		"name": "Сотовый телефон Nokia 105 SS TA-1203",
+		"imgPath": "/assets/categories/telephones.jpg",
+		"properties": {
+			"price": 6850,
+			"brand": "Nokia",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 3251052974711322,
+		"categoryId": 4050952776871174,
+		"name": "Сотовый телефон SUNWIND CITI A1701",
+		"imgPath": "/assets/categories/telephones.jpg",
+		"properties": {
+			"price": 6882,
+			"brand": "SUNWIND",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 7588363773108856,
+		"categoryId": 4050952776871174,
+		"name": "Сотовый телефон Nokia 106",
+		"imgPath": "/assets/categories/telephones.jpg",
+		"properties": {
+			"price": 1944,
+			"brand": "Nokia",
+			"color": "Белый"
+		}
+	},
+	{
+		"id": 2694820267608160,
+		"categoryId": 4050952776871174,
+		"name": "Сотовый телефон Philips Xenium E185",
+		"imgPath": "/assets/categories/telephones.jpg",
+		"properties": {
+			"price": 3533,
+			"brand": "Philips",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 4882654050114816,
+		"categoryId": 4050952776871174,
+		"name": "Сотовый телефон Digma Linx S240",
+		"imgPath": "/assets/categories/telephones.jpg",
+		"properties": {
+			"price": 1830,
+			"brand": "Digma",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 6024032986816590,
+		"categoryId": 4542478618009742,
+		"name": "Смарт-часы AMAZFIT Bip U Pro A2008",
+		"imgPath": "/assets/categories/smartwatches.jpg",
+		"properties": {
+			"price": 29609,
+			"brand": "AMAZFIT",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 7490784367083476,
+		"categoryId": 4542478618009742,
+		"name": "Смарт-часы Xiaomi Haylou LS02",
+		"imgPath": "/assets/categories/smartwatches.jpg",
+		"properties": {
+			"price": 7308,
+			"brand": "Xiaomi",
+			"color": "Красный"
+		}
+	},
+	{
+		"id": 4022062740207858,
+		"categoryId": 4542478618009742,
+		"name": "Смарт-часы JET Kid Connect",
+		"imgPath": "/assets/categories/smartwatches.jpg",
+		"properties": {
+			"price": 4395,
+			"brand": "JET",
+			"color": "Синий"
+		}
+	},
+	{
+		"id": 7143548478250076,
+		"categoryId": 4542478618009742,
+		"name": "Смарт-часы SUNWIND SW20",
+		"imgPath": "/assets/categories/smartwatches.jpg",
+		"properties": {
+			"price": 6440,
+			"brand": "SUNWIND",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 8400764004902746,
+		"categoryId": 4542478618009742,
+		"name": "Смарт-часы Canyon Wildberry",
+		"imgPath": "/assets/categories/smartwatches.jpg",
+		"properties": {
+			"price": 19543,
+			"brand": "Canyon",
+			"color": "Белый"
+		}
+	},
+	{
+		"id": 6827305560021500,
+		"categoryId": 523746442731178,
+		"name": "Квадрокоптер DJI Mini 2 MT2PD Fly More Combo с камерой,",
+		"imgPath": "/assets/categories/quadrocopters.jpg",
+		"properties": {
+			"price": 25731,
+			"brand": "DJI",
+			"color": "Белый"
+		}
+	},
+	{
+		"id": 989114025844240,
+		"categoryId": 523746442731178,
+		"name": "Квадрокоптер HIPER HQC-0003 Falcon X FPV с камерой",
+		"imgPath": "/assets/categories/quadrocopters.jpg",
+		"properties": {
+			"price": 15692,
+			"brand": "HIPER",
+			"color": "Белый"
+		}
+	},
+	{
+		"id": 3175644861004878,
+		"categoryId": 523746442731178,
+		"name": "Квадрокоптер HIPER HQC-0030 Sky Patrol FPV с камерой",
+		"imgPath": "/assets/categories/quadrocopters.jpg",
+		"properties": {
+			"price": 28800,
+			"brand": "HIPER",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 5245846021174698,
+		"categoryId": 523746442731178,
+		"name": "Квадрокоптер JXD 515W Space Ship с камерой",
+		"imgPath": "/assets/categories/quadrocopters.jpg",
+		"properties": {
+			"price": 7887,
+			"brand": "JXD",
+			"color": "Синий"
+		}
+	},
+	{
+		"id": 6320887686823238,
+		"categoryId": 523746442731178,
+		"name": "Квадрокоптер Syma X5UW с камерой",
+		"imgPath": "/assets/categories/quadrocopters.jpg",
+		"properties": {
+			"price": 32369,
+			"brand": "Syma",
+			"color": "Красный"
+		}
+	},
+	{
+		"id": 5693398326756796,
+		"categoryId": 572877343295800,
+		"name": "Компьютер iRU Home 310H5SE",
+		"imgPath": "/assets/categories/computers.jpg",
+		"properties": {
+			"price": 113292,
+			"brand": "iRU",
+			"RAM": "16"
+		}
+	},
+	{
+		"id": 1167785846325762,
+		"categoryId": 572877343295800,
+		"name": "Компьютер iRU Home 310H5",
+		"imgPath": "/assets/categories/computers.jpg",
+		"properties": {
+			"price": 72770,
+			"brand": "iRU",
+			"RAM": "16"
+		}
+	},
+	{
+		"id": 5182752400023870,
+		"categoryId": 572877343295800,
+		"name": "Компьютер Acer Nitro N50-620",
+		"imgPath": "/assets/categories/computers.jpg",
+		"properties": {
+			"price": 90837,
+			"brand": "Acer",
+			"RAM": "8"
+		}
+	},
+	{
+		"id": 6530612170536062,
+		"categoryId": 572877343295800,
+		"name": "Компьютер Acer Aspire XC-1660",
+		"imgPath": "/assets/categories/computers.jpg",
+		"properties": {
+			"price": 36217,
+			"brand": "Acer",
+			"RAM": "8"
+		}
+	},
+	{
+		"id": 4221939513581250,
+		"categoryId": 572877343295800,
+		"name": "Компьютер iRU Game 510B5GE",
+		"imgPath": "/assets/categories/computers.jpg",
+		"properties": {
+			"price": 70238,
+			"brand": "iRU",
+			"RAM": "32"
+		}
+	},
+	{
+		"id": 5515136692115408,
+		"categoryId": 4044155329474938,
+		"name": "Ноутбук Huawei MateBook D 15, 53012KQY",
+		"imgPath": "/assets/categories/laptops.png",
+		"properties": {
+			"price": 116458,
+			"brand": "Huawei",
+			"RAM": "16"
+		}
+	},
+	{
+		"id": 5179318093255320,
+		"categoryId": 4044155329474938,
+		"name": "Ноутбук Lenovo IP Gaming 3 15ACH6, 82K201D1RK",
+		"imgPath": "/assets/categories/laptops.png",
+		"properties": {
+			"price": 213212,
+			"brand": "Lenovo",
+			"RAM": "16"
+		}
+	},
+	{
+		"id": 2330354257329798,
+		"categoryId": 4044155329474938,
+		"name": "Ноутбук Acer Aspire 3 A315-56-38MN, NX.HS5ER.00B",
+		"imgPath": "/assets/categories/laptops.png",
+		"properties": {
+			"price": 72253,
+			"brand": "Acer",
+			"RAM": "16"
+		}
+	},
+	{
+		"id": 3511837079512854,
+		"categoryId": 4044155329474938,
+		"name": "Ноутбук Digma EVE 11 C409, ES2056EW",
+		"imgPath": "/assets/categories/laptops.png",
+		"properties": {
+			"price": 42508,
+			"brand": "Digma",
+			"RAM": "8"
+		}
+	},
+	{
+		"id": 6161420523756898,
+		"categoryId": 4044155329474938,
+		"name": "Ноутбук ASUS TUF Gaming F15 FX506HCB-HN1138",
+		"imgPath": "/assets/categories/laptops.png",
+		"properties": {
+			"price": 119049,
+			"brand": "ASUS",
+			"RAM": "32"
+		}
+	},
+	{
+		"id": 3754559724617934,
+		"categoryId": 488663833006086,
+		"name": "Процессор AMD A6 9500E, OEM",
+		"imgPath": "/assets/categories/processors.png",
+		"properties": {
+			"price": 5615,
+			"brand": "AMD",
+			"series": "A6"
+		}
+	},
+	{
+		"id": 5414027164758212,
+		"categoryId": 488663833006086,
+		"name": "Процессор AMD A8 9600, OEM",
+		"imgPath": "/assets/categories/processors.png",
+		"properties": {
+			"price": 10848,
+			"brand": "AMD",
+			"series": "A8"
+		}
+	},
+	{
+		"id": 7400528655500614,
+		"categoryId": 488663833006086,
+		"name": "Процессор AMD Athlon 3000G, OEM",
+		"imgPath": "/assets/categories/processors.png",
+		"properties": {
+			"price": 29936,
+			"brand": "AMD",
+			"series": "Athlon"
+		}
+	},
+	{
+		"id": 6655594604867402,
+		"categoryId": 488663833006086,
+		"name": "Процессор Intel Celeron G5905, OEM",
+		"imgPath": "/assets/categories/processors.png",
+		"properties": {
+			"price": 7604,
+			"brand": "Intel",
+			"series": "Celeron"
+		}
+	},
+	{
+		"id": 7870241623457162,
+		"categoryId": 488663833006086,
+		"name": "Процессор AMD A10 9700, OEM",
+		"imgPath": "/assets/categories/processors.png",
+		"properties": {
+			"price": 26487,
+			"brand": "AMD",
+			"series": "A10"
+		}
+	},
+	{
+		"id": 5436797957131906,
+		"categoryId": 5679189180610592,
+		"name": "Материнская плата ASUS PRIME H510M-K",
+		"imgPath": "/assets/categories/motherboards.jpg",
+		"properties": {
+			"price": 22119,
+			"brand": "ASUS",
+			"chipset": "AMD B450"
+		}
+	},
+	{
+		"id": 5205354817631444,
+		"categoryId": 5679189180610592,
+		"name": "Материнская плата ASROCK B560M PRO4",
+		"imgPath": "/assets/categories/motherboards.jpg",
+		"properties": {
+			"price": 8671,
+			"brand": "ASROCK",
+			"chipset": "AMD B550"
+		}
+	},
+	{
+		"id": 721168553321828,
+		"categoryId": 5679189180610592,
+		"name": "Материнская плата GIGABYTE B450M S2H",
+		"imgPath": "/assets/categories/motherboards.jpg",
+		"properties": {
+			"price": 16072,
+			"brand": "GIGABYTE",
+			"chipset": "Intel B560"
+		}
+	},
+	{
+		"id": 3111960893155508,
+		"categoryId": 5679189180610592,
+		"name": "Материнская плата ASROCK H510M-HVS R2.0",
+		"imgPath": "/assets/categories/motherboards.jpg",
+		"properties": {
+			"price": 15091,
+			"brand": "ASROCK",
+			"chipset": "Intel H510"
+		}
+	},
+	{
+		"id": 4167618219872122,
+		"categoryId": 5679189180610592,
+		"name": "Материнская плата ASROCK B450 PRO4 R2.0",
+		"imgPath": "/assets/categories/motherboards.jpg",
+		"properties": {
+			"price": 36658,
+			"brand": "ASROCK",
+			"chipset": "Intel H510"
+		}
+	},
+	{
+		"id": 173838153817892,
+		"categoryId": 1115084996950174,
+		"name": "Телевизор Xiaomi MI TV 32 P1, HD READY",
+		"imgPath": "/assets/categories/tv.png",
+		"properties": {
+			"price": 85000,
+			"brand": "Xiaomi",
+			"diagonal": "32"
+		}
+	},
+	{
+		"id": 6215299351063062,
+		"categoryId": 1115084996950174,
+		"name": "Телевизор LG 32LM6350PLA, 32",
+		"imgPath": "/assets/categories/tv.png",
+		"properties": {
+			"price": 194375,
+			"brand": "LG",
+			"diagonal": "32"
+		}
+	},
+	{
+		"id": 8191346776312856,
+		"categoryId": 1115084996950174,
+		"name": "Телевизор LG 43UP75006LF, 43",
+		"imgPath": "/assets/categories/tv.png",
+		"properties": {
+			"price": 294276,
+			"brand": "LG",
+			"diagonal": "43"
+		}
+	},
+	{
+		"id": 4015503410295002,
+		"categoryId": 1115084996950174,
+		"name": "Телевизор Digma DM-LED32MQ10, 32",
+		"imgPath": "/assets/categories/tv.png",
+		"properties": {
+			"price": 38782,
+			"brand": "Digma",
+			"diagonal": "32"
+		}
+	},
+	{
+		"id": 7248039543926696,
+		"categoryId": 1115084996950174,
+		"name": "Телевизор BBK 32LEM-1089/T2C, 32",
+		"imgPath": "/assets/categories/tv.png",
+		"properties": {
+			"price": 177210,
+			"brand": "BBK",
+			"diagonal": "32"
+		}
+	},
+	{
+		"id": 2570030477264448,
+		"categoryId": 867762482351120,
+		"name": "Медиаплеер Xiaomi Mi Box S, 8ГБ",
+		"imgPath": "/assets/categories/mediapleers.jpg",
+		"properties": {
+			"price": 4651,
+			"brand": "Xiaomi",
+			"RAM": "2"
+		}
+	},
+	{
+		"id": 3264335643664564,
+		"categoryId": 867762482351120,
+		"name": "Медиаплеер ЯНДЕКС Модуль - Смарт.ТВ с Алисой",
+		"imgPath": "/assets/categories/mediapleers.jpg",
+		"properties": {
+			"price": 2401,
+			"brand": "ЯНДЕКС",
+			"RAM": "2"
+		}
+	},
+	{
+		"id": 2373848612677056,
+		"categoryId": 867762482351120,
+		"name": "Медиаплеер Xiaomi MDZ-24-AA, 8ГБ",
+		"imgPath": "/assets/categories/mediapleers.jpg",
+		"properties": {
+			"price": 2060,
+			"brand": "Xiaomi",
+			"RAM": "4"
+		}
+	},
+	{
+		"id": 4252755446779828,
+		"categoryId": 867762482351120,
+		"name": "Медиаплеер SBER SberBox SBDV-00002, 16ГБ",
+		"imgPath": "/assets/categories/mediapleers.jpg",
+		"properties": {
+			"price": 3648,
+			"brand": "SBER",
+			"RAM": "1"
+		}
+	},
+	{
+		"id": 2263658626994998,
+		"categoryId": 867762482351120,
+		"name": "Медиаплеер ROMBICA TV Fly, 16ГБ",
+		"imgPath": "/assets/categories/mediapleers.jpg",
+		"properties": {
+			"price": 12661,
+			"brand": "ROMBICA",
+			"RAM": "2"
+		}
+	},
+	{
+		"id": 6921270778290262,
+		"categoryId": 3999786304527930,
+		"name": "Саундбар Xiaomi Redmi TV Soundbar 2.0 30Вт",
+		"imgPath": "/assets/categories/soundbars.jpg",
+		"properties": {
+			"price": 389661,
+			"brand": "Xiaomi",
+			"power": "150"
+		}
+	},
+	{
+		"id": 764645339183748,
+		"categoryId": 3999786304527930,
+		"name": "Саундбар JBL Cinema SB120 2.0 110Вт",
+		"imgPath": "/assets/categories/soundbars.jpg",
+		"properties": {
+			"price": 119713,
+			"brand": "JBL",
+			"power": "200"
+		}
+	},
+	{
+		"id": 1426509418658732,
+		"categoryId": 3999786304527930,
+		"name": "Саундбар LG SJ3 300Вт",
+		"imgPath": "/assets/categories/soundbars.jpg",
+		"properties": {
+			"price": 26258,
+			"brand": "LG",
+			"power": "200"
+		}
+	},
+	{
+		"id": 6335154758212754,
+		"categoryId": 3999786304527930,
+		"name": "Саундбар Ginzzu GM-501 2.0 20Вт",
+		"imgPath": "/assets/categories/soundbars.jpg",
+		"properties": {
+			"price": 348434,
+			"brand": "Ginzzu",
+			"power": "150"
+		}
+	},
+	{
+		"id": 4453912041235704,
+		"categoryId": 3999786304527930,
+		"name": "Саундбар Hisense HS214 2.1 54Вт+54Вт",
+		"imgPath": "/assets/categories/soundbars.jpg",
+		"properties": {
+			"price": 91834,
+			"brand": "Hisense",
+			"power": "180"
+		}
+	},
+	{
+		"id": 6478843929935534,
+		"categoryId": 7592219361933140,
+		"name": "Аудиомагнитола Hyundai H-PAS120",
+		"imgPath": "/assets/categories/taperecorders.jpg",
+		"properties": {
+			"price": 3259,
+			"brand": "Hyundai",
+			"power": "100"
+		}
+	},
+	{
+		"id": 4773719904260450,
+		"categoryId": 7592219361933140,
+		"name": "Аудиомагнитола Hyundai H-PAS180",
+		"imgPath": "/assets/categories/taperecorders.jpg",
+		"properties": {
+			"price": 3537,
+			"brand": "Hyundai",
+			"power": "90"
+		}
+	},
+	{
+		"id": 2625771526717396,
+		"categoryId": 7592219361933140,
+		"name": "Аудиомагнитола Hyundai H-PCD400",
+		"imgPath": "/assets/categories/taperecorders.jpg",
+		"properties": {
+			"price": 7066,
+			"brand": "Hyundai",
+			"power": "90"
+		}
+	},
+	{
+		"id": 5468061604903720,
+		"categoryId": 7592219361933140,
+		"name": "Аудиомагнитола Panasonic RX-D550GS-K",
+		"imgPath": "/assets/categories/taperecorders.jpg",
+		"properties": {
+			"price": 15216,
+			"brand": "Panasonic",
+			"power": "110"
+		}
+	},
+	{
+		"id": 1704311171411690,
+		"categoryId": 7592219361933140,
+		"name": "Аудиомагнитола Supra BTS-580",
+		"imgPath": "/assets/categories/taperecorders.jpg",
+		"properties": {
+			"price": 12388,
+			"brand": "Supra",
+			"power": "130"
+		}
+	},
+	{
+		"id": 652347383405376,
+		"categoryId": 6344086368913802,
+		"name": "Холодильник STINOL STS 185 S двухкамерный",
+		"imgPath": "/assets/categories/fridges.png",
+		"properties": {
+			"price": 36391,
+			"brand": "STINOL",
+			"height": "205"
+		}
+	},
+	{
+		"id": 8699312045308990,
+		"categoryId": 6344086368913802,
+		"name": "Холодильник Indesit ITR 4180 W двухкамерный",
+		"imgPath": "/assets/categories/fridges.png",
+		"properties": {
+			"price": 32328,
+			"brand": "Indesit",
+			"height": "180"
+		}
+	},
+	{
+		"id": 1232756331117226,
+		"categoryId": 6344086368913802,
+		"name": "Холодильник NORDFROST ERB 432 032 двухкамерный",
+		"imgPath": "/assets/categories/fridges.png",
+		"properties": {
+			"price": 26219,
+			"brand": "NORDFROST",
+			"height": "150"
+		}
+	},
+	{
+		"id": 3721299463228838,
+		"categoryId": 6344086368913802,
+		"name": "Холодильник Beko RCNK335K00W двухкамерный",
+		"imgPath": "/assets/categories/fridges.png",
+		"properties": {
+			"price": 24718,
+			"brand": "Beko",
+			"height": "190"
+		}
+	},
+	{
+		"id": 188007224187190,
+		"categoryId": 6344086368913802,
+		"name": "Холодильник Indesit ITR 5160 W двухкамерный",
+		"imgPath": "/assets/categories/fridges.png",
+		"properties": {
+			"price": 92959,
+			"brand": "Indesit",
+			"height": "220"
+		}
+	},
+	{
+		"id": 1597609186604448,
+		"categoryId": 5493326664410312,
+		"name": "Стиральная машина Candy CS34 1052DB1/2-07",
+		"imgPath": "/assets/categories/washingmachines.png",
+		"properties": {
+			"price": 22180,
+			"brand": "Candy",
+			"volume": "5"
+		}
+	},
+	{
+		"id": 1628320237089600,
+		"categoryId": 5493326664410312,
+		"name": "Стиральная машина Indesit EWUC 4105",
+		"imgPath": "/assets/categories/washingmachines.png",
+		"properties": {
+			"price": 24202,
+			"brand": "Indesit",
+			"volume": "4"
+		}
+	},
+	{
+		"id": 4594889378426868,
+		"categoryId": 5493326664410312,
+		"name": "Стиральная машина LG F1296NDS0",
+		"imgPath": "/assets/categories/washingmachines.png",
+		"properties": {
+			"price": 30757,
+			"brand": "LG",
+			"volume": "6"
+		}
+	},
+	{
+		"id": 5393147036021346,
+		"categoryId": 5493326664410312,
+		"name": "Стиральная машина Indesit IWSB 5105",
+		"imgPath": "/assets/categories/washingmachines.png",
+		"properties": {
+			"price": 38464,
+			"brand": "Indesit",
+			"volume": "5"
+		}
+	},
+	{
+		"id": 6511147316434320,
+		"categoryId": 5493326664410312,
+		"name": "Стиральная машина Hotpoint-Ariston VMSG 601 B",
+		"imgPath": "/assets/categories/washingmachines.png",
+		"properties": {
+			"price": 11344,
+			"brand": "Hotpoint-Ariston",
+			"volume": "4"
+		}
+	},
+	{
+		"id": 1764715797468280,
+		"categoryId": 3311772441592944,
+		"name": "Духовой шкаф Electrolux EZB52410AK",
+		"imgPath": "/assets/categories/ovens.jpg",
+		"properties": {
+			"price": 18732,
+			"brand": "Electrolux",
+			"height": "100"
+		}
+	},
+	{
+		"id": 2896773185410326,
+		"categoryId": 3311772441592944,
+		"name": "Духовой шкаф Electrolux EZB52430AX",
+		"imgPath": "/assets/categories/ovens.jpg",
+		"properties": {
+			"price": 14564,
+			"brand": "Electrolux",
+			"height": "110"
+		}
+	},
+	{
+		"id": 1841867738090620,
+		"categoryId": 3311772441592944,
+		"name": "Духовой шкаф Darina 1U BDE 111 707 At",
+		"imgPath": "/assets/categories/ovens.jpg",
+		"properties": {
+			"price": 36454,
+			"brand": "Darina",
+			"height": "100"
+		}
+	},
+	{
+		"id": 14693815462734,
+		"categoryId": 3311772441592944,
+		"name": "Духовой шкаф Bosch HBF114EB0R",
+		"imgPath": "/assets/categories/ovens.jpg",
+		"properties": {
+			"price": 17700,
+			"brand": "Bosch",
+			"height": "120"
+		}
+	},
+	{
+		"id": 23059800630024,
+		"categoryId": 3311772441592944,
+		"name": "Духовой шкаф Electrolux OEF5C50Z",
+		"imgPath": "/assets/categories/ovens.jpg",
+		"properties": {
+			"price": 37619,
+			"brand": "Electrolux",
+			"height": "105"
+		}
+	},
+	{
+		"id": 7107222024220482,
+		"categoryId": 148119500659280,
+		"name": "Микроволновая печь MAUNFELD MBMO.20.1PGW, встраиваемая, 20л, 800Вт",
+		"imgPath": "/assets/categories/microwaves.jpg",
+		"properties": {
+			"price": 6809,
+			"brand": "MAUNFELD",
+			"height": "80"
+		}
+	},
+    {
+		"id": 2498537917192432,
+		"categoryId": 148119500659280,
+		"name": "Микроволновая печь Samsung MS20A7013AL/BW, встраиваемая, 20л, 850Вт",
+		"imgPath": "/assets/categories/microwaves.jpg",
+		"properties": {
+			"price": 3455,
+			"brand": "Samsung",
+			"height": "90"
+		}
+	},
+	{
+		"id": 4668915036718596,
+		"categoryId": 148119500659280,
+		"name": "Микроволновая печь Candy MIC201EX, встраиваемая, 20л, 800Вт",
+		"imgPath": "/assets/categories/microwaves.jpg",
+		"properties": {
+			"price": 8970,
+			"brand": "Candy",
+			"height": "100"
+		}
+	},
+	{
+		"id": 3201535347188230,
+		"categoryId": 148119500659280,
+		"name": "Микроволновая печь MAUNFELD JBMO.20.5S, встраиваемая, 20л, 700Вт",
+		"imgPath": "/assets/categories/microwaves.jpg",
+		"properties": {
+			"price": 7784,
+			"brand": "MAUNFELD",
+			"height": "90"
+		}
+	},
+	{
+		"id": 2822749849993096,
+		"categoryId": 148119500659280,
+		"name": "Микроволновая печь LEX Bimo 20.01, встраиваемая, 20л, 700Вт",
+		"imgPath": "/assets/categories/microwaves.jpg",
+		"properties": {
+			"price": 18021,
+			"brand": "LEX",
+			"height": "150"
+		}
+	},
+	{
+		"id": 4698915360918826,
+		"categoryId": 1030817562911076,
+		"name": "Дрель-шуруповерт Bosch UniversalDrill 18 1.5Ач",
+		"imgPath": "/assets/categories/screwdrivers.jpg",
+		"properties": {
+			"price": 6459,
+			"brand": "Bosch",
+			"power": "150"
+		}
+	},
+	{
+		"id": 3225772504819398,
+		"categoryId": 1030817562911076,
+		"name": "Дрель-шуруповерт Bosch GSR 120-LI 2Ач",
+		"imgPath": "/assets/categories/screwdrivers.jpg",
+		"properties": {
+			"price": 3173,
+			"brand": "Bosch",
+			"power": "150"
+		}
+	},
+	{
+		"id": 4903327094808408,
+		"categoryId": 1030817562911076,
+		"name": "Дрель-шуруповерт DEKO GCD12DU3 SET 3 1.5Ач",
+		"imgPath": "/assets/categories/screwdrivers.jpg",
+		"properties": {
+			"price": 3790,
+			"brand": "DEKO",
+			"power": "140"
+		}
+	},
+	{
+		"id": 6764821126551972,
+		"categoryId": 1030817562911076,
+		"name": "Дрель-шуруповерт Вихрь ДА-18Л-2КА 1.5Ач",
+		"imgPath": "/assets/categories/screwdrivers.jpg",
+		"properties": {
+			"price": 2775,
+			"brand": "Вихрь",
+			"power": "100"
+		}
+	},
+	{
+		"id": 6803968388533882,
+		"categoryId": 1030817562911076,
+		"name": "Дрель-шуруповерт METABO PowerMaxx BS 2Ач",
+		"imgPath": "/assets/categories/screwdrivers.jpg",
+		"properties": {
+			"price": 4221,
+			"brand": "METABO",
+			"power": "120"
+		}
+	},
+	{
+		"id": 6893194119277406,
+		"categoryId": 4679511730634562,
+		"name": "Дрель ударная Интерскол ДУ-13/780ЭР",
+		"imgPath": "/assets/categories/drills.jpg",
+		"properties": {
+			"price": 16456,
+			"brand": "Интерскол",
+			"power": "140"
+		}
+	},
+	{
+		"id": 3209876325264972,
+		"categoryId": 4679511730634562,
+		"name": "Дрель ударная Makita HP1640",
+		"imgPath": "/assets/categories/drills.jpg",
+		"properties": {
+			"price": 20071,
+			"brand": "Makita",
+			"power": "145"
+		}
+	},
+	{
+		"id": 4409011432135420,
+		"categoryId": 4679511730634562,
+		"name": "Дрель ударная DEKO DKID600W",
+		"imgPath": "/assets/categories/drills.jpg",
+		"properties": {
+			"price": 21974,
+			"brand": "DEKO",
+			"power": "150"
+		}
+	},
+	{
+		"id": 8692152407676800,
+		"categoryId": 4679511730634562,
+		"name": "Дрель ударная Вихрь ДУ-500",
+		"imgPath": "/assets/categories/drills.jpg",
+		"properties": {
+			"price": 13861,
+			"brand": "Вихрь",
+			"power": "120"
+		}
+	},
+	{
+		"id": 6500480286239986,
+		"categoryId": 4679511730634562,
+		"name": "Дрель ударная Makita HP1640K",
+		"imgPath": "/assets/categories/drills.jpg",
+		"properties": {
+			"price": 13545,
+			"brand": "Makita",
+			"power": "130"
+		}
+	},
+	{
+		"id": 3695112996513730,
+		"categoryId": 943498683944736,
+		"name": "Розетка Schneider Electric Glossa скрытая, заземление, IP20",
+		"imgPath": "/assets/categories/sockets.jpg",
+		"properties": {
+			"price": 974,
+			"brand": "Schneider",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 6645622785044628,
+		"categoryId": 943498683944736,
+		"name": "Розетка силовая Schneider Electric AtlasDesign скрытая, заземление, IP20",
+		"imgPath": "/assets/categories/sockets.jpg",
+		"properties": {
+			"price": 434,
+			"brand": "Schneider",
+			"color": "Синий"
+		}
+	},
+	{
+		"id": 1602409301721452,
+		"categoryId": 943498683944736,
+		"name": "Розетка Schneider Electric Blanca скрытая, заземление, IP20",
+		"imgPath": "/assets/categories/sockets.jpg",
+		"properties": {
+			"price": 235,
+			"brand": "Schneider",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 1911309909547902,
+		"categoryId": 943498683944736,
+		"name": "Розетка силовая Panasonic Karre Plus & Arkedia Slim скрытая, заземление, IP20",
+		"imgPath": "/assets/categories/sockets.jpg",
+		"properties": {
+			"price": 484,
+			"brand": "Panasonic",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 4106210676946342,
+		"categoryId": 943498683944736,
+		"name": "Розетка Schneider Electric Glossa скрытая, заземление, шторки, IP20",
+		"imgPath": "/assets/categories/sockets.jpg",
+		"properties": {
+			"price": 355,
+			"brand": "Schneider",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 6923384527544732,
+		"categoryId": 4179831730223438,
+		"name": "Выключатель Schneider Electric Glossa 1-клавишный, установка скрытая, IP20",
+		"imgPath": "/assets/categories/switchers.jpg",
+		"properties": {
+			"price": 320,
+			"brand": "Schneider",
+			"color": "Черный"
+		}
+	},
+	{
+		"id": 7890146866249026,
+		"categoryId": 4179831730223438,
+		"name": "Выключатель Schneider Electric AtlasDesign 2-клавишный, установка скрытая, IP20",
+		"imgPath": "/assets/categories/switchers.jpg",
+		"properties": {
+			"price": 363,
+			"brand": "Schneider",
+			"color": "Серый"
+		}
+	},
+	{
+		"id": 176169613375424,
+		"categoryId": 4179831730223438,
+		"name": "Выключатель Schneider Electric Blanca 1-клавишный, установка скрытая, IP20",
+		"imgPath": "/assets/categories/switchers.jpg",
+		"properties": {
+			"price": 313,
+			"brand": "Schneider",
+			"color": "Белый"
+		}
+	},
+    {
+		"id": 7774612395804708,
+		"categoryId": 4179831730223438,
+		"name": "Выключатель Panasonic Karre Plus 2-клавишный, установка скрытая, IP20",
+		"imgPath": "/assets/categories/switchers.jpg",
+		"properties": {
+			"price": 651,
+			"brand": "Panasonic",
+			"color": "Белый"
+		}
+	},
+	{
+		"id": 8081718168463890,
+		"categoryId": 4179831730223438,
+		"name": "Выключатель Panasonic 1-клавишный, установка открытая, IP20",
+		"imgPath": "/assets/categories/switchers.jpg",
+		"properties": {
+			"price": 522,
+			"brand": "Panasonic",
+			"color": "Белый"
+		}
+	}
+]

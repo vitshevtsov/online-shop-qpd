@@ -1,21 +1,28 @@
 import React from 'react';
-import Header from './Header';
-import '../styles.css';
+import Header from './Header/Header';
+import 'styles.css';
+import SideMenu from './SideMenu/SideMenu';
+import RoutesComponent from './Routes/Routes';
+import {setupStore} from 'store/store';
+import { Provider } from 'react-redux';
+import Cart from './Cart/Cart';
+import OrderForm from './OrderForm.ts/OrderForm';
+import HeaderNavbar from './HeaderNavbar/HeaderNavbar';
 
 const App: React.FC = () => {
-  // const { openedItemId } = useContext(DataContext);
-  // const appClassNames = (openedItemId !== null) // при открытом модальном окне openedItemId = 0 (для новых задач) или = id (редактирование / удаление)
-  //   ? ['app', 'appWithOpenModal'].join(' ')
-  //   : 'app';
-  const appClassNames = 'needToReplace'
+    const store = setupStore();
 
-  return (
-      <div className={appClassNames}>
-        <Header>
-        </Header>
-        
-      </div>
-  );
+    return (
+        <Provider store={store}>
+            <Header>
+                <HeaderNavbar/>
+            </Header>
+            <SideMenu />
+            <Cart />
+            <OrderForm />
+            <RoutesComponent />
+        </Provider>
+    );
 };
 
 export default App;
