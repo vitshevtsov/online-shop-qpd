@@ -79,7 +79,6 @@ const OrderForm = () => {
     
     // если у инпута есть состояние ошибки, то вызываем функцию для обязательных инпутов
     // в противном случае вызываем только сеттер изменения значения
-    // todo нужно ли передавать значение для телефона как number
     const handleOnChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (objOfSetters[e.currentTarget.id].hasOwnProperty('error')) {
             handleOnChangeRequiredInput(

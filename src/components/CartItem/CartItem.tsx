@@ -4,11 +4,11 @@ import {cartSlice} from 'store/reducers/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { ICartItemProps } from 'types/props/ICartItemProps';
+import { selectStockQuantity } from 'store/reducers/stockSlice';
 
 
 const CartItem = (props: ICartItemProps) => {
-    const {stock} = useAppSelector(state => state.stockReducer);
-    const stockQuantity = stock.find((item) => item.productId === props.product.id)?.quantity;
+    const stockQuantity = useAppSelector(state => selectStockQuantity(state.stockReducer.stock, props.product.id));
     const {removeFromCart, changeQuantity} = cartSlice.actions;
     const dispatch = useAppDispatch();
     const handleRemoveFromCart = () => {

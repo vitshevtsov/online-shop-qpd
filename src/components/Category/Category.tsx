@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Params, useParams } from 'react-router-dom';
 import CategoryGroupsPanel from 'components/CategoryGroupsPanel/CategoryGroupsPanel';
 import { useAppSelector } from 'hooks/redux';
-import searchCategoryById from 'utils/searchCategoryById';
 import CategoryFilters from 'components/CategoryFilters/CategoryFilters';
 import getFilteredProducts from 'utils/getFilteredProducts';
 import ProductsList from 'components/ProductsList/ProductsList';
@@ -10,6 +9,7 @@ import { IProduct } from 'types/models/IProduct';
 import { ICheckboxesState, IPropertyState } from 'types/state/ICheckboxesState';
 import CategoryFiltersMobileWrapper from 'components/CategoryFiltersMobileWrapper/CategoryFiltersMobileWrapper';
 import CategoryFiltersToggler from 'components/CategoryFiltersToggler/CategoryFiltersToggler';
+import { selectCategoryById } from 'store/reducers/categoriesSlice';
 
 /**
  * Страница категорий. В соответствии с моделью, категория может быть:
@@ -21,13 +21,13 @@ import CategoryFiltersToggler from 'components/CategoryFiltersToggler/CategoryFi
  * и панель фильтрации
  */
 const Category = () => {
-    const {products} = useAppSelector(state => state.productsReducer);
-    const {categories} = useAppSelector(state => state.categoriesReducer);
     const {idAndName}: Readonly<Params<string>> = useParams();
     const id = idAndName?.split('-')[0];
     
-    const category = useMemo(() => searchCategoryById(categories, id), [categories, id]);
-    const currentCategoryProducts = useMemo(() => products.filter((item: IProduct) => item.categoryId === Number(id)), [products, id]); 
+    const category = useAppSelector(state => selectCategoryById(state.categoriesReducer.categories, id));
+    const {products} = useAppSelector(state => state.productsReducer);
+
+    const currentCategoryProducts = useMemo(() => products.filter((item: IProduct) => item.categoryId === Number(id)), [products, id]);
     const currentPricesSortedArr = useMemo(() => currentCategoryProducts.map(product => product.properties.price).sort((a,b) => a - b), [currentCategoryProducts]);
     
     const initialPriceRange = (currentPricesSortedArr.length > 1)

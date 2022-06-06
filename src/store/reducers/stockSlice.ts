@@ -1,3 +1,4 @@
+import { IStockItem } from './../../types/models/IStockItem';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {IStockState} from 'types/state/IStockState';
 import * as stockData from 'data/stock.json';
@@ -23,3 +24,12 @@ export const stockSlice = createSlice({
 });
 
 export default stockSlice.reducer;
+
+
+/**
+ * Не мемоизированные селекторы
+ * (мемоизация требуется, если каждый раз возвращается новое значение - напр., filter)
+ * Для мемоизации необх. исп-ть createSelector
+ * https://redux.js.org/usage/deriving-data-selectors
+ */
+export const selectStockQuantity = (stock: IStockItem[], productId: number) => stock.find((item) => item.productId === productId)?.quantity;
