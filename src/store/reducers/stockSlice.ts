@@ -27,9 +27,7 @@ export default stockSlice.reducer;
 
 
 /**
- * Не мемоизированные селекторы
- * (мемоизация требуется, если каждый раз возвращается новое значение - напр., filter)
- * Для мемоизации необх. исп-ть createSelector
+ * селекторы
  * https://redux.js.org/usage/deriving-data-selectors
  */
 export const selectStockQuantity = (stock: IStockItem[], productId: number) => stock.find((item) => item.productId === productId)?.quantity;

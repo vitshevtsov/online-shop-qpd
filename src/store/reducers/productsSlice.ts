@@ -16,6 +16,11 @@ export const productsSlice = createSlice({
 
 export default productsSlice.reducer;
 
+/**
+ * селекторы
+ * https://redux.js.org/usage/deriving-data-selectors
+ */
+
 export const selectProductsContainsQuery = (products: IProduct[], searchQuery: string) => {
     const result: IProduct[] = [];
     products.forEach((item) => {

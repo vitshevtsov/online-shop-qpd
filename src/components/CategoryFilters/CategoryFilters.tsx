@@ -4,7 +4,6 @@ import CheckFilter from 'components/UI/CheckFilter/CheckFilter';
 import RangeFilter from 'components/UI/RangeFilter/RangeFilter';
 import 'rc-slider/assets/index.css';
 import { ICategoryFiltersProps } from 'types/props/ICategoryFiltersProps';
-import { IProductsState } from 'types/state/IProductsState';
 import { IProduct } from 'types/models/IProduct';
 
 /**

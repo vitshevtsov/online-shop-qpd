@@ -18,9 +18,7 @@ export const categoriesSlice = createSlice({
 export default categoriesSlice.reducer;
 
 /**
- * Не мемоизированные селекторы
- * (мемоизация требуется, если каждый раз возвращается новое значение - напр., filter)
- * Для мемоизированных необх. исп-ть createSelector
+ * селекторы
  * https://redux.js.org/usage/deriving-data-selectors
  */
 export const selectCategoryById: ISearchCategorySelector = (categories, categoryId) => {
