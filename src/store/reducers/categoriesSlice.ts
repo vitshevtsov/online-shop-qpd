@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import {ICategoriesState} from 'types/state/ICategoriesState';
 import * as categoriesData from 'data/categories.json';
 import { ICategory } from 'types/models/ICategory';
+import { ISearchCategorySelector } from 'types/other/ISearchCategorySelector';
 
 const initialState: ICategoriesState = {
     categories: Array.from(categoriesData),
@@ -22,7 +23,7 @@ export default categoriesSlice.reducer;
  * Для мемоизированных необх. исп-ть createSelector
  * https://redux.js.org/usage/deriving-data-selectors
  */
-export const selectCategoryById = (categories: ICategory[], categoryId: string | undefined): ICategory | undefined => {
+export const selectCategoryById: ISearchCategorySelector = (categories, categoryId) => {
     let result = categories.find((item: ICategory) => item.id === Number(categoryId));
     if (result) {
         return result;
