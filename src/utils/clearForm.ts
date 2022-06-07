@@ -11,9 +11,10 @@ import { IObjOfSetters } from "types/other/IObjOfSetters";
 const clearForm = (objOfSetters: IObjOfSetters) => {
 
     const entriesArr = Object.entries(objOfSetters);
-    
+
     entriesArr.forEach(entry => {
         entry[1].value('');
+        
         if (entry[1].hasOwnProperty('isDirty') && entry[1].hasOwnProperty('error')) {
             entry[1].isDirty?.(false);
             entry[1].error?.(initInputErrorState);
