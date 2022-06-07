@@ -3,7 +3,13 @@ import React from 'react';
 import { IRangeFilterProps } from 'types/props/IRangeFilterProps';
 
 
-const RangeFilter = (props: IRangeFilterProps) => {
+const RangeFilter = ({
+    maxPriceRange,
+    priceRange,
+    onChangeMinPrice,
+    onChangeMaxPrice,
+    onChangePriceRange
+}: IRangeFilterProps) => {
     
     return (
         <>
@@ -14,10 +20,10 @@ const RangeFilter = (props: IRangeFilterProps) => {
                         type="text"
                         className="form-control"
                         aria-label="Min price"
-                        min={props.maxPriceRange[0]}
-                        max={props.maxPriceRange[1]}
-                        value={props.priceRange[0] ?? ''} 
-                        onChange={props.onChangeMinPrice}
+                        min={maxPriceRange[0]}
+                        max={maxPriceRange[1]}
+                        value={priceRange[0] ?? ''} 
+                        onChange={onChangeMinPrice}
                     />
                 </div>
                 <div className="col">
@@ -25,10 +31,10 @@ const RangeFilter = (props: IRangeFilterProps) => {
                         type="text"
                         className="form-control"
                         aria-label="Max price"
-                        min={props.maxPriceRange[0]}
-                        max={props.maxPriceRange[1]}
-                        value={props.priceRange[1] ?? ''}
-                        onChange={props.onChangeMaxPrice}
+                        min={maxPriceRange[0]}
+                        max={maxPriceRange[1]}
+                        value={priceRange[1] ?? ''}
+                        onChange={onChangeMaxPrice}
                     />
                 </div>
             </div>
@@ -36,10 +42,10 @@ const RangeFilter = (props: IRangeFilterProps) => {
             <Slider 
                 className="mb-3"
                 range
-                min={props.maxPriceRange[0]}
-                max={props.maxPriceRange[1]}
-                value={props.priceRange ?? ''}
-                onChange={props.onChangePriceRange}
+                min={maxPriceRange[0]}
+                max={maxPriceRange[1]}
+                value={priceRange ?? ''}
+                onChange={onChangePriceRange}
             />
         </>
     );

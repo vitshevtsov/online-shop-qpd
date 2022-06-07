@@ -2,23 +2,35 @@ import React from 'react';
 import { IModalWrapperBS } from 'types/props/IModalWrapperBS';
 
 
-const ModalWrapperBS = (props: IModalWrapperBS) => {
+const ModalWrapperBS = ({
+    id,
+    labelId,
+    classNameSize,
+    classNameContent,
+    classNameHeader,
+    classNameTitle,
+    title,
+    classNameBody,
+    body,
+    classNameFooter,
+    footer
+}: IModalWrapperBS) => {
     
     return (
         <div
             className="modal fade"
-            id={props.id}
+            id={id}
             tabIndex={-1}
-            aria-labelledby={props.labelId}
+            aria-labelledby={labelId}
             aria-hidden="true"
         >
-            <div className={"modal-dialog " + props.classNameSize}>
-                <div className={"modal-content " + props.classNameContent}>
-                    <div className={"modal-header " + props.classNameHeader}>
+            <div className={"modal-dialog " + classNameSize}>
+                <div className={"modal-content " + classNameContent}>
+                    <div className={"modal-header " + classNameHeader}>
                         <h5
-                            className={"modal-title " + props.classNameTitle}
-                            id={props.labelId}
-                        >{props.title}
+                            className={"modal-title " + classNameTitle}
+                            id={labelId}
+                        >{title}
                         </h5>
                         <button
                             type="button"
@@ -28,11 +40,11 @@ const ModalWrapperBS = (props: IModalWrapperBS) => {
                         >
                         </button>
                     </div>
-                    <div className={"modal-body " + props.classNameBody}>
-                        {props.body}
+                    <div className={"modal-body " + classNameBody}>
+                        {body}
                     </div>
-                    <div className={"modal-footer " + props.classNameFooter}>
-                        {props.footer}
+                    <div className={"modal-footer " + classNameFooter}>
+                        {footer}
                     </div>
                 </div>
             </div>

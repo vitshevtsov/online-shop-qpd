@@ -8,7 +8,7 @@ import ProductItem from 'components/ProductItem/ProductItem';
  * Компонент списка товаров, создан в целях переиспользования рендер-функции
  * и задания стиля корневому элементу
  */
-const ProductsList = (props: IProductsList) => {
+const ProductsList = ({rootDivClassName, products, titleRef}: IProductsList) => {
 
     const renderProducts = (product: IProduct) => {
         return (
@@ -20,12 +20,12 @@ const ProductsList = (props: IProductsList) => {
     };
     
     return (
-        <div className={props.rootDivClassName}>
+        <div className={rootDivClassName}>
             <List
-                items={props.products}
+                items={products}
                 renderItem={renderProducts}
                 paginationLimit={20}
-                titleRef={props.titleRef}
+                titleRef={titleRef}
             />
         </div>
     );

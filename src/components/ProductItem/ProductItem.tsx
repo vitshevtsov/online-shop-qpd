@@ -10,15 +10,15 @@ import List from 'components/List/List';
  * Добавить в корзину, товар уже в корзине, товар закончился (в случае, если ранее заказано
  * всё имеющееся на складе количество данного товара)
  */
-const ProductItem = (props: IProductItemProps) => {
+const ProductItem = ({product}: IProductItemProps) => {
 
     const {cart} = useAppSelector(state => state.cartReducer);
     const {stock} = useAppSelector(state => state.stockReducer);
     const {addToCart} = cartSlice.actions;
     const dispatch = useAppDispatch();
 
-    const isInCart: boolean = cart.some(item => item.id === props.product.id);
-    const isInStock: boolean = stock.some(item => item.productId === props.product.id && item.quantity > 0);
+    const isInCart: boolean = cart.some(item => item.id === product.id);
+    const isInStock: boolean = stock.some(item => item.productId === product.id && item.quantity > 0);
 
     const addInCartButtonClassNames = (isInCart)
         ? 'btn btn-outline-primary'
@@ -39,11 +39,11 @@ const ProductItem = (props: IProductItemProps) => {
         </button>;
     
     const handleAddToCart = () => {
-        dispatch(addToCart({...props.product, quantity: 1}));
+        dispatch(addToCart({...product, quantity: 1}));
     };
 
     // константа хранит entries всех свойств товара, за исключением цены (она рендерится в разметке отдельно)
-    const productProperties = Object.entries(props.product.properties).filter(property => property[0] !== 'price');
+    const productProperties = Object.entries(product.properties).filter(property => property[0] !== 'price');
     
     const renderProductProperties = (property: [string, string]) => {
         return <p
@@ -55,19 +55,19 @@ const ProductItem = (props: IProductItemProps) => {
 
     return (
         <div 
-            id={props.product.id.toString()} 
+            id={product.id.toString()} 
             className="list-group-item list-group-item-action"
         >
             <div className="row  text-center text-lg-start">
                 <div className="col-lg-3">
                     <img
                         className="productItemImg"
-                        src={props.product.imgPath}
+                        src={product.imgPath}
                         alt="product img"
                     />
                 </div>
                 <div className="col-lg-6">
-                    <h6>{props.product.name}</h6>
+                    <h6>{product.name}</h6>
                     <br/>
                     <List
                         items={productProperties}
@@ -76,7 +76,7 @@ const ProductItem = (props: IProductItemProps) => {
 
                 </div>
                 <div className="col-lg-3">
-                    <p className="mb-1">Цена: {props.product.properties.price} руб.</p>
+                    <p className="mb-1">Цена: {product.properties.price} руб.</p>
                     {addInCartButton}
                 </div>
             </div>

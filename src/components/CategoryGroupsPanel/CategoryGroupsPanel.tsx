@@ -9,7 +9,7 @@ import List from 'components/List/List';
  * используется на главной странице (передаются популярные категории) и 
  * в результатах поиска
  */
-const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
+const CategoryGroupsPanel = ({categories}: ICategoryGroupsPanelProps) => {
 
     const renderPanelCategory =(category: ICategory) => {
         return (
@@ -38,7 +38,7 @@ const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
         <div className="container-md">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
                 <List
-                    items={props.categories}
+                    items={categories}
                     renderItem={renderPanelCategory}
                 />
             </div>

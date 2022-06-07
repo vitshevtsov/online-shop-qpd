@@ -2,31 +2,43 @@ import React from 'react';
 import { ICustominputProps } from 'types/props/ICustomInputProps';
 
 
-const CustomInput = (props: ICustominputProps) => {
+const CustomInput = ({
+    error,
+    id,
+    label,
+    isRequired,
+    type,
+    className,
+    placeholder,
+    value,
+    handleOnChange,
+    handleOnFocus,
+    isDirty
+}: ICustominputProps) => {
 
-    const errorDiv = <div className="errorDiv">{props.error}</div>;
+    const errorDiv = <div className="errorDiv">{error}</div>;
     
     const requiredSign = <span>*</span>;
 
     return (
         <div className="mb-3">
             <label 
-                htmlFor={props.id} 
+                htmlFor={id} 
                 className="form-label"
             >
-                {props.label}
-                {props.isRequired && requiredSign}
+                {label}
+                {isRequired && requiredSign}
             </label>
             <input 
-                type={props.type} 
-                className={props.className} 
-                id={props.id} 
-                placeholder={props.placeholder} 
-                value={props.value}
-                onChange={props.handleOnChange}
-                onFocus={props.handleOnFocus}
+                type={type} 
+                className={className} 
+                id={id} 
+                placeholder={placeholder} 
+                value={value}
+                onChange={handleOnChange}
+                onFocus={handleOnFocus}
             />
-            {props.isDirty && errorDiv}
+            {isDirty && errorDiv}
         </div>
     );
 };

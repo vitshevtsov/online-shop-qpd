@@ -8,9 +8,9 @@ import List from 'components/List/List';
  * Компонент рендерит группу связанных категорий (родительскую и список дочерних)
  * Используется в боковом меню
  */
-const CategoryGroup = (props: ICategoryGroupProps) => {
+const CategoryGroup = ({category}: ICategoryGroupProps) => {
 
-    const subCategories = props.category.children;
+    const subCategories = category.children;
     
     const renderSubCategories = (category: ICategory) => {
         return (
@@ -29,10 +29,10 @@ const CategoryGroup = (props: ICategoryGroupProps) => {
     return (
         <div className='text-center text-md-start'>
             <Link
-                to={`/category/${props.category.id}`}
+                to={`/category/${category.id}`}
                 className="list-group-item-action"
             >
-                <h6 data-bs-dismiss="offcanvas">{props.category.name}</h6>
+                <h6 data-bs-dismiss="offcanvas">{category.name}</h6>
             </Link>
             {subCategories && <List
                 items={subCategories}

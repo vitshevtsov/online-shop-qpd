@@ -2,7 +2,19 @@ import CategoryFilters from 'components/CategoryFilters/CategoryFilters';
 import React from 'react';
 import { ICategoryFiltersProps } from 'types/props/ICategoryFiltersProps';
 
-const CategoryFiltersMobileWrapper = (props: ICategoryFiltersProps) => {
+const CategoryFiltersMobileWrapper = ({
+    category,
+    categoryProducts,
+    priceRange,
+    maxPriceRange,
+    checkboxesState,
+    onChangeCheckboxesState,
+    onChangeMaxPrice,
+    onChangeMinPrice,
+    onChangePriceRange,
+    onClickClearFilters,
+    classNameRootDiv
+}: ICategoryFiltersProps) => {
     
     return (
         <div
@@ -27,17 +39,17 @@ const CategoryFiltersMobileWrapper = (props: ICategoryFiltersProps) => {
             </div>
             <div className="offcanvas-body">
                 <CategoryFilters
-                    category={props.category} 
-                    categoryProducts={props.categoryProducts}
-                    priceRange={props.priceRange}
-                    maxPriceRange={props.maxPriceRange}
-                    checkboxesState={props.checkboxesState}
-                    onChangeCheckboxesState={props.onChangeCheckboxesState}
-                    onChangeMinPrice={props.onChangeMinPrice}
-                    onChangeMaxPrice={props.onChangeMaxPrice}
-                    onChangePriceRange={props.onChangePriceRange}
-                    onClickClearFilters={props.onClickClearFilters}
-                    classNameRootDiv={props.classNameRootDiv}
+                    category={category} 
+                    categoryProducts={categoryProducts}
+                    priceRange={priceRange}
+                    maxPriceRange={maxPriceRange}
+                    checkboxesState={checkboxesState}
+                    onChangeCheckboxesState={onChangeCheckboxesState}
+                    onChangeMinPrice={onChangeMinPrice}
+                    onChangeMaxPrice={onChangeMaxPrice}
+                    onChangePriceRange={onChangePriceRange}
+                    onClickClearFilters={onClickClearFilters}
+                    classNameRootDiv={classNameRootDiv}
                 />
             </div>  
         </div>
