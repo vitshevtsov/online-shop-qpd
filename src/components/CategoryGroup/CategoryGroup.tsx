@@ -19,7 +19,7 @@ const CategoryGroup = (props: ICategoryGroupProps) => {
                 data-bs-dismiss="offcanvas"
             >
                 <Link
-                    to={`/category${category.id}-${category.name.toLowerCase()}`}
+                    to={`/category/${category.id}`}
                     className="list-group-item-action"
                 >{category.name}
                 </Link>
@@ -29,7 +29,7 @@ const CategoryGroup = (props: ICategoryGroupProps) => {
     return (
         <div className='text-center text-md-start'>
             <Link
-                to={`/category${props.category.id}-${props.category.name.toLowerCase()}`}
+                to={`/category/${props.category.id}`}
                 className="list-group-item-action"
             >
                 <h6 data-bs-dismiss="offcanvas">{props.category.name}</h6>

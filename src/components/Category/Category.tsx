@@ -22,8 +22,7 @@ import { selectCategoryById } from 'store/reducers/categoriesSlice';
  */
 const Category = () => {
     
-    const {idAndName}: Readonly<Params<string>> = useParams();
-    const id = idAndName?.split('-')[0];
+    const {id}: Readonly<Params<string>> = useParams();
     
     const category = useAppSelector(state => selectCategoryById(state.categoriesReducer.categories, id));
     const {products} = useAppSelector(state => state.productsReducer);

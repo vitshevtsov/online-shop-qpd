@@ -29,7 +29,7 @@ const SideMenu = () => {
                 data-bs-dismiss="offcanvas"
             >
                 <Link
-                    to={`/category${category.id}-${category.name.toLowerCase()}`}
+                    to={`/category/${category.id}`}
                     className="list-group-item list-group-item-action"
                 >{category.name}
                 </Link>
