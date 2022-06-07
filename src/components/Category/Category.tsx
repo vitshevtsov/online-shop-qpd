@@ -21,6 +21,7 @@ import { selectCategoryById } from 'store/reducers/categoriesSlice';
  * и панель фильтрации
  */
 const Category = () => {
+    
     const {idAndName}: Readonly<Params<string>> = useParams();
     const id = idAndName?.split('-')[0];
     

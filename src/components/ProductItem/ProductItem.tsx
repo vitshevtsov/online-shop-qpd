@@ -11,12 +11,15 @@ import List from 'components/List/List';
  * всё имеющееся на складе количество данного товара)
  */
 const ProductItem = (props: IProductItemProps) => {
+
     const {cart} = useAppSelector(state => state.cartReducer);
     const {stock} = useAppSelector(state => state.stockReducer);
-    const isInCart: boolean = cart.some(item => item.id === props.product.id);
-    const isInStock: boolean = stock.some(item => item.productId === props.product.id && item.quantity > 0);
     const {addToCart} = cartSlice.actions;
     const dispatch = useAppDispatch();
+
+    const isInCart: boolean = cart.some(item => item.id === props.product.id);
+    const isInStock: boolean = stock.some(item => item.productId === props.product.id && item.quantity > 0);
+
     const addInCartButtonClassNames = (isInCart)
         ? 'btn btn-outline-primary'
         : 'btn btn-primary';

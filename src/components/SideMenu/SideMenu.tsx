@@ -9,10 +9,13 @@ import List from 'components/List/List';
  * Компонент бокового меню - каталог товаров
  */
 const SideMenu = () => {
+
     const {categories} = useAppSelector(state => state.categoriesReducer);
+
     const [openedCategory, setOpenedCategory] = useState<ICategory | undefined>(categories[0]);
 
     const selectedCategory = (id: number) => categories.find((item: ICategory) => item.id === id);
+    
     const handleOnMouseOverCategory = (e: React.MouseEvent<HTMLLIElement>) => {
         setOpenedCategory(selectedCategory(+e.currentTarget.id));
     };
@@ -33,6 +36,7 @@ const SideMenu = () => {
             </li>
         );
     };
+    
     const renderCategoryGroups =(category: ICategory) => {
         return (
             <CategoryGroup

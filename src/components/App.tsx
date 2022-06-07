@@ -10,6 +10,7 @@ import OrderForm from './OrderForm.ts/OrderForm';
 import HeaderNavbar from './HeaderNavbar/HeaderNavbar';
 
 const App: React.FC = () => {
+    
     const store = setupStore();
 
     return (

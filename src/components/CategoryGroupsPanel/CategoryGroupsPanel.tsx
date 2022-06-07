@@ -10,6 +10,7 @@ import List from 'components/List/List';
  * в результатах поиска
  */
 const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
+
     const renderPanelCategory =(category: ICategory) => {
         return (
             <div
@@ -32,6 +33,7 @@ const CategoryGroupsPanel = (props: ICategoryGroupsPanelProps) => {
             </div>
         );
     };
+    
     return (
         <div className="container-md">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">

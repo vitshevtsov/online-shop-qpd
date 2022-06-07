@@ -4,6 +4,7 @@ import { IRangeFilterProps } from 'types/props/IRangeFilterProps';
 
 
 const RangeFilter = (props: IRangeFilterProps) => {
+    
     return (
         <>
             <p className="mt-3">Цена, руб.</p>

@@ -4,6 +4,7 @@ import mapPropertyName from 'utils/mapPropertyName';
 import List from 'components/List/List';
 
 const CheckFilter = (props: ICheckFilterProps) => {
+    
     const renderPropertyVariant = (propertyVariant: string) => {
         return (
             <div

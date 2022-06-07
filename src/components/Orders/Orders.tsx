@@ -8,6 +8,7 @@ import { ICart } from 'types/models/ICart';
  * Страница списка совершенных заказов
  */
 const Orders = () => {
+
     const {orders} = useAppSelector(state => state.ordersReducer);
 
     const renderOrders = (order: IOrder) => {
@@ -24,6 +25,7 @@ const Orders = () => {
             </div>
         );
     };
+    
     return (
         <div className="container-md">
             {(orders.length !== 0)

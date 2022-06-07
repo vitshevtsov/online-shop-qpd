@@ -7,6 +7,7 @@ const initialState: IOrdersState = {
 };
 
 export const ordersSlice = createSlice({
+
     name: 'orders',
     initialState,
     reducers: {

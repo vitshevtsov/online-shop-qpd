@@ -5,6 +5,7 @@ import SearchInput from 'components/SearchInput/SearchInput';
 import SideMenuToggler from 'components/SideMenuToggler/SideMenuToggler';
 
 const HeaderNavbar = () => {
+    
     return (
         <nav
             className="navbar navbar-expand-lg navbar-light"

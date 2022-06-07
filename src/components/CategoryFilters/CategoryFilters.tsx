@@ -12,7 +12,6 @@ import { IProduct } from 'types/models/IProduct';
  */
 const CategoryFilters = (props: ICategoryFiltersProps) => {
 
-
     const renderCategoryFilters = (propertyName: string) => {
         if (propertyName === 'price') {
             return <RangeFilter

@@ -15,6 +15,7 @@ export const stockSlice = createSlice({
         changeStockQuantity(state, action: PayloadAction<ICart[]>) {
             for (let i = 0; i < action.payload.length; i++) {
                 const index = state.stock.findIndex((item) => item.productId === action.payload[i].id);
+                
                 if (index !== -1) {
                     state.stock[index].quantity = state.stock[index].quantity - action.payload[i].quantity;
                 }

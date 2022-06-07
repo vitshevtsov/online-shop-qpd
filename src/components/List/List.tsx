@@ -10,6 +10,7 @@ import getCurrentPageItems from 'utils/getCurrentPageItems';
  * на 1 стр., и при этом всего элементов больше, чем этот лимит
  */
 export default function List(props: IListProps) {
+
     const [page, setPage] = useState<number>(1);
     const isPaginationNeeded = (props.paginationLimit && (props.items.length > props.paginationLimit));
 
@@ -45,10 +46,6 @@ export default function List(props: IListProps) {
             props.titleRef.current.scrollIntoView();
         }
     };
-
-
-
-
 
     return (
         <>

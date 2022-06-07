@@ -4,6 +4,7 @@ import getPagesArray from 'utils/getPagesArray';
 import getTotalPages from 'utils/getTotalPages';
 
 const Pagination = (props: IPaginationProps) => {
+    
     const totalPages = getTotalPages(props.items, props.limit);
     const pagesArray = getPagesArray(totalPages);
 

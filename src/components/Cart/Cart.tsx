@@ -10,6 +10,7 @@ import ModalWrapperBS from 'components/UI/ModalWrapperBS/ModalWrapperBS';
  * Компонент рендерит модальное окно корзины
  */
 const Cart = () => {
+    
     const {cart} = useAppSelector(state => state.cartReducer);
     const {clearCart} = cartSlice.actions;
     const dispatch = useAppDispatch();

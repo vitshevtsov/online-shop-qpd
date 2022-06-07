@@ -3,6 +3,7 @@ import { IModalWrapperBS } from 'types/props/IModalWrapperBS';
 
 
 const ModalWrapperBS = (props: IModalWrapperBS) => {
+    
     return (
         <div
             className="modal fade"

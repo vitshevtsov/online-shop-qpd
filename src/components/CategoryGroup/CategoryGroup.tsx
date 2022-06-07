@@ -9,7 +9,9 @@ import List from 'components/List/List';
  * Используется в боковом меню
  */
 const CategoryGroup = (props: ICategoryGroupProps) => {
+
     const subCategories = props.category.children;
+    
     const renderSubCategories = (category: ICategory) => {
         return (
             <li

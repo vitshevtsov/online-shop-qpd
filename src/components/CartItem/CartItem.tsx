@@ -8,9 +8,11 @@ import { selectStockQuantity } from 'store/reducers/stockSlice';
 
 
 const CartItem = (props: ICartItemProps) => {
+
     const stockQuantity = useAppSelector(state => selectStockQuantity(state.stockReducer.stock, props.product.id));
     const {removeFromCart, changeQuantity} = cartSlice.actions;
     const dispatch = useAppDispatch();
+    
     const handleRemoveFromCart = () => {
         dispatch(removeFromCart(props.product.id));
     };

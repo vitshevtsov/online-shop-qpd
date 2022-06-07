@@ -5,6 +5,7 @@ import { ICustominputProps } from 'types/props/ICustomInputProps';
 const CustomInput = (props: ICustominputProps) => {
 
     const errorDiv = <div className="errorDiv">{props.error}</div>;
+    
     const requiredSign = <span>*</span>;
 
     return (

@@ -9,7 +9,9 @@ import { IObjOfSetters } from "types/other/IObjOfSetters";
  * Устанавливает состояние для каждого валидируемого инпута в true, ничего не возвращает
  */
 const setDirtyForAll = (objOfSetters: IObjOfSetters) => {
+
     const entriesArr = Object.entries(objOfSetters);
+    
     entriesArr.forEach(entry => {
         if (entry[1].hasOwnProperty('isDirty')) {
             entry[1].isDirty?.(true);

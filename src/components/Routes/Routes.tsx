@@ -7,6 +7,7 @@ import SearchResult from 'components/SearchResult/SearchResult';
 import NoMatchRoute from 'components/NoMatchRoute/NoMatchRoute';
 
 const RoutesComponent = () => {
+    
     return (
         <Routes>
             <Route

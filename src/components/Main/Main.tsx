@@ -8,6 +8,7 @@ import { ICategory } from 'types/models/ICategory';
  * Главная страница, на которой рендерится список популярных категорий
  */
 const Main = () => {
+    
     const {orders} = useAppSelector(state => state.ordersReducer);
     const popularCategories = <CategoryGroupsPanel categories={getPopularCategories() as ICategory[]} />;
 

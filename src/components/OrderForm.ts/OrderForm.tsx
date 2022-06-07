@@ -42,7 +42,6 @@ const OrderForm = () => {
         error: setSurnameError,
     };
 
-
     const [phone, setPhone] = useState<number | string>('');
     const [phoneIsDirty, setPhoneIsDirty] = useState<boolean>(false);
     const [phoneError, setPhoneError] = useState<string>(initInputErrorState);
@@ -115,9 +114,11 @@ const OrderForm = () => {
                 city: city,
                 street: street
             };
+
             if (secondPhone) {
                 order.secondPhone = secondPhone;
             }
+            
             dispatch(addToOrders(order));
             dispatch(clearCart());
             dispatch(changeStockQuantity(cart));

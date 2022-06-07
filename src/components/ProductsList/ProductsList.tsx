@@ -9,6 +9,7 @@ import ProductItem from 'components/ProductItem/ProductItem';
  * и задания стиля корневому элементу
  */
 const ProductsList = (props: IProductsList) => {
+
     const renderProducts = (product: IProduct) => {
         return (
             <ProductItem
@@ -17,6 +18,7 @@ const ProductsList = (props: IProductsList) => {
             />
         );
     };
+    
     return (
         <div className={props.rootDivClassName}>
             <List

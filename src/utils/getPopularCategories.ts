@@ -15,6 +15,7 @@ import { ICategory } from "types/models/ICategory";
  * ! Функция не проверяет на наличие заказов, т.к. данная проверка осуществляется в компоненте Main.
  */
 const getPopularCategories = (): ICategory[] | undefined => {
+    
     const {orders} = useAppSelector(state => state.ordersReducer);
     const popularCategories: Map<number, number> = new Map();
 

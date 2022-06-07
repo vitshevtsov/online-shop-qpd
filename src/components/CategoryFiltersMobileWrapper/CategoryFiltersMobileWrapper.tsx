@@ -3,6 +3,7 @@ import React from 'react';
 import { ICategoryFiltersProps } from 'types/props/ICategoryFiltersProps';
 
 const CategoryFiltersMobileWrapper = (props: ICategoryFiltersProps) => {
+    
     return (
         <div
             className="offcanvas offcanvas-end"

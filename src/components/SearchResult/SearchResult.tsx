@@ -12,7 +12,9 @@ import { selectProductsContainsQuery } from 'store/reducers/productsSlice';
  * и по товарам / их характеристикам.
  */
 const SearchResult = () => {
+
     const titleSearchInProductsRef = useRef<null | HTMLDivElement>(null);
+    
     const data = useLocation();
 
     const searchInCategoriesResult = typeof data.state === 'string'

@@ -7,7 +7,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
  * Компонент поиска по категориям и характеристикам товаров, рендерится в Навбаре Хедера
  */
 const SearchInput = () => {
+
     const [searchQuery, setSearchQuery] = useState('');
+    
     const navigate = useNavigate();
     
     const handleOnKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {

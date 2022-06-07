@@ -22,13 +22,16 @@ export default productsSlice.reducer;
  */
 
 export const selectProductsContainsQuery = (products: IProduct[], searchQuery: string) => {
+
     const result: IProduct[] = [];
+    
     products.forEach((item) => {
         if (item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
             result.push(item);
         }
 
         const propertiesEntries = Object.entries(item.properties);
+
         propertiesEntries.forEach((propertyEntry: [string, string | number | undefined]) => {
             if (propertyEntry[0] !== 'price' && typeof propertyEntry[1] === 'string') {
                 if (propertyEntry[1].toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -38,6 +41,7 @@ export const selectProductsContainsQuery = (products: IProduct[], searchQuery: s
         });
 
     });
+
     if (result.length) {
         // удаляем дубликаты на случай, если поисковый запрос содержится в нескольких параметрах / названии
         return Array.from(new Set(result));
