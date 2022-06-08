@@ -15,11 +15,11 @@ const CategoryGroupsPanel = ({categories}: ICategoryGroupsPanelProps) => {
         return (
             <div
                 key={category.id}
-                className="col"
+                className="col my-2"
             >
                 <Link
                     to={`/category/${category.id}`}
-                    className="card h-100 list-group-item list-group-item-action text-center"
+                    className="categoryCard card list-group-item list-group-item-action text-center"
                 >
                     <img
                         src={category.imgPath}

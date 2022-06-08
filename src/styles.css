@@ -55,6 +55,12 @@ body {
     width: 850px;
 }
 
+.categoryCard {
+    height: 166px;
+    overflow-y: hidden;
+    margin: auto 0;
+}
+
 .card-img-top {
     width: auto;
     height: 50px;
