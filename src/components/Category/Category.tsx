@@ -62,20 +62,38 @@ const Category = () => {
         setCheckboxesState(initialCheckboxesState);
     }, [category]);
 
-    const handleMinPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handlePriceRangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+
         const newPriceRange = [...priceRange];
-        newPriceRange[0] = Number(e.target.value);
+        
+        if (e.target.name === 'minPrice') {
+            newPriceRange[0] = Number(e.target.value);
+        }
+        
+        if (e.target.name === 'maxPrice') {
+            newPriceRange[1] = Number(e.target.value);
+        }
+
         setPriceRange(newPriceRange);
     };
 
-    const handleMaxPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newPriceRange = [...priceRange];
-        newPriceRange[1] = Number(e.target.value);
-        setPriceRange(newPriceRange);
+    const handlePriceRangeSlider = (priceRange: number[]) => {
+        setPriceRange(priceRange);
     };
 
-    const handlePriceRange = (eventValue: number | number[]) => {
-        setPriceRange(eventValue as number[]);
+    /**
+ * Универсальный обработчик фильтра цены, вешается на два инпута цены и на слайдер.
+ * В зависимости от полученного значения, запускает либо обработчик слайдера (если получили кортеж),
+ * либо обработчик инпутов, если получили Реакт ивент
+ * 
+ * От слайдера всегда приходит кортеж, number указан только из-за типизации компонента слайдера в сторонней либе
+ */
+    const handleOnChangePriceRange = (event: React.ChangeEvent<HTMLInputElement> | number | number[]) => {
+        if (Array.isArray(event)) {
+            handlePriceRangeSlider(event);
+        } else {
+            handlePriceRangeInput(event as React.ChangeEvent<HTMLInputElement>);
+        }
     };
 
     const handleCheckboxesState = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -113,9 +131,7 @@ const Category = () => {
                             maxPriceRange={initialPriceRange}
                             checkboxesState={checkboxesState}
                             onChangeCheckboxesState={handleCheckboxesState}
-                            onChangeMinPrice={handleMinPrice}
-                            onChangeMaxPrice={handleMaxPrice}
-                            onChangePriceRange={handlePriceRange}
+                            onChangePriceRange={handleOnChangePriceRange}
                             onClickClearFilters={handleClearFilters}
                             classNameRootDiv="d-none d-md-block"
                         />}
@@ -126,9 +142,7 @@ const Category = () => {
                             maxPriceRange={initialPriceRange}
                             checkboxesState={checkboxesState}
                             onChangeCheckboxesState={handleCheckboxesState}
-                            onChangeMinPrice={handleMinPrice}
-                            onChangeMaxPrice={handleMaxPrice}
-                            onChangePriceRange={handlePriceRange}
+                            onChangePriceRange={handleOnChangePriceRange}
                             onClickClearFilters={handleClearFilters}
                             classNameRootDiv="d-md-none"
                         />}

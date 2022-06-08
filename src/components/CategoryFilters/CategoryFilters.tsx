@@ -13,8 +13,6 @@ import { IProduct } from 'types/models/IProduct';
 const CategoryFilters = ({
     priceRange,
     maxPriceRange,
-    onChangeMinPrice,
-    onChangeMaxPrice,
     onChangePriceRange,
     categoryProducts,
     checkboxesState,
@@ -30,8 +28,6 @@ const CategoryFilters = ({
                 key='price'
                 priceRange={priceRange}
                 maxPriceRange={maxPriceRange}
-                onChangeMinPrice={onChangeMinPrice}
-                onChangeMaxPrice={onChangeMaxPrice}
                 onChangePriceRange={onChangePriceRange}
             />;
         }

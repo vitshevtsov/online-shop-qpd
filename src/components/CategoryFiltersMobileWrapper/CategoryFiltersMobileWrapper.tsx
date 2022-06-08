@@ -9,8 +9,6 @@ const CategoryFiltersMobileWrapper = ({
     maxPriceRange,
     checkboxesState,
     onChangeCheckboxesState,
-    onChangeMaxPrice,
-    onChangeMinPrice,
     onChangePriceRange,
     onClickClearFilters,
     classNameRootDiv
@@ -45,8 +43,6 @@ const CategoryFiltersMobileWrapper = ({
                     maxPriceRange={maxPriceRange}
                     checkboxesState={checkboxesState}
                     onChangeCheckboxesState={onChangeCheckboxesState}
-                    onChangeMinPrice={onChangeMinPrice}
-                    onChangeMaxPrice={onChangeMaxPrice}
                     onChangePriceRange={onChangePriceRange}
                     onClickClearFilters={onClickClearFilters}
                     classNameRootDiv={classNameRootDiv}

@@ -6,8 +6,6 @@ import { IRangeFilterProps } from 'types/props/IRangeFilterProps';
 const RangeFilter = ({
     maxPriceRange,
     priceRange,
-    onChangeMinPrice,
-    onChangeMaxPrice,
     onChangePriceRange
 }: IRangeFilterProps) => {
     
@@ -17,24 +15,26 @@ const RangeFilter = ({
             <div className="row g-3">
                 <div className="col">
                     <input 
-                        type="text"
+                        type="number"
+                        name="minPrice"
                         className="form-control"
                         aria-label="Min price"
                         min={maxPriceRange[0]}
                         max={maxPriceRange[1]}
                         value={priceRange[0] ?? ''} 
-                        onChange={onChangeMinPrice}
+                        onChange={onChangePriceRange}
                     />
                 </div>
                 <div className="col">
                     <input
-                        type="text"
+                        type="number"
+                        name="maxPrice"
                         className="form-control"
                         aria-label="Max price"
                         min={maxPriceRange[0]}
                         max={maxPriceRange[1]}
                         value={priceRange[1] ?? ''}
-                        onChange={onChangeMaxPrice}
+                        onChange={onChangePriceRange}
                     />
                 </div>
             </div>
