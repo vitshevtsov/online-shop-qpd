@@ -24,8 +24,7 @@ export const stockSlice = createSlice({
     },
 });
 
-export default stockSlice.reducer;
-
+export const stockReducer = stockSlice.reducer;
 
 /**
  * селекторы
