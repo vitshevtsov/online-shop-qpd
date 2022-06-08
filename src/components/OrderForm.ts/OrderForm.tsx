@@ -83,16 +83,11 @@ const OrderForm = () => {
             handleOnChangeRequiredInput(
                 e,
                 objOfSetters[e.currentTarget.id].value,
-                objOfSetters[e.currentTarget.id].error!
+                objOfSetters[e.currentTarget.id].error!,
+                objOfSetters[e.currentTarget.id].isDirty!
             );
         } else {
             objOfSetters[e.currentTarget.id].value(e.target.value);
-        }
-    };
-    
-    const handleOnFocusInput = (e: React.FocusEvent<HTMLInputElement>) => {
-        if (objOfSetters[e.currentTarget.id].hasOwnProperty('isDirty')) {
-            objOfSetters[e.currentTarget.id].isDirty?.(true);
         }
     };
 
@@ -148,7 +143,6 @@ const OrderForm = () => {
                         isRequired
                         error={nameError}
                         handleOnChange={handleOnChangeInput}
-                        handleOnFocus={handleOnFocusInput}
                     />
                 </div>
                 <div className="col-lg-6">
@@ -163,7 +157,6 @@ const OrderForm = () => {
                         isRequired
                         error={surnameError}
                         handleOnChange={handleOnChangeInput}
-                        handleOnFocus={handleOnFocusInput}
                                         
                     />
                 </div>
@@ -181,7 +174,6 @@ const OrderForm = () => {
                         isRequired
                         error={phoneError}
                         handleOnChange={handleOnChangeInput}
-                        handleOnFocus={handleOnFocusInput}
                     />
                 </div>
                 <div className="col-lg-6">
@@ -209,7 +201,6 @@ const OrderForm = () => {
                         isRequired
                         error={cityError}
                         handleOnChange={handleOnChangeInput}
-                        handleOnFocus={handleOnFocusInput}
                     />
                 </div>
                 <div className="col-lg-6">
@@ -224,7 +215,6 @@ const OrderForm = () => {
                         isRequired
                         error={streetError}
                         handleOnChange={handleOnChangeInput}
-                        handleOnFocus={handleOnFocusInput}
                     />
                 </div>
             </div>

@@ -12,7 +12,6 @@ const CustomInput = ({
     placeholder,
     value,
     handleOnChange,
-    handleOnFocus,
     isDirty
 }: ICustominputProps) => {
 
@@ -36,7 +35,6 @@ const CustomInput = ({
                 placeholder={placeholder} 
                 value={value}
                 onChange={handleOnChange}
-                onFocus={handleOnFocus}
             />
             {isDirty && errorDiv}
         </div>

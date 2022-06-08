@@ -8,7 +8,6 @@ export interface ICustominputProps {
     placeholder: string;
     value: string | number;
     handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    handleOnFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
     isDirty?: boolean;
     isRequired?: boolean;
     id?: string;
